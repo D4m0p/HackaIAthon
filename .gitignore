@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+.streamlit/secrets.toml
+
+# El RSS de TVN incluye extractos e imágenes que no se redistribuyen.
+# Se conserva en local; su hash y la receta quedan en datos/raw/extraccion.json.
+datos/raw/tvn_rss.xml

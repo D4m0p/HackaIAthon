@@ -1,0 +1,82 @@
+[
+  {
+    "fuente": "TVN · feed RSS público",
+    "url": "https://www.tvn-2.com/rss/",
+    "fecha_extraccion": "2026-10-08T18:41:07Z",
+    "cobertura": "154 titulares; el feed solo conserva las últimas horas, no el histórico.",
+    "campos": [
+      "titulo",
+      "url",
+      "fecha_publicacion",
+      "palabras_clave",
+      "seccion"
+    ],
+    "licencia_condiciones": "Feed RSS público de TVN, sin licencia abierta declarada. Se usan solo titular, URL, fecha y palabras clave. No se redistribuyen descripciones, cuerpos, imágenes ni videos.",
+    "transformaciones": "Fechas a UTC, URL normalizada, ID estable. Se descartan descripción e imágenes.",
+    "archivo": "processed/noticias.csv",
+    "sha256_snapshot": "117395f3c0e26bddc5b5cec3b57a625c661e459c4e86a792d5b3c5c098ddb047"
+  },
+  {
+    "fuente": "GDELT · DOC 2.0 API (ArtList)",
+    "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+    "fecha_extraccion": "2026-10-08T18:44:42Z",
+    "cobertura": "288 titulares únicos en 4 consultas sobre los 30 días previos al corte; detección de 2026-09-11T22:45:00Z a 2026-10-08T18:41:07Z.",
+    "campos": [
+      "titulo",
+      "url",
+      "medio",
+      "idioma",
+      "fecha_deteccion",
+      "pais_medio",
+      "tema"
+    ],
+    "licencia_condiciones": "GDELT DOC 2.0, de uso abierto citando a The GDELT Project. No transfiere derechos sobre los artículos enlazados: se conservan solo titular y metadatos.",
+    "transformaciones": "'seendate' a fecha_deteccion en UTC, deduplicación por URL, limpieza de espacios del titular.",
+    "archivo": "processed/noticias.csv",
+    "sha256_snapshot": "117395f3c0e26bddc5b5cec3b57a625c661e459c4e86a792d5b3c5c098ddb047"
+  },
+  {
+    "fuente": "Banco Mundial · Indicators API v2",
+    "url": "https://api.worldbank.org/v2",
+    "fecha_extraccion": "2026-10-08T18:41:10Z",
+    "cobertura": "6 países × 6 indicadores × 2010–2024: 540 combinaciones, 540 con valor y 0 nulas.",
+    "campos": [
+      "pais_iso3",
+      "indicador_id",
+      "anio",
+      "valor",
+      "unidad",
+      "fuente_url",
+      "fecha_extraccion",
+      "licencia",
+      "indicador_nombre",
+      "actualizacion_fuente"
+    ],
+    "licencia_condiciones": "Banco Mundial, World Development Indicators. CC BY 4.0, con atribución.",
+    "transformaciones": "Una consulta por indicador; cuadrícula completa con nulos explícitos; unidad documentada por indicador.",
+    "archivo": "processed/indicadores.csv",
+    "sha256_snapshot": "d4660faf9197d78ea01cc44450da5c8ee106bad94bc7ae2441d340abb86bee85"
+  },
+  {
+    "fuente": "USGS · Earthquake Catalog (FDSN)",
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-12-31T23%3A59%3A59&minlatitude=5&maxlatitude=12&minlongitude=-86&maxlongitude=-76&minmagnitude=3&orderby=time-asc",
+    "fecha_extraccion": "2026-10-08T18:41:11Z",
+    "cobertura": "82 sismos de magnitud ≥ 3 en 2024. Caja regional lat 5 a 12, lon -86 a -76: incluye zonas fuera de Panamá. Solo sustenta hechos sísmicos; no es evidencia de inundaciones ni de pérdidas económicas.",
+    "campos": [
+      "id",
+      "magnitude",
+      "time",
+      "updated",
+      "longitude",
+      "latitude",
+      "depth",
+      "place",
+      "status",
+      "url"
+    ],
+    "licencia_condiciones": "USGS Earthquake Catalog. Dominio público de EE. UU.; se cita a USGS como fuente.",
+    "transformaciones": "Tiempos a ISO 8601 UTC; coordenadas copiadas a las propiedades.",
+    "archivo": "processed/eventos.geojson",
+    "sha256_snapshot": "0a99e0cb2d2e1dd5e409aefa01ba1361b458c4b34e923607aa8ea95a72150c96"
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "noticias": {
+    "leidas": 442,
+    "validas": 442,
+    "rechazadas": 0,
+    "motivos_de_rechazo": {},
+    "duplicados_por_url_fusionados": 12,
+    "de_tvn": 154,
+    "por_origen": {
+      "gdelt_doc": 288,
+      "tvn_rss": 154
+    },
+    "por_idioma": {
+      "es": 401,
+      "en": 24,
+      "greek": 10,
+      "pt": 2,
+      "chinese": 2,
+      "thai": 1,
+      "arabic": 1,
+      "fr": 1
+    },
+    "por_tema_de_consulta": {
+      "general": 225,
+      "sin dato": 154,
+      "economia": 63
+    },
+    "medios_distintos": 66,
+    "recirculadas": 100,
+    "sin_fecha_de_publicacion": 263,
+    "cobertura_deteccion": {
+      "minimo": "2026-09-11T22:45:00Z",
+      "maximo": "2026-10-08T18:41:07Z"
+    },
+    "nulos_por_campo": {
+      "fecha_publicacion": 263,
+      "tema": 154,
+      "palabras_clave": 288,
+      "seccion": 288,
+      "pais_medio": 157
+    }
+  },
+  "indicadores": {
+    "leidas": 540,
+    "validas": 540,
+    "rechazadas": 0,
+    "motivos_de_rechazo": {},
+    "combinaciones": 540,
+    "con_valor": 540,
+    "sin_valor": 0,
+    "sin_valor_por_indicador": {},
+    "paises": [
+      "COL",
+      "CRI",
+      "DOM",
+      "GTM",
+      "MEX",
+      "PAN"
+    ],
+    "indicadores": [
+      "FP.CPI.TOTL.ZG",
+      "IT.NET.USER.ZS",
+      "NE.EXP.GNFS.ZS",
+      "NY.GDP.MKTP.KD.ZG",
+      "SL.UEM.TOTL.ZS",
+      "SP.POP.TOTL"
+    ],
+    "cobertura_anios": {
+      "minimo": 2010,
+      "maximo": 2024
+    },
+    "nulos_por_campo": {}
+  },
+  "eventos": {
+    "leidas": 82,
+    "validas": 82,
+    "rechazadas": 0,
+    "motivos_de_rechazo": {},
+    "cobertura": {
+      "minimo": "2024-01-07T01:02:08Z",
+      "maximo": "2024-12-29T23:00:10Z"
+    },
+    "magnitud": {
+      "minimo": 3.2,
+      "maximo": 5.8
+    },
+    "por_estado": {
+      "reviewed": 82
+    },
+    "nulos_por_campo": {}
+  },
+  "incidencias": [
+    "Descarga fallida: raw/gdelt/economia_20260918_20260928.json (No se pudo descargar https://api.gdeltproject.org/api/v2/doc/doc?query=panama+%28economy+OR+inflation+OR+employment+OR+investment+OR+econom%C3%ADa+OR+inflaci%C3%B3n+OR+empleo%29&mode=ArtList&format=json&sort=DateDesc&maxrecords=75&startdatetime=20260918184106&enddatetime=20260928184106: HTTP Error 429: Too Many Requests)",
+    "Descarga fallida: raw/gdelt/economia_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/logistica_20260908_20260918.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/logistica_20260918_20260928.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/logistica_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/turismo_20260908_20260918.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/turismo_20260918_20260928.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/turismo_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/eventos_naturales_20260908_20260918.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/eventos_naturales_20260918_20260928.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/eventos_naturales_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/tvn_20260908_20260918.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/tvn_20260918_20260928.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/tvn_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)"
+  ]
+}
