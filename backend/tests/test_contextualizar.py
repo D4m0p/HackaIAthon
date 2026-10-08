@@ -66,3 +66,21 @@ def test_inundacion_no_usa_datos_sismicos(eventos):
     # Hay un sismo sintético el mismo día de la inundación (SIN-013), pero USGS
     # solo sirve para hechos sísmicos
     assert contexto_de(evento_de(eventos, "SIN-013"), "sismo_usgs") == []
+
+
+def test_sismos_en_formato_del_equipo_a(tmp_path):
+    # El paquete de A trae las propiedades aplanadas: magnitude y time en ISO 8601
+    from nucleo.contextualizar import sismos_desde_lista
+    propiedades = {'id': 'us6000m2a6', 'magnitude': 4.6, 'time': '2024-01-07T01:02:08Z',
+                   'longitude': -82.4658, 'latitude': 5.0822, 'depth': 10, 'place': 'south of Panama',
+                   'status': 'reviewed', 'url': 'https://earthquake.usgs.gov/earthquakes/eventpage/us6000m2a6'}
+    desde_lista = sismos_desde_lista([propiedades])[0]
+    assert desde_lista['magnitud'] == 4.6 and desde_lista['fecha'].isoformat() == '2024-01-07T01:02:08+00:00'
+
+    ruta = tmp_path / 'eventos.geojson'
+    import json
+    ruta.write_text(json.dumps({'type': 'FeatureCollection', 'features': [
+        {'type': 'Feature', 'id': 'us6000m2a6', 'geometry': {'type': 'Point', 'coordinates': [-82.4658, 5.0822, 10]},
+         'properties': propiedades}]}), encoding='utf-8')
+    desde_archivo = cargar_sismos(ruta)[0]
+    assert desde_archivo == desde_lista

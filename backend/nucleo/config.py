@@ -209,8 +209,10 @@ DIAS_NOVEDAD = 30
 # Parecido con un evento anterior: <= MIN -> totalmente nuevo; >= MAX -> repetido.
 NOVEDAD_SIM_MIN = 0.50
 NOVEDAD_SIM_MAX = 0.90
-# Si se detectó más de estos días después de publicada, es una noticia recirculada.
-DIAS_RECIRCULADA = 30
+# Si se detectó más de estos días después de su fecha original, es una noticia
+# recirculada. Mismo umbral que usa el equipo A (ingesta/recirculacion.py), para que
+# haya una sola regla. Con datos de A se usa directamente su campo "recirculada".
+DIAS_RECIRCULADA = 7
 # Una noticia recirculada se limita a menos de este puntaje (= nunca pasa de "bajo").
 TOPE_RECIRCULADA = 40
 
@@ -227,3 +229,16 @@ LIMITE_PALABRAS_COPY = 80
 RANGO_PALABRAS_GUION = (100, 160)
 # Siglas que pueden aparecer aunque no estén en la evidencia (no son entidades citadas).
 SIGLAS_PERMITIDAS = {"TVN", "UTC"}
+
+# Valores de alcance_texto que significan "solo hay titular y metadatos".
+ALCANCES_SOLO_TITULAR = {"titular", "titular_y_metadatos"}
+
+# ---------------------------------------------------------------------------
+# Idiomas
+# ---------------------------------------------------------------------------
+# Solo estas noticias entran al panel. Las demás no se borran del paquete: se
+# marcan como fuera de alcance. Decisión: en el paquete real, el inglés trae
+# mayormente noticias sobre Panamá; los otros idiomas (griego, chino, portugués,
+# francés...) son casi todo ruido (fletes, bolsa china, política de Brasil).
+# Una noticia sin idioma declarado se conserva.
+IDIOMAS_PANEL = {"es", "en"}

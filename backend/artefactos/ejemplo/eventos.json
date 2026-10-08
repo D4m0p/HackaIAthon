@@ -14,6 +14,10 @@
     "url": "https://ejemplo.invalid/sin-013",
     "fecha_publicacion": "2025-09-28T18:00:00Z",
     "fecha_deteccion": "2025-09-28T19:00:00Z",
+    "fecha": "2025-09-28T18:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "eventos_naturales",
     "metodo_tema": "llm",
@@ -58,7 +62,7 @@
      "valor": 0.821,
      "peso": 20,
      "aporte": 16.4,
-     "explicacion": "última publicación hace 1.2 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 1.2 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -99,6 +103,10 @@
     "url": "https://ejemplo.invalid/sin-018",
     "fecha_publicacion": "2025-09-17T12:00:00Z",
     "fecha_deteccion": "2025-09-17T13:00:00Z",
+    "fecha": "2025-09-17T12:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
@@ -112,6 +120,10 @@
     "url": "https://ejemplo.invalid/sin-019",
     "fecha_publicacion": "2025-09-17T15:00:00Z",
     "fecha_deteccion": "2025-09-17T16:00:00Z",
+    "fecha": "2025-09-17T15:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
@@ -208,7 +220,7 @@
      "valor": 0.0,
      "peso": 20,
      "aporte": 0.0,
-     "explicacion": "última publicación hace 12.4 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 12.4 días (ventana de 7)"
     },
     "N": {
      "valor": 0.956,
@@ -261,6 +273,10 @@
     "url": "https://ejemplo.invalid/sin-012",
     "fecha_publicacion": "2025-09-27T09:00:00Z",
     "fecha_deteccion": "2025-09-27T10:00:00Z",
+    "fecha": "2025-09-27T09:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "servicios_publicos",
     "metodo_tema": "llm",
@@ -305,7 +321,7 @@
      "valor": 0.625,
      "peso": 20,
      "aporte": 12.5,
-     "explicacion": "última publicación hace 2.6 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 2.6 días (ventana de 7)"
     },
     "N": {
      "valor": 0.86,
@@ -345,6 +361,10 @@
     "url": "https://ejemplo.invalid/sin-010",
     "fecha_publicacion": "2025-09-26T08:00:00Z",
     "fecha_deteccion": "2025-09-26T09:00:00Z",
+    "fecha": "2025-09-26T08:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "servicios_publicos",
     "metodo_tema": "llm",
@@ -389,7 +409,7 @@
      "valor": 0.476,
      "peso": 20,
      "aporte": 9.5,
-     "explicacion": "última publicación hace 3.7 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 3.7 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -430,6 +450,10 @@
     "url": "https://ejemplo.invalid/sin-006",
     "fecha_publicacion": "2025-09-22T03:10:00Z",
     "fecha_deteccion": "2025-09-22T04:00:00Z",
+    "fecha": "2025-09-22T03:10:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "eventos_naturales",
     "metodo_tema": "llm",
@@ -443,6 +467,10 @@
     "url": "https://ejemplo.invalid/sin-007",
     "fecha_publicacion": "2025-09-22T05:00:00Z",
     "fecha_deteccion": "2025-09-22T05:30:00Z",
+    "fecha": "2025-09-22T05:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "eventos_naturales",
     "metodo_tema": "llm",
@@ -503,7 +531,7 @@
      "valor": 0.0,
      "peso": 20,
      "aporte": 0.0,
-     "explicacion": "última publicación hace 7.8 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 7.8 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -544,6 +572,10 @@
     "url": "https://ejemplo.invalid/sin-004",
     "fecha_publicacion": "2025-09-18T12:00:00Z",
     "fecha_deteccion": "2025-09-18T13:00:00Z",
+    "fecha": "2025-09-18T12:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
@@ -557,6 +589,10 @@
     "url": "https://ejemplo.invalid/sin-005",
     "fecha_publicacion": "2025-09-19T11:00:00Z",
     "fecha_deteccion": "2025-09-19T12:00:00Z",
+    "fecha": "2025-09-19T11:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
@@ -653,7 +689,7 @@
      "valor": 0.0,
      "peso": 20,
      "aporte": 0.0,
-     "explicacion": "última publicación hace 10.5 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 10.5 días (ventana de 7)"
     },
     "N": {
      "valor": 0.827,
@@ -695,6 +731,10 @@
     "url": "https://ejemplo.invalid/sin-001",
     "fecha_publicacion": "2025-09-20T13:00:00Z",
     "fecha_deteccion": "2025-09-20T14:00:00Z",
+    "fecha": "2025-09-20T13:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
@@ -708,6 +748,10 @@
     "url": "https://ejemplo.invalid/sin-002",
     "fecha_publicacion": "2025-09-20T15:30:00Z",
     "fecha_deteccion": "2025-09-20T16:00:00Z",
+    "fecha": "2025-09-20T15:30:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
@@ -721,6 +765,10 @@
     "url": "https://ejemplo.invalid/sin-003",
     "fecha_publicacion": "2025-09-21T09:00:00Z",
     "fecha_deteccion": "2025-09-21T10:00:00Z",
+    "fecha": "2025-09-21T09:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
@@ -771,7 +819,7 @@
      "valor": 0.0,
      "peso": 20,
      "aporte": 0.0,
-     "explicacion": "última publicación hace 8.6 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 8.6 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -811,6 +859,10 @@
     "url": "https://ejemplo.invalid/sin-009",
     "fecha_publicacion": "2025-09-25T10:00:00Z",
     "fecha_deteccion": "2025-09-25T11:00:00Z",
+    "fecha": "2025-09-25T10:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "turismo",
     "metodo_tema": "llm",
@@ -855,7 +907,7 @@
      "valor": 0.345,
      "peso": 20,
      "aporte": 6.9,
-     "explicacion": "última publicación hace 4.6 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 4.6 días (ventana de 7)"
     },
     "N": {
      "valor": 0.687,
@@ -895,6 +947,10 @@
     "url": "https://ejemplo.invalid/sin-008",
     "fecha_publicacion": "2025-09-15T10:00:00Z",
     "fecha_deteccion": "2025-09-15T11:00:00Z",
+    "fecha": "2025-09-15T10:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "turismo",
     "metodo_tema": "llm",
@@ -939,7 +995,7 @@
      "valor": 0.0,
      "peso": 20,
      "aporte": 0.0,
-     "explicacion": "última publicación hace 14.6 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 14.6 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -979,6 +1035,10 @@
     "url": "https://ejemplo.invalid/sin-011",
     "fecha_publicacion": "2025-09-24T20:00:00Z",
     "fecha_deteccion": "2025-09-24T21:00:00Z",
+    "fecha": "2025-09-24T20:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "regulacion",
     "metodo_tema": "llm",
@@ -1023,7 +1083,7 @@
      "valor": 0.262,
      "peso": 20,
      "aporte": 5.2,
-     "explicacion": "última publicación hace 5.2 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 5.2 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -1063,6 +1123,10 @@
     "url": "https://ejemplo.invalid/sin-014",
     "fecha_publicacion": "2025-09-23T14:00:00Z",
     "fecha_deteccion": "2025-09-23T15:00:00Z",
+    "fecha": "2025-09-23T14:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "regulacion",
     "metodo_tema": "llm",
@@ -1107,7 +1171,7 @@
      "valor": 0.083,
      "peso": 20,
      "aporte": 1.7,
-     "explicacion": "última publicación hace 6.4 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 6.4 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -1147,6 +1211,10 @@
     "url": "https://ejemplo.invalid/sin-016",
     "fecha_publicacion": "2024-04-10T13:00:00Z",
     "fecha_deteccion": "2025-09-29T10:00:00Z",
+    "fecha": "2024-04-10T13:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": "recirculada",
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
@@ -1191,13 +1259,13 @@
      "valor": 0.0,
      "peso": 20,
      "aporte": 0.0,
-     "explicacion": "última publicación hace 537.5 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 537.5 días (ventana de 7)"
     },
     "N": {
      "valor": 0.0,
      "peso": 15,
      "aporte": 0.0,
-     "explicacion": "posible noticia recirculada: SIN-016 publicada 2024-04-10, detectada 2025-09-29"
+     "explicacion": "posible noticia recirculada: SIN-016 con fecha original 2024-04-10 (publicacion), detectada 2025-09-29"
     },
     "E": {
      "valor": 0.0,
@@ -1231,6 +1299,10 @@
     "url": "https://ejemplo.invalid/sin-017",
     "fecha_publicacion": "2025-09-27T12:00:00Z",
     "fecha_deteccion": "2025-09-27T13:00:00Z",
+    "fecha": "2025-09-27T12:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "otro",
     "metodo_tema": "bloqueado_inyeccion",
@@ -1275,7 +1347,7 @@
      "valor": 0.643,
      "peso": 20,
      "aporte": 12.9,
-     "explicacion": "última publicación hace 2.5 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 2.5 días (ventana de 7)"
     },
     "N": {
      "valor": 1.0,
@@ -1315,6 +1387,10 @@
     "url": "https://ejemplo.invalid/sin-015",
     "fecha_publicacion": "2025-09-25T16:00:00Z",
     "fecha_deteccion": "2025-09-25T17:00:00Z",
+    "fecha": "2025-09-25T16:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
     "alcance_texto": "titular",
     "tema": "otro",
     "metodo_tema": "llm",
@@ -1359,7 +1435,7 @@
      "valor": 0.381,
      "peso": 20,
      "aporte": 7.6,
-     "explicacion": "última publicación hace 4.3 días (ventana de 7)"
+     "explicacion": "fecha más reciente (publicacion) hace 4.3 días (ventana de 7)"
     },
     "N": {
      "valor": 0.898,

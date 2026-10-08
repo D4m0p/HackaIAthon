@@ -78,19 +78,26 @@ def urgencia(evento, fecha_corte):
     """U: 1 si se publicó en la fecha de corte, baja a 0 en DIAS_URGENCIA días.
     Usa la fecha de PUBLICACIÓN, no la de detección."""
     if not evento["fecha_ultima"]:
-        return 0.0, "sin fecha de publicación"
+        return 0.0, "sin fecha conocida"
     dias = (fecha_corte - _fecha(evento["fecha_ultima"])).total_seconds() / 86400
     valor = _limitar(1 - dias / config.DIAS_URGENCIA)
-    return valor, f"última publicación hace {dias:.1f} días (ventana de {config.DIAS_URGENCIA})"
+    # La fecha puede ser de publicación o de detección: se dice cuál (§7)
+    tipo = next((n["tipo_fecha"] for n in evento["noticias"] if n["fecha"] and
+                 _fecha(n["fecha"]) == _fecha(evento["fecha_ultima"])), None)
+    return valor, (f"fecha más reciente ({tipo or 'desconocida'}) hace {dias:.1f} días "
+                   f"(ventana de {config.DIAS_URGENCIA})")
 
 
 def es_recirculada(evento):
-    """Una noticia detectada mucho después de publicada (ej. GDELT la ve hoy pero es de 2024)."""
-    for n in evento["noticias"]:
-        pub, det = _fecha(n["fecha_publicacion"]), _fecha(n["fecha_deteccion"])
-        if pub and det and (det - pub).days > config.DIAS_RECIRCULADA:
-            return n
-    return None
+    """Noticia antigua que volvió a circular (la marca viene de organizar.py,
+    que usa el campo "recirculada" del equipo A cuando existe)."""
+    return next((n for n in evento["noticias"] if n["antiguedad"] == "recirculada"), None)
+
+
+def es_antigua_en_feed(evento):
+    """Nota de TVN con fecha de publicación antigua que sigue en el feed RSS.
+    No es "recirculada": nadie la volvió a difundir, solo es vieja."""
+    return next((n for n in evento["noticias"] if n["antiguedad"] == "antigua_en_feed"), None)
 
 
 def novedad(evento, anteriores, vectores):
@@ -98,8 +105,12 @@ def novedad(evento, anteriores, vectores):
     El número de noticias del evento NO se usa: duplicar no suma."""
     vieja = es_recirculada(evento)
     if vieja:
-        return 0.0, (f"posible noticia recirculada: {vieja['id_noticia']} publicada "
-                     f"{vieja['fecha_publicacion'][:10]}, detectada {vieja['fecha_deteccion'][:10]}")
+        return 0.0, (f"posible noticia recirculada: {vieja['id_noticia']} con fecha original "
+                     f"{vieja['fecha'][:10]} ({vieja['tipo_fecha']}), detectada {(vieja['fecha_deteccion'] or '?')[:10]}")
+    antigua = es_antigua_en_feed(evento)
+    if antigua:
+        return 0.0, (f"nota antigua que sigue en el feed de TVN: {antigua['id_noticia']} "
+                     f"publicada {antigua['fecha'][:10]}; no es un hecho nuevo")
     if not anteriores:
         return 1.0, "no hay eventos anteriores parecidos"
 
@@ -205,7 +216,8 @@ def priorizar(eventos, fecha_corte):
         }
         e["posibles_contradicciones"] = posibles_contradicciones(e)
         e["estado_evidencia"], e["motivo_estado_evidencia"] = estado_evidencia(e)
-        if all(n["alcance_texto"] == "titular" for n in e["noticias"]):
+        # El paquete del equipo A usa "titular_y_metadatos"; los datos de ejemplo, "titular"
+        if all(n["alcance_texto"] in config.ALCANCES_SOLO_TITULAR for n in e["noticias"]):
             e["aviso_alcance"] = AVISO_SOLO_TITULAR
 
     # Orden: mayor puntaje; empates -> mayor urgencia y luego ID

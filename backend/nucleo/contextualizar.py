@@ -24,31 +24,60 @@ from nucleo.organizar import normalizar
 # ---------------------------------------------------------------------------
 # Carga
 # ---------------------------------------------------------------------------
-def cargar_indicadores(ruta_csv):
-    """Lee indicadores.csv. Los valores vacíos quedan como None (no como 0)."""
-    df = pd.read_csv(ruta_csv, dtype={"anio": int, "valor": float})
+def _normalizar_indicadores(df):
+    df["anio"] = df["anio"].astype(int)
+    df["valor"] = pd.to_numeric(df["valor"], errors="coerce")
     df["valor"] = df["valor"].astype(object).where(df["valor"].notna(), None)
     return df
 
 
+def cargar_indicadores(ruta_csv):
+    """Lee indicadores.csv. Los valores vacíos quedan como None (no como 0)."""
+    return _normalizar_indicadores(pd.read_csv(ruta_csv))
+
+
+def indicadores_desde_lista(filas):
+    """Lo mismo, a partir de la lista que entrega ingesta.cargar_paquete() (equipo A)."""
+    return _normalizar_indicadores(pd.DataFrame(filas))
+
+
+def _fecha_sismo(valor):
+    """USGS original da milisegundos; el paquete del equipo A, texto ISO 8601."""
+    if isinstance(valor, (int, float)):
+        return datetime.fromtimestamp(valor / 1000, tz=timezone.utc)
+    return datetime.fromisoformat(str(valor).replace("Z", "+00:00"))
+
+
+def _sismo(propiedades, coordenadas=None, id_feature=None):
+    """Un sismo en nuestro formato. Acepta las propiedades de USGS ("mag", "time" en ms)
+    y las del paquete del equipo A ("magnitude", "time" ISO, longitude/latitude/depth)."""
+    p = propiedades
+    lon, lat, prof = coordenadas or (p.get("longitude"), p.get("latitude"), p.get("depth"))
+    return {
+        "id": p.get("id") or id_feature,
+        "magnitud": p.get("magnitude", p.get("mag")),
+        "lugar": p.get("place") or "",
+        "fecha": _fecha_sismo(p["time"]),
+        "estado": p.get("status"),
+        "url": p.get("url"),
+        "latitud": lat, "longitud": lon, "profundidad_km": prof,
+    }
+
+
 def cargar_sismos(ruta_geojson):
-    """Lee eventos.geojson (formato USGS) y lo aplana a una lista de dicts."""
+    """Lee eventos.geojson y lo aplana a una lista de dicts."""
     with open(ruta_geojson, encoding="utf-8") as f:
         datos = json.load(f)
     sismos = []
     for feature in datos["features"]:
-        p = feature["properties"]
-        lon, lat, prof = feature["geometry"]["coordinates"]
-        sismos.append({
-            "id": feature["id"],
-            "magnitud": p.get("mag", p.get("magnitude")),
-            "lugar": p.get("place", ""),
-            "fecha": datetime.fromtimestamp(p["time"] / 1000, tz=timezone.utc),
-            "estado": p.get("status"),
-            "url": p.get("url"),
-            "latitud": lat, "longitud": lon, "profundidad_km": prof,
-        })
+        geometria = feature.get("geometry") or {}
+        sismos.append(_sismo(feature["properties"], geometria.get("coordinates"), feature.get("id")))
     return sismos
+
+
+def sismos_desde_lista(propiedades):
+    """A partir de la lista que entrega ingesta.cargar_paquete() (propiedades ya aplanadas)."""
+    return [_sismo(p) for p in propiedades]
 
 
 # ---------------------------------------------------------------------------

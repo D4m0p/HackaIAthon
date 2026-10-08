@@ -77,21 +77,86 @@ def embeber(textos):
 def cargar_noticias(ruta_csv):
     """Lee noticias.csv (formato del contrato de datos, sección 7)."""
     df = pd.read_csv(ruta_csv, dtype=str, keep_default_na=False)
-    noticias = df.to_dict(orient="records")
+    return preparar_noticias(df.to_dict(orient="records"))
+
+
+def filtrar_por_idioma(noticias):
+    """Separa (dentro_del_panel, fuera_de_alcance) según config.IDIOMAS_PANEL.
+    Las de fuera no se borran: se devuelven aparte, con el motivo, para registrarlas."""
+    dentro, fuera = [], []
+    for n in noticias:
+        idioma = n.get("idioma") or None
+        if idioma is None or idioma in config.IDIOMAS_PANEL:
+            dentro.append(n)
+        else:
+            fuera.append({"id_noticia": n["id_noticia"], "idioma": idioma, "titulo": n["titulo"],
+                          "motivo": f"idioma '{idioma}' fuera del alcance del panel"})
+    return dentro, fuera
+
+
+def preparar_noticias(noticias):
+    """Agrega fecha de referencia y antigüedad a cada noticia. Acepta la lista que
+    entrega ingesta.cargar_paquete() (equipo A) o la leída del CSV."""
     for n in noticias:
         n["fecha"] = _fecha_de_referencia(n)
+        n["antiguedad"] = _antiguedad(n)
     return noticias
 
 
+def _leer_fecha(valor):
+    return datetime.fromisoformat(valor.replace("Z", "+00:00")) if valor else None
+
+
 def _fecha_de_referencia(noticia):
-    """Usa la fecha de publicación. Si no existe, la de detección (seendate de GDELT),
-    dejando marcado que no es la fecha original."""
-    for campo in ("fecha_publicacion", "fecha_deteccion"):
-        valor = noticia.get(campo, "")
-        if valor:
-            noticia["fecha_usada"] = campo
-            return datetime.fromisoformat(valor.replace("Z", "+00:00"))
-    noticia["fecha_usada"] = None
+    """Fecha que representa a la noticia y QUÉ tipo de fecha es.
+
+    Si el paquete trae `fecha_original` (equipo A), se usa esa, que es la que debe
+    mostrarse (prueba T03). Como en muchas noticias de GDELT esa fecha es en realidad
+    la de detección, se guarda el tipo para no presentarla como publicación (§7):
+    - "publicacion": la fecha en que el medio la publicó
+    - "deteccion": cuándo se detectó (seendate de GDELT o lectura del RSS)
+    - "primera_aparicion": la primera vez que el mismo titular apareció en el paquete
+    """
+    publicacion = noticia.get("fecha_publicacion") or None
+    deteccion = noticia.get("fecha_deteccion") or None
+    original = noticia.get("fecha_original") or None
+
+    if original:
+        tipo = ("publicacion" if original == publicacion else
+                "deteccion" if original == deteccion else "primera_aparicion")
+        valor = original
+    elif publicacion:
+        tipo, valor = "publicacion", publicacion
+    elif deteccion:
+        tipo, valor = "deteccion", deteccion
+    else:
+        tipo, valor = None, None
+
+    noticia["tipo_fecha"] = tipo
+    noticia["fecha_mostrar"] = valor
+    return _leer_fecha(valor)
+
+
+def _antiguedad(noticia):
+    """None, "recirculada" o "antigua_en_feed".
+
+    Si el paquete trae `recirculada` (equipo A), esa es la fuente de verdad. Pero en el
+    RSS de TVN la "detección" es la hora en que se leyó el feed: una nota de TVN con su
+    propia fecha de publicación antigua no volvió a circular, solo sigue en el feed.
+    Esa se marca "antigua_en_feed" para no etiquetarla como recirculada.
+    Sin el campo de A (datos de ejemplo), se aplica la misma regla de A: detectada más de
+    DIAS_RECIRCULADA días después de su fecha original."""
+    if "recirculada" in noticia and noticia["recirculada"] != "":
+        if str(noticia["recirculada"]).lower() != "true":
+            return None
+        if noticia.get("origen") == "tvn_rss" and noticia["tipo_fecha"] == "publicacion":
+            return "antigua_en_feed"
+        return "recirculada"
+
+    original = _leer_fecha(noticia.get("fecha_publicacion"))
+    deteccion = _leer_fecha(noticia.get("fecha_deteccion"))
+    if original and deteccion and (deteccion - original).days > config.DIAS_RECIRCULADA:
+        return "recirculada"
     return None
 
 
@@ -348,6 +413,11 @@ def organizar(noticias, usar_llm=True, usar_artefactos=True):
                 "url": m["url"],
                 "fecha_publicacion": m.get("fecha_publicacion") or None,
                 "fecha_deteccion": m.get("fecha_deteccion") or None,
+                # Fecha a mostrar y su tipo (publicacion / deteccion / primera_aparicion)
+                "fecha": m["fecha_mostrar"],
+                "tipo_fecha": m["tipo_fecha"],
+                "antiguedad": m["antiguedad"],
+                "origen": m.get("origen") or None,
                 "alcance_texto": m.get("alcance_texto") or "titular",
                 "tema": m["tema_asignado"],
                 "metodo_tema": m["metodo_tema"],

@@ -135,3 +135,14 @@ def test_titulares_van_como_json_y_se_rechazan_ids_repetidos(monkeypatch):
     assert [t['id'] for t in _json.loads(recibido['contenido'])] == ['SIN-001', 'SIN-004']
     # SIN-001 vino repetido: se descarta (usará el respaldo); SIN-004 se acepta
     assert set(resultado) == {'SIN-004'}
+
+
+def test_filtro_de_idioma_aparta_sin_borrar():
+    from nucleo.organizar import filtrar_por_idioma
+    noticias = [{'id_noticia': 'A', 'idioma': 'es', 'titulo': 'a'},
+                {'id_noticia': 'B', 'idioma': 'en', 'titulo': 'b'},
+                {'id_noticia': 'C', 'idioma': 'el', 'titulo': 'c'},
+                {'id_noticia': 'D', 'idioma': '', 'titulo': 'd'}]
+    dentro, fuera = filtrar_por_idioma(noticias)
+    assert [n['id_noticia'] for n in dentro] == ['A', 'B', 'D']  # sin idioma declarado: se conserva
+    assert [n['id_noticia'] for n in fuera] == ['C'] and 'fuera del alcance' in fuera[0]['motivo']

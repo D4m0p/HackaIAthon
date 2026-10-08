@@ -13,7 +13,8 @@ import pytest
 
 from nucleo.pipeline import DATOS_EJEMPLO, correr
 
-ARTEFACTOS = Path(__file__).parent.parent / "artefactos"
+# Resultados de referencia de los datos de ejemplo (los del paquete real van en artefactos/)
+ARTEFACTOS = Path(__file__).parent.parent / "artefactos" / "ejemplo"
 FECHA_CORTE = "2025-09-30T00:00:00Z"
 
 
