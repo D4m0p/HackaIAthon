@@ -225,3 +225,5 @@ LIMITE_PALABRAS_BRIEF = 250
 LIMITE_PALABRAS_COPY = 80
 # Guion de 45-60 segundos ~ 100-160 palabras leídas en voz alta
 RANGO_PALABRAS_GUION = (100, 160)
+# Siglas que pueden aparecer aunque no estén en la evidencia (no son entidades citadas).
+SIGLAS_PERMITIDAS = {"TVN", "UTC"}

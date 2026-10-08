@@ -2,8 +2,10 @@
 Pruebas de los controles de seguridad (no usan el LLM).
 """
 
-from nucleo.seguridad import (cifras_no_respaldadas, citas_en_texto_invalidas, contar_palabras,
-                              detectar_inyeccion, validar_afirmaciones)
+from nucleo.seguridad import (cifras_fuera_de_evidencia, cifras_sin_respaldo_en_afirmacion,
+                              cifras_sin_respaldo_por_oracion, citas_en_texto_invalidas, contar_palabras,
+                              detectar_inyeccion, faltan_versiones, siglas_fuera_de_evidencia,
+                              validar_afirmaciones)
 
 PAQUETE = {
     "SIN-004": {"tipo": "noticia", "titulo": "Inflación en Panamá sube", "medio": "Medio A"},
@@ -38,9 +40,43 @@ def test_afirmacion_sin_cita_valida_se_descarta():
     assert len(descartadas) == 3 and all(d["motivo_descarte"] for d in descartadas)
 
 
-def test_cifras_inventadas_se_marcan():
-    texto = "La inflación fue 0.7% en 2024, pero según el ministro llegó a 3.2%. Hay 3 preguntas."
-    assert cifras_no_respaldadas(texto, PAQUETE) == ["3.2"]
+def test_cifras_inventadas_se_marcan_aunque_sean_pequenas():
+    # Ejemplo del revisor crítico: antes pasaba sin alerta porque se ignoraban los enteros < 10
+    texto = "El corte dejará sin agua a 8 corregimientos durante 3 días [SIN-004:titulo]."
+    problemas = cifras_sin_respaldo_por_oracion(texto, PAQUETE)
+    assert len(problemas) == 1 and "3, 8" in problemas[0]
+
+
+def test_cifra_debe_estar_en_lo_citado_no_en_cualquier_parte():
+    # 2024 está en la evidencia (anio del Banco Mundial), pero esta oración cita el titular
+    texto = "La inflación sube desde 2024 [SIN-004:titulo]."
+    assert cifras_sin_respaldo_por_oracion(texto, PAQUETE)
+    # Citando el campo correcto sí pasa
+    texto = "El dato anual de 2024 [WB:PAN:FP.CPI.TOTL.ZG:2024:anio] fue 0.7% [WB:PAN:FP.CPI.TOTL.ZG:2024:valor]."
+    assert cifras_sin_respaldo_por_oracion(texto, PAQUETE) == []
+
+
+def test_cifra_sin_cita_se_marca():
+    assert cifras_sin_respaldo_por_oracion("La inflación fue 3.2% este año.", PAQUETE)
+
+
+def test_afirmacion_con_cifra_ajena_a_su_cita():
+    a = {"texto": "La inflación fue 0.7%", "tipo": "hecho", "citas": [{"id_evidencia": "SIN-004", "campo": "titulo"}]}
+    assert cifras_sin_respaldo_en_afirmacion(a, PAQUETE) == ["0.7"]
+
+
+def test_cifras_fuera_de_evidencia_en_textos_sin_cita():
+    assert cifras_fuera_de_evidencia("Verificar si fue 0.7 o 3.2", PAQUETE) == ["3.2"]
+
+
+def test_siglas_fuera_de_evidencia():
+    assert siglas_fuera_de_evidencia("Consultar al INEC y a TVN sobre el dato", PAQUETE) == ["INEC"]
+
+
+def test_T05_faltan_versiones():
+    contradicciones = [{"cifra": "9.5%", "ids_noticia": ["A"]}, {"cifra": "7.4%", "ids_noticia": ["B"]}]
+    assert faltan_versiones("El desempleo es 7.4% según B", contradicciones) == ["9.5%"]
+    assert faltan_versiones("Reportan 9.5% y 7.4%", contradicciones) == []
 
 
 def test_citas_en_texto_y_palabras():

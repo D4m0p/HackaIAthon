@@ -37,12 +37,22 @@ def test_T10_ranking_offline_identico_al_de_referencia(corrida_offline):
     assert ranking(eventos) == ranking(referencia)
 
 
-def test_T10_temas_y_fichas_salen_de_artefactos(corrida_offline):
+def test_T10_temas_y_fichas_iguales_a_la_referencia(corrida_offline):
     eventos, fichas = corrida_offline
     assert all(n["metodo_tema"] == "llm" for e in eventos for n in e["noticias"])
-    # Ninguna ficha con evidencia utilizable queda sin redacción
+
+    referencia = {}
+    for linea in (ARTEFACTOS / "fichas.jsonl").read_text(encoding="utf-8").splitlines():
+        f = json.loads(linea)
+        referencia[f["id_caso"]] = f
     for f in fichas:
-        assert f["generado"]["metodo"] in ("llm", "sin_evidencia_utilizable"), f["id_caso"]
+        ref = referencia[f["id_caso"]]
+        # Sin internet sale la misma ficha que en la corrida de referencia
+        assert f["generado"]["metodo"] == ref["generado"]["metodo"], f["id_caso"]
+        assert f["borrador"] == ref["borrador"], f["id_caso"]
+        assert f["estado_revision"] == ref["estado_revision"], f["id_caso"]
+        # Ninguna ficha con evidencia queda vacía: o la redactó el LLM o la plantilla
+        assert f["generado"]["metodo"] in ("llm", "plantilla", "sin_evidencia_utilizable"), f["id_caso"]
 
 
 def test_titular_nuevo_sin_conexion_usa_respaldo_sin_afectar_a_los_demas(sin_internet):

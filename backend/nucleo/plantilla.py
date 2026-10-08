@@ -38,9 +38,10 @@ def _afirmaciones(paquete):
         elif e["tipo"] == "sismo_usgs":
             afirmaciones.append({
                 "texto": (f"USGS registró un sismo de magnitud {e['magnitud']} [{id_ev}:magnitud] "
-                          f"({e['lugar']}) el {e['fecha_utc'][:10]} UTC [{id_ev}:fecha_utc]."),
+                          f"({e['lugar']}) [{id_ev}:lugar] el {e['fecha_utc'][:10]} UTC [{id_ev}:fecha_utc]."),
                 "tipo": "hecho",
-                "citas": [{"id_evidencia": id_ev, "campo": "magnitud"}, {"id_evidencia": id_ev, "campo": "fecha_utc"}],
+                "citas": [{"id_evidencia": id_ev, "campo": "magnitud"}, {"id_evidencia": id_ev, "campo": "lugar"},
+                          {"id_evidencia": id_ev, "campo": "fecha_utc"}],
             })
     return afirmaciones
 
@@ -50,7 +51,8 @@ def _pendientes(evento, paquete):
     if evento.get("aviso_alcance"):
         pendientes.append("Solo se dispone del titular: falta la nota completa para confirmar los detalles.")
     if evento["posibles_contradicciones"]:
-        cifras = ", ".join(c["cifra"] for c in evento["posibles_contradicciones"])
+        # Cada cifra con la cita del titular donde aparece
+        cifras = ", ".join(f"{c['cifra']} [{c['ids_noticia'][0]}:titulo]" for c in evento["posibles_contradicciones"])
         pendientes.append(f"Las fuentes reportan cifras distintas ({cifras}): verificar cuál es la correcta "
                           f"y a qué periodo corresponde.")
     if evento["n_fuentes_independientes"] < 2:
@@ -84,11 +86,11 @@ def redaccion_por_plantilla(evento, paquete, con_borrador):
     """Devuelve un dict con la misma forma que la respuesta del LLM."""
     afirmaciones = _afirmaciones(paquete)
     pendientes = _pendientes(evento, paquete)
-    n_noticias = sum(1 for e in paquete.values() if e["tipo"] == "noticia")
 
     redaccion = {
-        "que_se_reporta": (f"{n_noticias} titular(es) de {evento['n_fuentes_independientes']} procedencia(s) "
-                           f"independiente(s) sobre {NOMBRE_TEMA.get(evento['tema'], evento['tema'])}."),
+        # Sin conteos numéricos: el validador exige que toda cifra esté en la evidencia
+        "que_se_reporta": (f"Titulares de prensa sobre {NOMBRE_TEMA.get(evento['tema'], evento['tema'])}; "
+                           f"el detalle de medios y procedencias está en «quién lo reporta»."),
         "afirmaciones": afirmaciones,
         "que_falta_verificar": pendientes,
         "accion_recomendada": _accion(evento["estado_evidencia"]),
@@ -99,13 +101,17 @@ def redaccion_por_plantilla(evento, paquete, con_borrador):
 
     frases = " ".join(a["texto"] for a in afirmaciones)
     pendiente = " ".join(pendientes)
-    primera = afirmaciones[0]["texto"] if afirmaciones else ""
+    # Copy: la primera declaración; si hay cifras en conflicto, todas las declaraciones que las contienen
+    en_conflicto = {i for c in evento["posibles_contradicciones"] for i in c["ids_noticia"]}
+    copy = [a["texto"] for a in afirmaciones if a["citas"][0]["id_evidencia"] in en_conflicto]
+    if not copy:
+        copy = [a["texto"] for a in afirmaciones[:1]]
     redaccion["borrador"] = {
         "titulo_propuesto": f"(Plantilla) «{evento['titulo_representativo']}»",
         "enfoque_interes_publico": "Pendiente de definir por la persona editora: la plantilla no propone enfoque.",
         "brief": f"{frases} Pendiente: {pendiente}",
         "verificaciones_pendientes": pendientes,
         "guion_45_60s": f"{frases} Hay aspectos pendientes de verificación.",
-        "copy_digital": f"{primera} Información pendiente de verificación.",
+        "copy_digital": f"{' '.join(copy)} Información pendiente de verificación.",
     }
     return redaccion

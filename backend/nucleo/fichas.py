@@ -56,6 +56,14 @@ BORRADORES
 - En brief, guion y copy, pon la cita entre corchetes después de cada afirmación
   factual, con el formato [id_evidencia:campo] usando el id exacto y un campo
   que ese elemento tenga. Ej: "El dato anual de 2024 fue 0.7% [WB:PAN:FP.CPI.TOTL.ZG:2024:valor]".
+- Toda oración que contenga una cifra o una fecha debe citar el campo que contiene
+  ESA cifra: una fecha se cita con :fecha_publicacion o :fecha_utc, un valor del
+  Banco Mundial con :valor y su año con :anio, una cifra de un titular con :titulo.
+  No escribas cifras sin cita, tampoco en preguntas retóricas.
+- Si hay cifras en conflicto, brief, guion y copy_digital deben mencionarlas TODAS.
+- En afirmaciones, que_se_reporta, brief, guion y copy no nombres instituciones,
+  personas ni siglas que no estén en la evidencia. Puedes sugerir a quién consultar
+  solo en preguntas_investigacion y que_falta_verificar.
 - brief: máximo {brief} palabras. copy_digital: máximo {copy} palabras.
 - guion_45_60s: entre {guion_min} y {guion_max} palabras, para leer en voz alta.
 - Escribe en español neutro, tono periodístico, sin sensacionalismo."""
@@ -194,6 +202,82 @@ def _redactar(evento, paquete, con_borrador):
 # ---------------------------------------------------------------------------
 # Ficha completa
 # ---------------------------------------------------------------------------
+def validar_redaccion(evento, paquete, redaccion, borrador):
+    """Revisa todo lo que devolvió el LLM (o la plantilla).
+    Devuelve (afirmaciones_validas, validacion). Si algo no está respaldado por la
+    evidencia, la ficha queda BLOQUEADA (pasa a "requiere evidencia").
+
+    Bloquea:
+    - afirmaciones sin cita válida, o con cifras que no están en lo que citan
+    - en brief/guion/copy: citas inválidas, cifras que no están en lo que cita su
+      oración, siglas que no están en la evidencia, y (si hay contradicción) no
+      mostrar todas las cifras
+    - en título y qué se reporta (no llevan citas): cifras o siglas que no están en la evidencia
+    Solo advierte (no bloquea):
+    - siglas o cifras fuera de la evidencia en preguntas, pendientes y acción
+      (ahí se sugiere a quién consultar, no se afirma nada)
+    - límites de palabras (es formato, no evidencia)
+    """
+    motivos, advertencias = [], []
+
+    validas, descartadas = seguridad.validar_afirmaciones(redaccion["afirmaciones"], paquete)
+    for a in list(validas):
+        faltan = seguridad.cifras_sin_respaldo_en_afirmacion(a, paquete)
+        siglas = seguridad.siglas_fuera_de_evidencia(a["texto"], paquete)
+        if faltan or siglas:
+            validas.remove(a)
+            detalle = [f"cifras que no están en lo citado: {', '.join(faltan)}"] if faltan else []
+            detalle += [f"siglas fuera de la evidencia: {', '.join(siglas)}"] if siglas else []
+            descartadas.append({**a, "motivo_descarte": "; ".join(detalle)})
+    if descartadas:
+        motivos.append(f"{len(descartadas)} afirmación(es) sin respaldo válido")
+
+    if borrador:
+        # El título no lleva corchetes de cita: sus cifras solo deben existir en la evidencia
+        cifras = seguridad.cifras_fuera_de_evidencia(borrador["titulo_propuesto"], paquete)
+        if cifras:
+            motivos.append(f"titulo_propuesto: cifras fuera de la evidencia ({', '.join(cifras)})")
+        siglas = seguridad.siglas_fuera_de_evidencia(borrador["titulo_propuesto"], paquete)
+        if siglas:
+            motivos.append(f"titulo_propuesto: siglas fuera de la evidencia ({', '.join(siglas)})")
+        for campo in ("brief", "guion_45_60s", "copy_digital"):
+            texto = borrador[campo]
+            motivos += [f"{campo}: cita inválida [{c}]" for c in seguridad.citas_en_texto_invalidas(texto, paquete)]
+            motivos += [f"{campo}: {p}" for p in seguridad.cifras_sin_respaldo_por_oracion(texto, paquete)]
+            siglas = seguridad.siglas_fuera_de_evidencia(texto, paquete)
+            if siglas:
+                motivos.append(f"{campo}: siglas fuera de la evidencia ({', '.join(siglas)})")
+        for campo in ("brief", "guion_45_60s", "copy_digital"):
+            faltan = seguridad.faltan_versiones(borrador[campo], evento["posibles_contradicciones"])
+            if faltan:
+                motivos.append(f"{campo}: no muestra todas las cifras en conflicto (falta {', '.join(faltan)})")
+        advertencias += _problemas_de_limites(borrador)
+
+    reporte = redaccion["que_se_reporta"]
+    cifras = seguridad.cifras_fuera_de_evidencia(reporte, paquete)
+    siglas = seguridad.siglas_fuera_de_evidencia(reporte, paquete)
+    if cifras:
+        motivos.append(f"que_se_reporta: cifras fuera de la evidencia ({', '.join(cifras)})")
+    if siglas:
+        motivos.append(f"que_se_reporta: siglas fuera de la evidencia ({', '.join(siglas)})")
+
+    sugerencias = " ".join(redaccion["que_falta_verificar"] + redaccion["preguntas_investigacion"]
+                           + [redaccion["accion_recomendada"]])
+    siglas = seguridad.siglas_fuera_de_evidencia(sugerencias, paquete)
+    if siglas:
+        advertencias.append(f"se sugiere consultar entidades que no están en la evidencia: {', '.join(siglas)}")
+    cifras = seguridad.cifras_fuera_de_evidencia(sugerencias, paquete)
+    if cifras:
+        advertencias.append(f"cifras en preguntas/pendientes que no están en la evidencia: {', '.join(cifras)}")
+
+    return validas, {
+        "bloqueada": bool(motivos),
+        "motivos_bloqueo": motivos,
+        "afirmaciones_descartadas": descartadas,
+        "advertencias": advertencias,
+    }
+
+
 def _obtener_redaccion(evento, paquete, con_borrador, usar_llm, usar_artefactos):
     """Devuelve (redaccion, modelo, metodo).
     1. Artefacto versionado (artefactos/redacciones.json) si la evidencia no cambió.
@@ -284,22 +368,21 @@ def generar_ficha(evento, usar_llm=True, usar_artefactos=True):
 
     if redaccion is None:
         ficha.update(que_se_reporta=None, afirmaciones=[], citas=[], que_falta_verificar=[],
-                     accion_recomendada=("Investigar: no hay evidencia utilizable." if not paquete else None),
+                     accion_recomendada="Investigar: no hay evidencia utilizable.",
                      preguntas_investigacion=[], borrador=None,
-                     alertas_validacion={"afirmaciones_descartadas": [], "cifras_no_respaldadas": [],
-                                         "citas_invalidas_borrador": [], "limites": []})
+                     validacion={"bloqueada": False, "motivos_bloqueo": [], "afirmaciones_descartadas": [],
+                                 "advertencias": []})
         return ficha
 
-    # ---- Validación de todo lo que devolvió el LLM ----
-    validas, descartadas = seguridad.validar_afirmaciones(redaccion["afirmaciones"], paquete)
     borrador = redaccion.get("borrador") if con_borrador else None
+    if borrador and evento.get("aviso_alcance") and not borrador["brief"].startswith(evento["aviso_alcance"]):
+        borrador["brief"] = f"{evento['aviso_alcance']} {borrador['brief']}"
 
-    textos_borrador = ""
-    if borrador:
-        if evento.get("aviso_alcance") and not borrador["brief"].startswith(evento["aviso_alcance"]):
-            borrador["brief"] = f"{evento['aviso_alcance']} {borrador['brief']}"
-        textos_borrador = " ".join([borrador["titulo_propuesto"], borrador["brief"],
-                                    borrador["guion_45_60s"], borrador["copy_digital"]])
+    validas, validacion = validar_redaccion(evento, paquete, redaccion, borrador)
+    if validacion["bloqueada"]:
+        ficha["estado_revision"] = "requiere evidencia"
+        ficha["avisos"].append("Ficha bloqueada por el validador: hay contenido sin respaldo en la evidencia "
+                               "(ver validacion.motivos_bloqueo).")
 
     citas = []
     for a in validas:
@@ -315,13 +398,7 @@ def generar_ficha(evento, usar_llm=True, usar_artefactos=True):
         accion_recomendada=redaccion["accion_recomendada"],
         preguntas_investigacion=redaccion["preguntas_investigacion"],
         borrador=borrador,
-        alertas_validacion={
-            "afirmaciones_descartadas": descartadas,
-            "cifras_no_respaldadas": seguridad.cifras_no_respaldadas(
-                textos_borrador + " " + " ".join(a["texto"] for a in validas), paquete),
-            "citas_invalidas_borrador": seguridad.citas_en_texto_invalidas(textos_borrador, paquete),
-            "limites": _problemas_de_limites(borrador),
-        },
+        validacion=validacion,
     )
     return ficha
 

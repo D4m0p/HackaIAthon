@@ -55,9 +55,9 @@ def test_sin_llm_la_ficha_se_arma_por_plantilla_sin_inventar(eventos):
         assert ficha["generado"]["metodo"] == "plantilla", id_evento
         assert ficha["borrador"] is not None, id_evento
         assert ficha["borrador"]["brief"].startswith("Basado únicamente en titular/metadatos."), id_evento
-        av = ficha["alertas_validacion"]
-        assert av["afirmaciones_descartadas"] == [] and av["citas_invalidas_borrador"] == [], id_evento
-        assert av["cifras_no_respaldadas"] == [], id_evento
+        # La plantilla solo repite lo citable: nunca debe quedar bloqueada
+        assert ficha["validacion"]["bloqueada"] is False, (id_evento, ficha["validacion"]["motivos_bloqueo"])
+        assert ficha["validacion"]["afirmaciones_descartadas"] == [], id_evento
         assert len(ficha["preguntas_investigacion"]) == 3
 
 
@@ -84,11 +84,16 @@ def test_T07_titular_con_inyeccion_no_llega_al_llm(eventos):
 # ---------------------------------------------------------------------------
 # Con LLM
 # ---------------------------------------------------------------------------
-def test_T09_todas_las_afirmaciones_tienen_cita_valida(fichas_llm):
+def test_T09_afirmaciones_citadas_y_bloqueo_si_falta_respaldo(fichas_llm):
     for ficha in fichas_llm.values():
         assert ficha["afirmaciones"], ficha["id_caso"]
-        assert ficha["alertas_validacion"]["afirmaciones_descartadas"] == [], ficha["id_caso"]
-        assert ficha["alertas_validacion"]["citas_invalidas_borrador"] == [], ficha["id_caso"]
+        # Las afirmaciones que quedan en la ficha tienen todas una cita válida
+        assert all(a["citas"] for a in ficha["afirmaciones"]), ficha["id_caso"]
+        # Garantía del sistema: si el validador encuentra algo sin respaldo, la ficha NO
+        # puede quedar como "nuevo"; pasa a "requiere evidencia" con sus motivos
+        if ficha["validacion"]["bloqueada"]:
+            assert ficha["estado_revision"] == "requiere evidencia", ficha["id_caso"]
+            assert ficha["validacion"]["motivos_bloqueo"], ficha["id_caso"]
 
 
 def test_T09_paquete_editorial_completo_y_dentro_de_limites(fichas_llm):
@@ -97,9 +102,8 @@ def test_T09_paquete_editorial_completo_y_dentro_de_limites(fichas_llm):
     assert all(b[k] for k in ["titulo_propuesto", "enfoque_interes_publico", "brief",
                               "guion_45_60s", "copy_digital"])
     assert len(ficha["preguntas_investigacion"]) == 3
-    assert ficha["alertas_validacion"]["limites"] == []
+    assert not any("palabras" in a for a in ficha["validacion"]["advertencias"])
     assert b["brief"].startswith("Basado únicamente en titular/metadatos.")
-    assert ficha["alertas_validacion"]["cifras_no_respaldadas"] == []
 
 
 def test_T05_contradiccion_muestra_ambas_versiones(fichas_llm):
