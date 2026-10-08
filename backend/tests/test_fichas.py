@@ -30,11 +30,12 @@ def eventos():
 
 @pytest.fixture(scope="module")
 def fichas_llm(eventos):
-    if not os.environ.get("GEMINI_API_KEY"):
-        pytest.skip("sin GEMINI_API_KEY")
-    fichas = {i: generar_ficha(eventos[i]) for i in ["EV-SIN-004", "EV-SIN-018", "EV-SIN-010"]}
+    # Por defecto NO se llama a Gemini (cuida la cuota gratuita): se prueban las
+    # redacciones ya guardadas en artefactos/. Con PROBAR_LLM=1 se generan las que falten.
+    llamar = os.environ.get("PROBAR_LLM") == "1"
+    fichas = {i: generar_ficha(eventos[i], usar_llm=llamar) for i in ["EV-SIN-004", "EV-SIN-018", "EV-SIN-010"]}
     if any(f["generado"]["metodo"] != "llm" for f in fichas.values()):
-        pytest.skip("Gemini no respondió (sin conexión o saturado)")
+        pytest.skip("faltan redacciones del LLM en artefactos/; correr con PROBAR_LLM=1")
     return fichas
 
 

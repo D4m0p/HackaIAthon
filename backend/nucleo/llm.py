@@ -26,6 +26,8 @@ RUTA_LOG = CARPETA_BACKEND / config.CARPETA_CACHE / "llm_log.jsonl"
 load_dotenv(CARPETA_BACKEND / ".env")
 
 _cliente = None
+# Modelos que respondieron 429 (cuota agotada) durante esta ejecución
+_modelos_sin_cuota = set()
 
 
 class LLMNoDisponible(Exception):
@@ -96,7 +98,10 @@ def generar(instrucciones, contenido, esquema, modelos=config.MODELOS_RAPIDOS, t
 
     errores = []
     for ronda in range(config.REINTENTOS_LLM):
-        for modelo in modelos:
+        disponibles = [m for m in modelos if m not in _modelos_sin_cuota]
+        if not disponibles:
+            break  # todos sin cuota: esperar no sirve, se avisa de inmediato
+        for modelo in disponibles:
             inicio = time.time()
             try:
                 respuesta = cliente.models.generate_content(model=modelo, contents=contenido, config=ajustes)
@@ -105,6 +110,10 @@ def generar(instrucciones, contenido, esquema, modelos=config.MODELOS_RAPIDOS, t
                 errores.append(f"{modelo}: {_codigo_error(e)}")
                 _registrar({"tarea": tarea, "modelo": modelo, "desde_cache": False, "fallo": _codigo_error(e),
                             "segundos": round(time.time() - inicio, 2)})
+                if _codigo_error(e) == "429":
+                    # La cuota es por modelo: este no se vuelve a intentar en esta ejecución
+                    # (reintentarlo solo gasta llamadas), pero los otros modelos sí
+                    _modelos_sin_cuota.add(modelo)
                 continue
 
             uso = respuesta.usage_metadata
@@ -122,7 +131,9 @@ def generar(instrucciones, contenido, esquema, modelos=config.MODELOS_RAPIDOS, t
                                              ensure_ascii=False, indent=2), encoding="utf-8")
             return resultado, modelo
 
-        if ronda < config.REINTENTOS_LLM - 1:
+        if ronda < config.REINTENTOS_LLM - 1 and any(m not in _modelos_sin_cuota for m in modelos):
             time.sleep(2 ** (ronda + 1))
 
+    if all(m in _modelos_sin_cuota for m in modelos):
+        raise LLMNoDisponible("Cuota agotada en todos los modelos (429): " + ", ".join(modelos))
     raise LLMNoDisponible("Ningún modelo respondió: " + "; ".join(errores))

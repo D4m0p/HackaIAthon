@@ -120,7 +120,7 @@ cd backend
 python -m pytest
 ```
 
-Desde la raíz, `python -m pytest` corre las pruebas del paquete de datos y las de la interfaz, que solo usan la biblioteca estándar (ver `pytest.ini`); las del núcleo se corren aquí. Las pruebas que llaman a Gemini se saltan solas si no hay clave o conexión.
+Desde la raíz, `python -m pytest` corre las pruebas del paquete de datos y las de la interfaz, que solo usan la biblioteca estándar (ver `pytest.ini`); las del núcleo se corren aquí. Para cuidar la cuota gratuita de los LLM, las pruebas **no llaman al LLM por defecto**: revisan los resultados ya guardados en `artefactos/`. Con `PROBAR_LLM=1 python -m pytest` se generan los que falten.
 
 | Prueba | Qué comprueba | Archivo |
 |---|---|---|

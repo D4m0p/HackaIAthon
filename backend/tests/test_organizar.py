@@ -23,10 +23,12 @@ def eventos():
 
 @pytest.fixture(scope="module")
 def temas_llm():
-    if not os.environ.get("GEMINI_API_KEY"):
-        pytest.skip("sin GEMINI_API_KEY")
+    # Por defecto NO se llama a Gemini (cuida la cuota gratuita): se prueban los temas
+    # del LLM ya guardados en artefactos/. Con PROBAR_LLM=1 se completan los que falten.
     noticias = cargar_noticias(RUTA)
-    asignar_temas(noticias, embeber(n["titulo"] for n in noticias), usar_llm=True)
+    asignar_temas(noticias, embeber(n["titulo"] for n in noticias), usar_llm=os.environ.get("PROBAR_LLM") == "1")
+    if any(n["metodo_tema"] == "respaldo_embeddings" for n in noticias):
+        pytest.skip("faltan temas del LLM en artefactos/; correr con PROBAR_LLM=1")
     return {n["id_noticia"]: n for n in noticias}
 
 
