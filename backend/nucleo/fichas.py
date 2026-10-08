@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 
 from nucleo import artefactos, config, seguridad
 from nucleo.llm import LLMNoDisponible, generar
+from nucleo.plantilla import redaccion_por_plantilla
 
 TIPOS_AFIRMACION = ["hecho", "declaracion", "inferencia", "hipotesis"]
 
@@ -274,8 +275,12 @@ def generar_ficha(evento, usar_llm=True, usar_artefactos=True):
     else:
         redaccion, modelo, metodo = _obtener_redaccion(evento, paquete, con_borrador, usar_llm, usar_artefactos)
         ficha["generado"].update(metodo=metodo, modelo=modelo)
-        if metodo == "sin_conexion":
-            ficha["avisos"].append("Redacción no disponible sin conexión: se muestran solo los datos verificables.")
+        if redaccion is None:
+            # Sin LLM (sin conexión o desactivado): ficha por plantilla, sin inventar nada
+            redaccion = redaccion_por_plantilla(evento, paquete, con_borrador)
+            ficha["generado"].update(metodo="plantilla", motivo_plantilla=metodo)
+            ficha["avisos"].append("Ficha armada por plantilla (sin LLM): solo repite lo que dicen las fuentes, "
+                                   "sin interpretación.")
 
     if redaccion is None:
         ficha.update(que_se_reporta=None, afirmaciones=[], citas=[], que_falta_verificar=[],

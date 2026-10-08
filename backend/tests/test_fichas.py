@@ -46,14 +46,31 @@ def test_ficha_sin_llm_tiene_datos_verificables(eventos):
     assert ficha["id_caso"] == "CASO-EV-SIN-001" and ficha["modalidad"] == "editorial_tvn"
     assert ficha["fuentes_independientes"] == 2
     assert "cuentan como 1 procedencia" in ficha["quien_lo_reporta"][0]
-    assert ficha["borrador"] is None and ficha["afirmaciones"] == []
     assert "Basado únicamente en titular/metadatos." in ficha["avisos"]
+
+
+def test_sin_llm_la_ficha_se_arma_por_plantilla_sin_inventar(eventos):
+    for id_evento in ["EV-SIN-001", "EV-SIN-004", "EV-SIN-006", "EV-SIN-018"]:
+        ficha = generar_ficha(eventos[id_evento], usar_llm=False, usar_artefactos=False)
+        assert ficha["generado"]["metodo"] == "plantilla", id_evento
+        assert ficha["borrador"] is not None, id_evento
+        assert ficha["borrador"]["brief"].startswith("Basado únicamente en titular/metadatos."), id_evento
+        av = ficha["alertas_validacion"]
+        assert av["afirmaciones_descartadas"] == [] and av["citas_invalidas_borrador"] == [], id_evento
+        assert av["cifras_no_respaldadas"] == [], id_evento
+        assert len(ficha["preguntas_investigacion"]) == 3
+
+
+def test_plantilla_con_contradiccion_muestra_ambas_cifras(eventos):
+    brief = generar_ficha(eventos["EV-SIN-018"], usar_llm=False, usar_artefactos=False)["borrador"]["brief"]
+    assert "9.5%" in brief and "7.4%" in brief
 
 
 def test_caso_insuficiente_requiere_evidencia(eventos):
     ficha = generar_ficha(eventos["EV-SIN-010"], usar_llm=False, usar_artefactos=False)
     assert ficha["estado_evidencia"] == "insuficiente"
     assert ficha["estado_revision"] == "requiere evidencia"
+    assert ficha["borrador"] is None and len(ficha["preguntas_investigacion"]) == 3
 
 
 def test_T07_titular_con_inyeccion_no_llega_al_llm(eventos):
