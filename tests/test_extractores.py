@@ -5,7 +5,8 @@ from datetime import datetime, timezone
 
 from ingesta import banco_mundial, gdelt, tvn, usgs
 from ingesta.comun import a_hora_panama, normalizar_url
-from ingesta.snapshot import _fusionar
+from ingesta.archivos import escribir_json
+from ingesta.snapshot import _fusionar, _retirar_excluidas
 
 EXTRACCION = "2026-10-08T18:00:00Z"
 
@@ -133,3 +134,17 @@ def test_utilidades_de_url_y_hora():
     assert normalizar_url("HTTPS://Medio.com/Nota/?utm_source=x&id=5#seccion") == "https://medio.com/Nota?id=5"
     assert a_hora_panama("2026-10-08T18:00:00Z") == "2026-10-08 13:00 (hora de Panamá)"
     assert a_hora_panama("no es fecha") is None
+
+
+def test_las_noticias_excluidas_se_retiran_y_quedan_registradas(tmp_path):
+    primera, segunda = tvn.interpretar(RSS, EXTRACCION)
+    escribir_json(tmp_path / "exclusiones.json", [
+        {"id_noticia": segunda["id_noticia"], "motivo": "Sin relación con Panamá."},
+        {"id_noticia": "N-000000000000", "motivo": "No está en esta extracción."},
+    ])
+
+    restantes, retiradas = _retirar_excluidas(tmp_path, [primera, segunda])
+
+    assert restantes == [primera]
+    assert retiradas == [{"id_noticia": segunda["id_noticia"], "motivo": "Sin relación con Panamá."}]
+    assert _retirar_excluidas(tmp_path / "sin_archivo", [primera]) == ([primera], [])

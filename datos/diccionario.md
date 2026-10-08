@@ -75,5 +75,6 @@ Cuadrícula completa de 6 países × 6 indicadores × 15 años (2010–2024) = 5
 | `manifest.json` | Versión, fecha de corte, consultas ejecutadas, cantidad de registros, condiciones de uso, SHA-256 y transformaciones. |
 | `fuentes.json` | Catálogo de las cuatro fuentes, con los campos de la página "Catálogo de datos" de Notion. |
 | `reporte_calidad.md` / `.json` | Qué se leyó, qué se apartó y por qué; nulos por campo y cobertura efectiva. |
+| `exclusiones.json` | Noticias retiradas por decisión del equipo, con ID y motivo. El manifest las cuenta en `registros_excluidos`. |
 | `processed/rechazados.json` | Registros que no pasaron la validación, con su motivo. |
 | `raw/` | Respuestas originales de las fuentes y `extraccion.json`, el registro de cada descarga. El RSS de TVN no se incluye porque trae extractos e imágenes; su huella y su URL sí quedan registradas. |

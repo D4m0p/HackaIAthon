@@ -6,25 +6,25 @@ Fecha de corte (UTC): 2026-10-08T18:41:06Z
 
 | Archivo | Leídas | Válidas | Apartadas |
 |---|---|---|---|
-| noticias.csv | 442 | 442 | 0 |
+| noticias.csv | 504 | 504 | 0 |
 | indicadores.csv | 540 | 540 | 0 |
 | eventos.geojson | 82 | 82 | 0 |
 
 ## Noticias
 
-- Registros únicos: 442 (meta 200, mínimo operativo 100).
+- Registros únicos: 504 (meta 200, mínimo operativo 100).
 - De TVN: 154 (mínimo 20).
-- Medios distintos: 66.
-- Duplicados por URL fusionados: 12.
+- Medios distintos: 106.
+- Duplicados por URL fusionados: 24.
 - Cobertura efectiva de detección: 2026-09-11T22:45:00Z a 2026-10-08T18:41:07Z.
-- Sin fecha de publicación conocida: 263 (GDELT solo informa la detección; no se inventa la publicación).
+- Sin fecha de publicación conocida: 310 (GDELT solo informa la detección; no se inventa la publicación).
 - Marcadas como recirculadas: 100.
 
 ### Por origen
 
 | Concepto | Cantidad |
 |---|---|
-| gdelt_doc | 288 |
+| gdelt_doc | 350 |
 | tvn_rss | 154 |
 
 ### Por tema de la consulta de extracción
@@ -33,20 +33,22 @@ Fecha de corte (UTC): 2026-10-08T18:41:06Z
 |---|---|
 | general | 225 |
 | sin dato | 154 |
-| economia | 63 |
+| economia | 125 |
 
 ### Por idioma
 
 | Concepto | Cantidad |
 |---|---|
-| es | 401 |
-| en | 24 |
-| greek | 10 |
-| pt | 2 |
-| chinese | 2 |
-| thai | 1 |
-| arabic | 1 |
-| fr | 1 |
+| es | 435 |
+| en | 43 |
+| el | 10 |
+| zh | 7 |
+| pt | 3 |
+| fr | 2 |
+| de | 1 |
+| ja | 1 |
+| th | 1 |
+| ar | 1 |
 
 ### Motivos de rechazo
 
@@ -56,11 +58,11 @@ Ninguno.
 
 | Concepto | Cantidad |
 |---|---|
-| fecha_publicacion | 263 |
+| fecha_publicacion | 310 |
 | tema | 154 |
-| palabras_clave | 288 |
-| seccion | 288 |
-| pais_medio | 157 |
+| palabras_clave | 350 |
+| seccion | 350 |
+| pais_medio | 159 |
 
 ## Indicadores
 
@@ -87,8 +89,7 @@ Ninguno.
 
 ## Incidencias
 
-- Descarga fallida: raw/gdelt/economia_20260918_20260928.json (No se pudo descargar https://api.gdeltproject.org/api/v2/doc/doc?query=panama+%28economy+OR+inflation+OR+employment+OR+investment+OR+econom%C3%ADa+OR+inflaci%C3%B3n+OR+empleo%29&mode=ArtList&format=json&sort=DateDesc&maxrecords=75&startdatetime=20260918184106&enddatetime=20260928184106: HTTP Error 429: Too Many Requests)
-- Descarga fallida: raw/gdelt/economia_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)
+- Descarga fallida: raw/gdelt/economia_20260928_20261008.json (No se pudo descargar https://api.gdeltproject.org/api/v2/doc/doc?query=panama+%28economy+OR+inflation+OR+employment+OR+investment+OR+econom%C3%ADa+OR+inflaci%C3%B3n+OR+empleo%29&mode=ArtList&format=json&sort=DateDesc&maxrecords=75&startdatetime=20260928184106&enddatetime=20261008184106: HTTP Error 429: Too Many Requests)
 - Descarga fallida: raw/gdelt/logistica_20260908_20260918.json (pendiente: GDELT limitó las consultas en esta ejecución)
 - Descarga fallida: raw/gdelt/logistica_20260918_20260928.json (pendiente: GDELT limitó las consultas en esta ejecución)
 - Descarga fallida: raw/gdelt/logistica_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)

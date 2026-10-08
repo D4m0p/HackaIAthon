@@ -1,0 +1,9 @@
+[
+  {
+    "id_noticia": "N-ec4c2dd5e8dd",
+    "motivo": "Sin relación con Panamá ni con los temas del reto. Retirada por decisión del equipo.",
+    "fecha_decision": "2026-10-08",
+    "origen": "gdelt_doc",
+    "respuesta_cruda": "raw/gdelt/economia_20260918_20260928.json"
+  }
+]

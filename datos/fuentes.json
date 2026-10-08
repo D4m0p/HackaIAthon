@@ -14,13 +14,13 @@
     "licencia_condiciones": "Feed RSS público de TVN, sin licencia abierta declarada. Se usan solo titular, URL, fecha y palabras clave. No se redistribuyen descripciones, cuerpos, imágenes ni videos.",
     "transformaciones": "Fechas a UTC, URL normalizada, ID estable. Se descartan descripción e imágenes.",
     "archivo": "processed/noticias.csv",
-    "sha256_snapshot": "117395f3c0e26bddc5b5cec3b57a625c661e459c4e86a792d5b3c5c098ddb047"
+    "sha256_snapshot": "44506c24d025194347c38cea806b20e15dc9c260f381641aa4571e0b69f2782a"
   },
   {
     "fuente": "GDELT · DOC 2.0 API (ArtList)",
     "url": "https://api.gdeltproject.org/api/v2/doc/doc",
-    "fecha_extraccion": "2026-10-08T18:44:42Z",
-    "cobertura": "288 titulares únicos en 4 consultas sobre los 30 días previos al corte; detección de 2026-09-11T22:45:00Z a 2026-10-08T18:41:07Z.",
+    "fecha_extraccion": "2026-10-08T19:04:40Z",
+    "cobertura": "350 titulares únicos en 5 consultas sobre los 30 días previos al corte; detección de 2026-09-11T22:45:00Z a 2026-10-08T18:41:07Z.",
     "campos": [
       "titulo",
       "url",
@@ -33,7 +33,7 @@
     "licencia_condiciones": "GDELT DOC 2.0, de uso abierto citando a The GDELT Project. No transfiere derechos sobre los artículos enlazados: se conservan solo titular y metadatos.",
     "transformaciones": "'seendate' a fecha_deteccion en UTC, deduplicación por URL, limpieza de espacios del titular.",
     "archivo": "processed/noticias.csv",
-    "sha256_snapshot": "117395f3c0e26bddc5b5cec3b57a625c661e459c4e86a792d5b3c5c098ddb047"
+    "sha256_snapshot": "44506c24d025194347c38cea806b20e15dc9c260f381641aa4571e0b69f2782a"
   },
   {
     "fuente": "Banco Mundial · Indicators API v2",

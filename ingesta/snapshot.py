@@ -26,6 +26,7 @@ from .validacion import (
 )
 
 REGISTRO = "raw/extraccion.json"
+EXCLUSIONES = "exclusiones.json"
 ARCHIVO_TVN = "tvn_rss.xml"
 PAUSA_GDELT = 20.0  # GDELT pide espaciar las consultas
 
@@ -53,6 +54,7 @@ TRANSFORMACIONES = [
     "Indicadores: cuadrícula completa país × indicador × año; lo que la API no entrega queda nulo, nunca cero.",
     "Sismos: tiempos de milisegundos a ISO 8601 UTC; longitud, latitud y profundidad separadas de la geometría.",
     "Registros que no pasan la validación: apartados en processed/rechazados.json con su motivo.",
+    "Registros retirados por decisión del equipo: listados por ID y motivo en exclusiones.json.",
 ]
 
 
@@ -183,6 +185,20 @@ def _fusionar(noticias: list[dict]) -> tuple[list[dict], int]:
     return ordenadas + sin_id, duplicados
 
 
+def _retirar_excluidas(directorio: Path, noticias: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Quita las noticias listadas en datos/exclusiones.json y devuelve cuáles se retiraron."""
+    ruta = directorio / EXCLUSIONES
+    if not ruta.exists():
+        return noticias, []
+    motivos = {exclusion["id_noticia"]: exclusion["motivo"] for exclusion in leer_json(ruta)}
+    presentes = {noticia.get("id_noticia") for noticia in noticias}
+    retiradas = [
+        {"id_noticia": identificador, "motivo": motivo}
+        for identificador, motivo in motivos.items() if identificador in presentes
+    ]
+    return [noticia for noticia in noticias if noticia.get("id_noticia") not in motivos], retiradas
+
+
 def procesar(directorio: Path) -> dict:
     """Convierte datos/raw en datos/processed, con reporte de calidad, catálogo y manifest."""
     registro = leer_json(directorio / REGISTRO)
@@ -214,6 +230,7 @@ def procesar(directorio: Path) -> dict:
             incidencias.append(f"No se pudo interpretar {descarga['archivo']}: {error}")
 
     noticias, duplicados = _fusionar(noticias)
+    noticias, retiradas = _retirar_excluidas(directorio, noticias)
     marcar_recirculadas(noticias)
     momento_corte = leer_iso(corte)
     resultado_noticias = validar_noticias(noticias, ahora=momento_corte)
@@ -250,7 +267,10 @@ def procesar(directorio: Path) -> dict:
     }
     manifest = manifiesto.construir(
         directorio, corte, archivos, registro["descargas"], TRANSFORMACIONES,
-        {nombre: len(filas) for nombre, filas in rechazados.items()},
+        {
+            "por_validacion": {nombre: len(filas) for nombre, filas in rechazados.items()},
+            "por_decision_del_equipo": retiradas,
+        },
     )
     escribir_json(directorio / "fuentes.json", _catalogo(registro, reporte, manifest))
     return reporte
