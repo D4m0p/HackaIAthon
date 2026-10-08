@@ -38,7 +38,7 @@ def obtener_modelo():
 
 def _ruta_cache():
     nombre = config.MODELO_EMBEDDINGS.replace("/", "_")
-    return Path(__file__).parent.parent / config.CARPETA_CACHE / f"embeddings_{nombre}.pkl"
+    return Path(__file__).parent.parent / config.CARPETA_ARTEFACTOS / f"embeddings_{nombre}.pkl"
 
 
 def _cargar_cache():
@@ -111,7 +111,7 @@ Reglas:
 
 
 def clasificar_temas_llm(noticias):
-    """Clasifica los titulares con Gemini, en lotes. Devuelve {id_noticia: (tema, motivo)}.
+    """Clasifica los titulares con Gemini, en lotes. Devuelve {id_noticia: (tema, motivo, modelo)}.
     Los IDs que el LLM no devuelva bien quedan fuera (se usará el respaldo)."""
     from nucleo.llm import generar
 
@@ -140,12 +140,13 @@ def clasificar_temas_llm(noticias):
         # Cada titular va delimitado para que quede claro que es dato, no instrucción
         contenido = "\n".join(f'<<TITULAR id="{n["id_noticia"]}">>{n["titulo"]}<<FIN>>' for n in lote)
 
-        respuesta, _ = generar(instrucciones, contenido, esquema, config.MODELOS_RAPIDOS, tarea="clasificar_temas")
+        respuesta, modelo = generar(instrucciones, contenido, esquema, config.MODELOS_RAPIDOS,
+                                    tarea="clasificar_temas")
 
         for c in respuesta.get("clasificaciones", []):
             # Validación: solo IDs que mandamos y temas de la lista
             if c.get("id") in ids_lote and c.get("tema") in temas_validos:
-                resultado[c["id"]] = (c["tema"], c.get("motivo", ""))
+                resultado[c["id"]] = (c["tema"], c.get("motivo", ""), modelo)
     return resultado
 
 
@@ -262,34 +263,51 @@ def _tema_del_evento(miembros):
 # ---------------------------------------------------------------------------
 # Función principal de la etapa
 # ---------------------------------------------------------------------------
-def asignar_temas(noticias, vectores, usar_llm=True):
-    """Tema de cada noticia. Primero intenta con Gemini; si no hay conexión o
-    el LLM no devolvió alguna noticia, usa el clasificador por embeddings.
-    Cada noticia queda marcada con el método usado."""
+def asignar_temas(noticias, vectores, usar_llm=True, usar_artefactos=True):
+    """Tema de cada noticia, en este orden:
+    1. Artefacto versionado (artefactos/temas.json), si el titular no cambió.
+       Así el resultado es idéntico con y sin internet.
+    2. Gemini, solo para los titulares que falten; el resultado se guarda.
+    3. Respaldo por embeddings, si no hay conexión o el LLM no respondió.
+    Cada noticia queda marcada con el método y el modelo usados."""
+    from nucleo import artefactos
     from nucleo.llm import LLMNoDisponible
 
-    por_llm = {}
-    if usar_llm:
+    guardados = artefactos.cargar("temas.json") if usar_artefactos else {}
+
+    def vigente(n):
+        g = guardados.get(n["id_noticia"])
+        return g if g and g["hash_titulo"] == artefactos.huella(n["titulo"]) else None
+
+    pendientes = [n for n in noticias if not vigente(n)]
+    if usar_llm and pendientes:
         try:
-            por_llm = clasificar_temas_llm(noticias)
+            nuevos = clasificar_temas_llm(pendientes)
         except LLMNoDisponible:
-            por_llm = {}
+            nuevos = {}
+        for n in pendientes:
+            if n["id_noticia"] in nuevos:
+                tema, motivo, modelo = nuevos[n["id_noticia"]]
+                guardados[n["id_noticia"]] = {"hash_titulo": artefactos.huella(n["titulo"]), "tema": tema,
+                                              "motivo": motivo, "modelo": modelo,
+                                              "fecha_utc": artefactos.ahora_utc()}
+        if nuevos and usar_artefactos:
+            artefactos.guardar("temas.json", guardados)
 
     respaldo = clasificar_temas_embeddings(vectores)
     for n, (tema_emb, sim_emb) in zip(noticias, respaldo):
-        if n["id_noticia"] in por_llm:
-            n["tema_asignado"], n["motivo_tema"] = por_llm[n["id_noticia"]]
-            n["metodo_tema"] = "llm"
+        g = vigente(n)
+        if g:
+            n.update(tema_asignado=g["tema"], motivo_tema=g["motivo"], metodo_tema="llm", modelo_tema=g["modelo"])
         else:
-            n["tema_asignado"] = tema_emb
-            n["motivo_tema"] = f"parecido {sim_emb} con frases de ejemplo del tema"
-            n["metodo_tema"] = "respaldo_embeddings"
+            n.update(tema_asignado=tema_emb, motivo_tema=f"parecido {sim_emb} con frases de ejemplo del tema",
+                     metodo_tema="respaldo_embeddings", modelo_tema=config.MODELO_EMBEDDINGS)
 
 
-def organizar(noticias, usar_llm=True):
+def organizar(noticias, usar_llm=True, usar_artefactos=True):
     """Recibe la lista de noticias y devuelve la lista de eventos."""
     vectores = embeber(n["titulo"] for n in noticias)
-    asignar_temas(noticias, vectores, usar_llm)
+    asignar_temas(noticias, vectores, usar_llm, usar_artefactos)
 
     grupos, sim = agrupar_eventos(noticias, vectores)
 
@@ -315,6 +333,10 @@ def organizar(noticias, usar_llm=True):
                 "fecha_publicacion": m.get("fecha_publicacion") or None,
                 "fecha_deteccion": m.get("fecha_deteccion") or None,
                 "alcance_texto": m.get("alcance_texto") or "titular",
+                "tema": m["tema_asignado"],
+                "metodo_tema": m["metodo_tema"],
+                "motivo_tema": m["motivo_tema"],
+                "modelo_tema": m["modelo_tema"],
             } for m in sorted(miembros, key=lambda m: m["id_noticia"])],
             "medios": sorted({m["medio"] for m in miembros}),
             "n_noticias": len(miembros),
@@ -322,6 +344,8 @@ def organizar(noticias, usar_llm=True):
             "n_fuentes_independientes": len(procedencias),
             "fecha_primera": min(fechas).isoformat() if fechas else None,
             "fecha_ultima": max(fechas).isoformat() if fechas else None,
+            # True si algún tema lo puso el respaldo (sin LLM): la persona revisora debe confirmarlo
+            "tema_por_respaldo": any(m["metodo_tema"] != "llm" for m in miembros),
         })
 
     eventos.sort(key=lambda e: e["id_evento"])

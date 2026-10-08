@@ -1,0 +1,480 @@
+{
+ "EV-SIN-001": {
+  "fecha_utc": "2026-10-08T18:38:47.414006+00:00",
+  "hash_evidencia": "d01934115fada1e9",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Contactar a la Autoridad del Canal de Panamá para obtener el comunicado oficial, precisar las medidas de calado y consultar el impacto estimado en el comercio.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-001"
+      }
+     ],
+     "texto": "Medio A reportó que el Canal de Panamá anunció nuevas restricciones de calado debido a la baja del lago Gatún.",
+     "tipo": "declaracion"
+    },
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-002"
+      }
+     ],
+     "texto": "Medio B también reportó el anuncio de nuevas restricciones de calado en el Canal de Panamá por la baja del lago Gatún.",
+     "tipo": "declaracion"
+    },
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-003"
+      }
+     ],
+     "texto": "Según Medio C, los buques enfrentan límites de carga en el Canal ante el bajo nivel del agua.",
+     "tipo": "declaracion"
+    }
+   ],
+   "borrador": {
+    "brief": "Medios de comunicación reportan posibles nuevas restricciones en la vía interoceánica. Según publicaciones de Medio A [SIN-001:titulo] y Medio B [SIN-002:titulo], el Canal de Panamá anunció restricciones de calado debido a la baja en el nivel del lago Gatún. Asimismo, Medio C reportó que los buques enfrentan límites de carga ante el bajo nivel del agua [SIN-003:titulo]. Al tratarse de reportes preliminares basados únicamente en titulares de prensa, se requiere verificar los detalles técnicos de estas medidas, sus fechas de implementación y obtener una confirmación oficial por parte de la Autoridad del Canal de Panamá para determinar el impacto real en el tránsito marítimo.",
+    "copy_digital": "Medios reportan que el Canal de Panamá anunció restricciones de calado por la baja del lago Gatún [SIN-001:titulo] [SIN-002:titulo]. Según reportes, los buques enfrentan límites de carga por el bajo nivel del agua [SIN-003:titulo]. Falta verificar los detalles oficiales.",
+    "enfoque_interes_publico": "El impacto de las condiciones climáticas en la operación del Canal de Panamá, lo cual afecta el comercio global y los ingresos del Estado panameño.",
+    "guion_45_60s": "Medios de comunicación reportan nuevas medidas en la vía interoceánica. De acuerdo con publicaciones de Medio A [SIN-001:titulo] y Medio B [SIN-002:titulo], el Canal de Panamá anunció nuevas restricciones de calado debido a la baja en el nivel del lago Gatún. Por su parte, Medio C señala que los buques ya enfrentan límites de carga ante el bajo nivel del agua en la ruta [SIN-003:titulo]. Hasta el momento, la información disponible se limita a estos reportes de prensa, por lo que queda pendiente verificar los detalles específicos de las restricciones, las fechas de aplicación y obtener un pronunciamiento oficial de la Autoridad del Canal de Panamá sobre el impacto de esta situación en el comercio marítimo internacional.",
+    "titulo_propuesto": "Reportan nuevas restricciones de calado en el Canal de Panamá por bajo nivel del lago Gatún",
+    "verificaciones_pendientes": [
+     "Confirmar el anuncio oficial por parte de la Autoridad del Canal de Panamá.",
+     "Obtener los datos técnicos de las restricciones de calado y límites de carga.",
+     "Verificar los niveles actuales de agua en el lago Gatún."
+    ]
+   },
+   "preguntas_investigacion": [
+    "¿Cuáles son las especificaciones técnicas y los límites de calado exactos que se aplicarán a los buques?",
+    "¿A partir de qué fecha entran en vigor estas restricciones y cuál es el nivel actual del lago Gatún?",
+    "¿Cómo afectarán estas medidas al número de tránsitos diarios programados y a los ingresos estimados del Canal?"
+   ],
+   "que_falta_verificar": [
+    "Los detalles específicos de las restricciones de calado anunciadas (medidas exactas en pies).",
+    "La fecha de entrada en vigor de las nuevas restricciones.",
+    "El nivel actual de agua del lago Gatún y el impacto cuantitativo en el tránsito de buques.",
+    "Un pronunciamiento oficial directo de la Autoridad del Canal de Panamá (ACP)."
+   ],
+   "que_se_reporta": "Reportes de prensa sobre el anuncio de nuevas restricciones de calado y límites de carga para buques en el Canal de Panamá debido al bajo nivel de agua en el lago Gatún."
+  }
+ },
+ "EV-SIN-004": {
+  "fecha_utc": "2026-10-08T18:37:52.834910+00:00",
+  "hash_evidencia": "27fed9fa98ac293b",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Solicitar los informes oficiales de inflación de la Contraloría General de la República de Panamá para el mes de septiembre de 2025 y realizar un monitoreo de precios en supermercados locales para contrastar con los titulares de prensa.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-004"
+      }
+     ],
+     "texto": "Según el titular de Medio A publicado el 18 de septiembre de 2025, la inflación en Panamá sube y golpea el precio de la canasta básica.",
+     "tipo": "declaracion"
+    },
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-005"
+      }
+     ],
+     "texto": "Según el titular de Medio D publicado el 19 de septiembre de 2025, aumentan los precios de alimentos básicos en supermercados panameños.",
+     "tipo": "declaracion"
+    },
+    {
+     "citas": [
+      {
+       "campo": "valor",
+       "id_evidencia": "WB:PAN:FP.CPI.TOTL.ZG:2024"
+      }
+     ],
+     "texto": "Los datos históricos del Banco Mundial indican que la inflación anual de precios al consumidor en Panamá para el año 2024 fue de 0.7%.",
+     "tipo": "hecho"
+    },
+    {
+     "citas": [
+      {
+       "campo": "serie",
+       "id_evidencia": "WB:PAN:FP.CPI.TOTL.ZG:2024"
+      }
+     ],
+     "texto": "La serie histórica del Banco Mundial para Panamá registra una inflación anual de -1.6% en 2020, 1.6% en 2021, 2.9% en 2022 y 1.5% en 2023.",
+     "tipo": "hecho"
+    }
+   ],
+   "borrador": {
+    "brief": "Medios de comunicación locales han reportado incrementos en el costo de la vida en Panamá. El 18 de septiembre de 2025, Medio A tituló que la inflación sube y golpea el precio de la canasta básica [SIN-004:titulo]. Al día siguiente, Medio D publicó un titular señalando que aumentan los precios de alimentos básicos en supermercados panameños [SIN-005:titulo]. Debido a que solo se dispone de los titulares de estas noticias, no se conocen los detalles ni las cifras específicas de estos incrementos. Como contexto histórico, los datos anuales del Banco Mundial muestran que la inflación de precios al consumidor en Panamá cerró en 0.7% en 2024 [WB:PAN:FP.CPI.TOTL.ZG:2024:valor], tras haber registrado tasas de -1.6% en 2020, 1.6% en 2021, 2.9% en 2022 y 1.5% en 2023 [WB:PAN:FP.CPI.TOTL.ZG:2024:serie]. En comparación con otros países de la región en 2024, Costa Rica registró una inflación de -0.4% y República Dominicana de 3.3% [WB:PAN:FP.CPI.TOTL.ZG:2024:comparacion]. Queda pendiente verificar las cifras oficiales de inflación para el periodo actual de 2025.",
+    "copy_digital": "Medios locales reportan un alza en la inflación y en los precios de alimentos básicos en supermercados de Panamá [SIN-004:titulo] [SIN-005:titulo]. Aunque los datos históricos del Banco Mundial muestran que la inflación anual en 2024 fue de 0.7% [WB:PAN:FP.CPI.TOTL.ZG:2024:valor], los nuevos reportes de prensa de septiembre de 2025 alertan sobre un impacto directo en la canasta básica [SIN-004:titulo]. Falta verificar las cifras oficiales de este mes.",
+    "enfoque_interes_publico": "El acceso a la canasta básica y el costo de la vida son temas de alto impacto para el presupuesto de las familias panameñas, por lo que es crucial verificar con datos oficiales el alcance real de las alzas reportadas en los precios de los alimentos.",
+    "guion_45_60s": "Titulares de prensa local alertan sobre un incremento en el costo de la vida en Panamá. Según publicó Medio A, la inflación en el país sube y golpea directamente el precio de la canasta básica [SIN-004:titulo]. Por su parte, Medio D reportó un aumento en los precios de los alimentos básicos en los supermercados panameños [SIN-005:titulo]. Al tratarse de reportes preliminares basados en titulares, aún falta verificar las cifras exactas de estos incrementos para el mes de septiembre de 2025. Para ponerlo en perspectiva histórica, los datos anuales del Banco Mundial indican que Panamá cerró el año 2024 con una inflación de 0.7% [WB:PAN:FP.CPI.TOTL.ZG:2024:valor], una cifra menor al 1.5% registrado en 2023 y al 2.9% de 2022 [WB:PAN:FP.CPI.TOTL.ZG:2024:serie]. Es necesario contrastar estos reportes con los datos oficiales para confirmar el impacto real en el bolsillo de los panameños.",
+    "titulo_propuesto": "Titulares de prensa reportan alza en la inflación y precios de alimentos en Panamá",
+    "verificaciones_pendientes": [
+     "Obtener el reporte oficial del Índice de Precios al Consumidor (IPC) de Panamá para septiembre de 2025.",
+     "Verificar el contenido completo de las notas publicadas por Medio A y Medio D para conocer sus fuentes y datos.",
+     "Consultar a la Autoridad de Protección al Consumidor y Defensa de la Competencia (Acodeco) sobre el monitoreo de precios de la canasta básica."
+    ]
+   },
+   "preguntas_investigacion": [
+    "¿Cuál es la tasa de inflación oficial registrada en Panamá para el mes de septiembre de 2025 según el Instituto Nacional de Estadística y Censo?",
+    "¿Qué productos específicos de la canasta básica familiar han experimentado las mayores alzas de precios en los supermercados panameños?",
+    "¿Cómo se compara la tendencia inflacionaria de septiembre de 2025 con el dato histórico anual de 0.7% registrado por el Banco Mundial en 2024?"
+   ],
+   "que_falta_verificar": [
+    "Los datos específicos y cifras de inflación correspondientes a septiembre de 2025, ya que los artículos solo se conocen por sus titulares.",
+    "El porcentaje exacto de aumento en los precios de la canasta básica y de los alimentos en los supermercados panameños.",
+    "Las causas del incremento reportado por los medios locales en septiembre de 2025.",
+    "La postura oficial de las autoridades económicas de Panamá sobre estos incrementos de precios."
+   ],
+   "que_se_reporta": "Reportes de prensa sobre el aumento de la inflación y del precio de los alimentos básicos en Panamá en septiembre de 2025, en un contexto donde los datos históricos del Banco Mundial muestran que la inflación anual en 2024 fue del 0.7%."
+  }
+ },
+ "EV-SIN-006": {
+  "fecha_utc": "2026-10-08T18:37:52.832579+00:00",
+  "hash_evidencia": "3db6f8c944816e48",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Contactar a las autoridades de protección civil de Panamá para obtener un informe de daños y coordinar con corresponsales en Chiriquí y Bocas del Toro para verificar la situación en las comunidades.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "magnitud",
+       "id_evidencia": "USGS:sin-us-0001"
+      },
+      {
+       "campo": "lugar",
+       "id_evidencia": "USGS:sin-us-0001"
+      },
+      {
+       "campo": "profundidad_km",
+       "id_evidencia": "USGS:sin-us-0001"
+      },
+      {
+       "campo": "fecha_utc",
+       "id_evidencia": "USGS:sin-us-0001"
+      }
+     ],
+     "texto": "Un sismo de magnitud 4.8 ocurrió el 22 de septiembre de 2025 con epicentro a 32 km al sur de Boca Chica, Panamá, y a una profundidad de 15.2 km.",
+     "tipo": "hecho"
+    },
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-006"
+      }
+     ],
+     "texto": "Medio B reportó en su titular que el sismo de magnitud 4.8 sacudió la provincia de Chiriquí.",
+     "tipo": "declaracion"
+    },
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-007"
+      }
+     ],
+     "texto": "Medio C reportó en su titular que el temblor de 4.8 se sintió tanto en Chiriquí como en Bocas del Toro.",
+     "tipo": "declaracion"
+    }
+   ],
+   "borrador": {
+    "brief": "El 22 de septiembre de 2025, se registró un sismo de magnitud 4.8 con epicentro a 32 km al sur de Boca Chica, Panamá, y una profundidad de 15.2 km [USGS:sin-us-0001:magnitud]. De acuerdo con los reportes de los medios de comunicación locales, el evento sísmico fue perceptible en la región occidental del país. Específicamente, Medio B tituló que el sismo sacudió la provincia de Chiriquí [SIN-006:titulo], mientras que Medio C reportó en su titular que el temblor también se sintió en la provincia de Bocas del Toro [SIN-007:titulo]. Hasta el momento, la información disponible proviene únicamente de los datos técnicos oficiales del Servicio Geológico de los Estados Unidos (USGS) [USGS:sin-us-0001:tipo] y de los titulares de prensa mencionados. No se dispone de detalles adicionales sobre posibles daños materiales, heridos o afectaciones a la infraestructura en las zonas donde se percibió el movimiento telúrico.",
+    "copy_digital": "Un sismo de magnitud 4.8 se registró al sur de Boca Chica [USGS:sin-us-0001:magnitud]. El temblor fue perceptible en Chiriquí, según reportó Medio B [SIN-006:titulo], y también se sintió en Bocas del Toro, de acuerdo con Medio C [SIN-007:titulo]. El evento tuvo una profundidad de 15.2 km [USGS:sin-us-0001:profundidad_km]. Aún falta verificar si existen daños o afectados en las zonas donde se sintió el movimiento.",
+    "enfoque_interes_publico": "Informar de manera oportuna sobre un evento sísmico perceptible en el occidente del país, priorizando la seguridad de la población y la necesidad de verificar posibles afectaciones estructurales o humanas a través de fuentes oficiales.",
+    "guion_45_60s": "Un sismo de magnitud 4.8 se registró este 22 de septiembre de 2025 en el occidente de Panamá [USGS:sin-us-0001:magnitud]. Según el Servicio Geológico de los Estados Unidos, el epicentro se localizó a 32 kilómetros al sur de Boca Chica, con una profundidad de 15.2 kilómetros [USGS:sin-us-0001:lugar]. El movimiento telúrico fue perceptible en varias zonas del país. Medio B reportó que el sismo sacudió la provincia de Chiriquí [SIN-006:titulo], mientras que Medio C informó que el temblor también se sintió en la provincia de Bocas del Toro [SIN-007:titulo]. Al tratarse de reportes preliminares basados en titulares de prensa y datos técnicos, aún no se cuenta con información oficial sobre posibles daños materiales o personas afectadas. Corresponde verificar los reportes de las autoridades de protección civil para conocer el impacto real de este sismo en las comunidades afectadas.",
+    "titulo_propuesto": "Sismo de magnitud 4.8 se registra al sur de Boca Chica y se siente en Chiriquí y Bocas del Toro",
+    "verificaciones_pendientes": [
+     "Confirmar con el Sistema Nacional de Protección Civil (SINAPROC) si hay reportes de daños o heridos.",
+     "Verificar si se han producido réplicas del sismo en la región.",
+     "Obtener testimonios de residentes en Chiriquí y Bocas del Toro sobre la intensidad percibida."
+    ]
+   },
+   "preguntas_investigacion": [
+    "¿Cuál es el reporte oficial de daños materiales o personas afectadas emitido por el SINAPROC tras el sismo?",
+    "¿Se han registrado réplicas del sismo en la zona sur de Boca Chica o en las provincias occidentales?",
+    "¿Cómo se encuentra el estado de las vías de comunicación e infraestructura clave en Chiriquí y Bocas del Toro?"
+   ],
+   "que_falta_verificar": [
+    "Si existen reportes de daños materiales o estructurales en Chiriquí o Bocas del Toro.",
+    "Si se han registrado personas heridas o afectadas por el sismo.",
+    "El pronunciamiento oficial y las evaluaciones de campo del Sistema Nacional de Protección Civil (SINAPROC)."
+   ],
+   "que_se_reporta": "Un sismo de magnitud 4.8 registrado el 22 de septiembre de 2025 con epicentro al sur de Boca Chica, el cual fue perceptible en las provincias de Chiriquí y Bocas del Toro."
+  }
+ },
+ "EV-SIN-008": {
+  "fecha_utc": "2026-10-08T18:39:18.096147+00:00",
+  "hash_evidencia": "04da407c730d3dac",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Solicitar los informes estadísticos oficiales de la Autoridad de Turismo de Panamá (ATP) y del Instituto Nacional de Estadística y Censo (INEC) para corroborar el comportamiento del flujo turístico en el periodo señalado.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-008"
+      }
+     ],
+     "texto": "Medio A publicó un titular señalando que la llegada de turistas a Panamá crece durante el primer semestre.",
+     "tipo": "declaracion"
+    }
+   ],
+   "preguntas_investigacion": [
+    "¿Cuál es la cifra oficial de visitantes que ingresaron a Panamá durante el primer semestre y qué variación porcentual representa respecto al año anterior?",
+    "¿A qué año corresponde el periodo de crecimiento reportado en el titular de Medio A?",
+    "¿Cuáles fueron las principales vías de ingreso y los países de origen de los turistas que impulsaron este crecimiento?"
+   ],
+   "que_falta_verificar": [
+    "Las cifras exactas y el porcentaje de crecimiento de la llegada de turistas al país.",
+    "El año específico al que corresponde el primer semestre mencionado en el titular.",
+    "Las fuentes estadísticas oficiales que sustentan la afirmación del reporte."
+   ],
+   "que_se_reporta": "Se reporta, a través de un titular de prensa, que la llegada de turistas a Panamá registró un crecimiento durante el primer semestre."
+  }
+ },
+ "EV-SIN-009": {
+  "fecha_utc": "2026-10-08T18:38:57.784067+00:00",
+  "hash_evidencia": "7c41386a17d3ea33",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Solicitar los reportes oficiales de ocupación a la Asociación Panameña de Hoteles (APATEL) y a la Autoridad de Turismo de Panamá (ATP) para contrastar el titular.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-009"
+      }
+     ],
+     "texto": "Según un titular publicado por Medio D, la ocupación hotelera en la Ciudad de Panamá alcanzó su nivel más alto del año.",
+     "tipo": "declaracion"
+    }
+   ],
+   "preguntas_investigacion": [
+    "¿Cuál es la cifra o porcentaje oficial de ocupación hotelera registrado en la Ciudad de Panamá para la fecha del reporte?",
+    "¿Qué datos históricos mensuales de 2025 sustentan que este periodo representa el nivel más alto del año?",
+    "¿Qué factores o eventos explican el incremento de la ocupación hotelera según los gremios del sector?"
+   ],
+   "que_falta_verificar": [
+    "El porcentaje exacto de ocupación hotelera alcanzado en la Ciudad de Panamá.",
+    "Los datos estadísticos de los meses previos de 2025 para confirmar que se trata del nivel más alto del año.",
+    "Las fuentes primarias, gremios hoteleros o autoridades de turismo que confirmen la información."
+   ],
+   "que_se_reporta": "Se reporta, según un titular de prensa, que la ocupación hotelera en la Ciudad de Panamá alcanzó su nivel más alto del año."
+  }
+ },
+ "EV-SIN-010": {
+  "fecha_utc": "2026-10-08T18:37:24.925531+00:00",
+  "hash_evidencia": "398c9b16b8004810",
+  "modelo": "gemini-3.8-flash",
+  "redaccion": {
+   "accion_recomendada": "No publicar borradores informativos hasta recopilar el comunicado oficial o detalles completos del corte de agua.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-010"
+      }
+     ],
+     "texto": "Según Medio B, un corte de agua afectará a varios corregimientos de San Miguelito este fin de semana.",
+     "tipo": "declaracion"
+    }
+   ],
+   "preguntas_investigacion": [
+    "¿Qué entidad emitió el aviso de corte de agua y cuál es la causa técnica programada?",
+    "¿Cuáles son los horarios, fechas exactas y corregimientos de San Miguelito incluidos en la interrupción del servicio?",
+    "¿Existen medidas de contingencia o puntos de abastecimiento temporal de agua potable previstos para la comunidad afectada?"
+   ],
+   "que_falta_verificar": [
+    "Cuáles son los corregimientos específicos de San Miguelito que se verán afectados.",
+    "El motivo, horario, duración exacta y fechas del corte de agua.",
+    "Confirmación oficial por parte de la entidad encargada del suministro de agua (como el IDAAN) u otras fuentes oficiales."
+   ],
+   "que_se_reporta": "Medio B reporta en un titular que un corte de agua afectará a varios corregimientos de San Miguelito durante el fin de semana."
+  }
+ },
+ "EV-SIN-011": {
+  "fecha_utc": "2026-10-08T18:39:26.316726+00:00",
+  "hash_evidencia": "b3f6cf5c6f061c31",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Se recomienda obtener el texto oficial aprobado en la Asamblea Nacional y consultar a representantes del sector turístico para analizar el impacto de la medida.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-011"
+      }
+     ],
+     "texto": "Medio C publicó un titular que señala que la Asamblea Nacional aprobó en tercer debate la reforma a la ley de turismo.",
+     "tipo": "declaracion"
+    }
+   ],
+   "preguntas_investigacion": [
+    "¿Cuáles son los cambios principales que introduce esta reforma a la ley de turismo vigente?",
+    "¿Qué posturas tienen los gremios turísticos y los diputados respecto al contenido aprobado?",
+    "¿Cuándo se prevé que el Órgano Ejecutivo reciba el documento para su sanción o veto?"
+   ],
+   "que_falta_verificar": [
+    "El contenido detallado y los artículos específicos modificados en la reforma de ley.",
+    "Las posiciones de los diferentes gremios turísticos y de las bancadas legislativas sobre la reforma.",
+    "La fecha de remisión del documento al Órgano Ejecutivo para su sanción o veto."
+   ],
+   "que_se_reporta": "La aprobación en tercer debate de la reforma a la ley de turismo por parte de la Asamblea Nacional, según un titular de prensa."
+  }
+ },
+ "EV-SIN-012": {
+  "fecha_utc": "2026-10-08T18:37:24.921533+00:00",
+  "hash_evidencia": "17d2049662e61a9b",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Solicitar un pronunciamiento oficial o el cronograma de operaciones directamente a la administración del Metro de Panamá para corroborar los detalles del servicio.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-012"
+      }
+     ],
+     "texto": "Según un titular publicado por Medio A, el Metro de Panamá extenderá su horario de servicio durante las fiestas patrias.",
+     "tipo": "declaracion"
+    }
+   ],
+   "preguntas_investigacion": [
+    "¿Cuáles serán las horas específicas de apertura y cierre del Metro de Panamá durante los días de fiestas patrias?",
+    "¿En qué fechas exactas se aplicará esta extensión de horario en el servicio?",
+    "¿Qué medidas adicionales de seguridad y dosificación de usuarios se implementarán en las estaciones de mayor afluencia durante estas festividades?"
+   ],
+   "que_falta_verificar": [
+    "Las horas específicas de apertura y cierre del Metro de Panamá durante el periodo anunciado.",
+    "Las fechas exactas en las que se aplicará la extensión de horario.",
+    "La confirmación oficial por parte de la empresa Metro de Panamá S.A. sobre esta medida y sus detalles operativos."
+   ],
+   "que_se_reporta": "La publicación de un titular que anuncia la extensión del horario del Metro de Panamá durante las fiestas patrias."
+  }
+ },
+ "EV-SIN-013": {
+  "fecha_utc": "2026-10-08T18:37:15.288100+00:00",
+  "hash_evidencia": "a29f1938a97dc845",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Se recomienda contactar al Sistema Nacional de Protección Civil (SINAPROC) y consultar a fuentes locales en Panamá Oeste para constatar la situación en el terreno.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-013"
+      }
+     ],
+     "texto": "El Medio D publicó un titular que informa sobre inundaciones en Arraiján y La Chorrera provocadas por lluvias intensas.",
+     "tipo": "declaracion"
+    }
+   ],
+   "preguntas_investigacion": [
+    "¿Cuál es el informe oficial del Sistema Nacional de Protección Civil (SINAPROC) sobre el nivel de afectación en Arraiján y La Chorrera?",
+    "¿Qué sectores específicos de estos distritos se encuentran inundados y cuál es el estado actual del tránsito en la zona?",
+    "¿Se han reportado víctimas fatales, heridos o personas damnificadas que requieran traslado a albergues temporales?"
+   ],
+   "que_falta_verificar": [
+    "La gravedad y extensión de las inundaciones en las comunidades afectadas.",
+    "La existencia de víctimas, heridos o personas damnificadas.",
+    "Los daños materiales reportados en viviendas, comercios e infraestructura vial.",
+    "El pronunciamiento o reporte oficial de las autoridades de protección civil."
+   ],
+   "que_se_reporta": "Se reporta la ocurrencia de inundaciones en los distritos de Arraiján y La Chorrera a causa de lluvias intensas, según un titular de prensa."
+  }
+ },
+ "EV-SIN-018": {
+  "fecha_utc": "2026-10-08T18:37:15.290936+00:00",
+  "hash_evidencia": "1eba9d7c4cde4620",
+  "modelo": "gemini-3.5-flash",
+  "redaccion": {
+   "accion_recomendada": "Solicitar y revisar el informe oficial de desempleo emitido por la institución pertinente en Panamá para contrastar las cifras de 9.5% y 7.4%.",
+   "afirmaciones": [
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-018"
+      }
+     ],
+     "texto": "Medio A reportó que el desempleo en Panamá se ubica en 9.5% según un informe oficial.",
+     "tipo": "declaracion"
+    },
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-019"
+      }
+     ],
+     "texto": "Medio D reportó que el desempleo en Panamá bajó a 7.4% según cifras divulgadas.",
+     "tipo": "declaracion"
+    },
+    {
+     "citas": [
+      {
+       "campo": "valor",
+       "id_evidencia": "WB:PAN:SL.UEM.TOTL.ZS:2023"
+      }
+     ],
+     "texto": "El Banco Mundial registró una tasa de desempleo anual para Panamá de 7.4% en el año 2023.",
+     "tipo": "hecho"
+    },
+    {
+     "citas": [
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-018"
+      },
+      {
+       "campo": "titulo",
+       "id_evidencia": "SIN-019"
+      }
+     ],
+     "texto": "Existe una contradicción entre las cifras de desempleo reportadas por Medio A (9.5%) y Medio D (7.4%) para septiembre de 2025.",
+     "tipo": "inferencia"
+    }
+   ],
+   "borrador": {
+    "brief": "Dos medios de comunicación han publicado cifras contradictorias sobre el desempleo en Panamá el 17 de septiembre de 2025. Por un lado, Medio A reportó que el desempleo se ubica en 9.5% basándose en un informe oficial [SIN-018:titulo]. Por otro lado, Medio D afirmó que la tasa bajó a 7.4% según cifras divulgadas [SIN-019:titulo]. Debido a que el alcance de la información disponible se limita a los titulares de estas noticias, no es posible determinar el origen exacto de los datos ni el periodo al que corresponden. Como contexto histórico, el Banco Mundial registró una tasa de desempleo anual para Panamá de 7.4% en el año 2023 [WB:PAN:SL.UEM.TOTL.ZS:2023:valor], tras haber registrado un 18.5% en 2020 [WB:PAN:SL.UEM.TOTL.ZS:2023:serie], 11.3% en 2021 [WB:PAN:SL.UEM.TOTL.ZS:2023:serie] y 9.9% en 2022 [WB:PAN:SL.UEM.TOTL.ZS:2023:serie]. Actualmente, no se cuenta con datos anuales del Banco Mundial para el año 2024 [WB:PAN:SL.UEM.TOTL.ZS:2023:serie]. Es necesario verificar de manera independiente cuál es la cifra oficial vigente para resolver la discrepancia entre el 9.5% y el 7.4% reportados.",
+    "copy_digital": "¿Cuál es la verdadera tasa de desempleo en Panamá? Medio A reporta un 9.5% según un informe oficial [SIN-018:titulo], mientras Medio D afirma que bajó al 7.4% [SIN-019:titulo]. Esta última cifra coincide con el dato histórico anual que el Banco Mundial registró para el país en el año 2023 [WB:PAN:SL.UEM.TOTL.ZS:2023:valor]. Queda pendiente verificar los datos oficiales de 2025 para aclarar esta contradicción.",
+    "enfoque_interes_publico": "El acceso a información económica verídica y precisa sobre el mercado laboral panameño, evitando la confusión generada por cifras contradictorias en los medios de comunicación.",
+    "guion_45_60s": "Reportes de prensa contradictorios generan confusión sobre la situación del empleo en Panamá. El 17 de septiembre de 2025, Medio A informó que el desempleo se ubica en 9.5% según un informe oficial [SIN-018:titulo]. Sin embargo, ese mismo día, Medio D reportó que la tasa bajó a 7.4% según cifras divulgadas [SIN-019:titulo]. Al contar únicamente con los titulares de estas publicaciones, queda pendiente verificar cuál es la cifra correcta y a qué periodo corresponde cada una. Para dar perspectiva, el Banco Mundial reportó históricamente que la tasa de desempleo anual en Panamá fue de 7.4% en el año 2023 [WB:PAN:SL.UEM.TOTL.ZS:2023:valor], mostrando una reducción desde el 18.5% registrado en el año 2020 [WB:PAN:SL.UEM.TOTL.ZS:2023:serie]. Es indispensable acceder a las fuentes oficiales panameñas para esclarecer si el desempleo actual se mantiene en 7.4% o si subió al 9.5%.",
+    "titulo_propuesto": "Contradicciones en reportes de prensa sobre la tasa de desempleo en Panamá",
+    "verificaciones_pendientes": [
+     "Obtener el informe oficial citado por Medio A para verificar la cifra de 9.5%.",
+     "Obtener el documento de las cifras divulgadas citado por Medio D para verificar la cifra de 7.4%.",
+     "Consultar la base de datos de la Contraloría General de la República o el INEC de Panamá para obtener el dato oficial más reciente de 2025."
+    ]
+   },
+   "preguntas_investigacion": [
+    "¿Cuál es la tasa oficial de desempleo en Panamá publicada por el Instituto Nacional de Estadística y Censo (INEC) u otra entidad oficial para septiembre de 2025?",
+    "¿A qué periodo específico corresponden las cifras de desempleo de 9.5% reportadas por Medio A y de 7.4% reportadas por Medio D?",
+    "¿Existe alguna confusión en los reportes de prensa entre la tasa de desempleo actual de 2025 y el dato histórico del 7.4% registrado por el Banco Mundial en 2023?"
+   ],
+   "que_falta_verificar": [
+    "La cifra oficial exacta de desempleo en Panamá para el periodo reportado en septiembre de 2025.",
+    "El origen, emisor y fecha de publicación del informe oficial mencionado por Medio A.",
+    "El origen, emisor y fecha de publicación de las cifras divulgadas mencionadas por Medio D.",
+    "Si la cifra de 7.4% reportada por Medio D corresponde a un dato nuevo de 2025 o si se confunde con el dato histórico de 2023 del Banco Mundial."
+   ],
+   "que_se_reporta": "Discrepancias en los reportes de prensa sobre la tasa de desempleo actual en Panamá, con cifras que varían entre el 7.4% y el 9.5%."
+  }
+ }
+}

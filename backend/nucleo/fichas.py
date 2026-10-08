@@ -15,7 +15,7 @@ Reparto del trabajo:
 import json
 from datetime import datetime, timezone
 
-from nucleo import config, seguridad
+from nucleo import artefactos, config, seguridad
 from nucleo.llm import LLMNoDisponible, generar
 
 TIPOS_AFIRMACION = ["hecho", "declaracion", "inferencia", "hipotesis"]
@@ -193,7 +193,35 @@ def _redactar(evento, paquete, con_borrador):
 # ---------------------------------------------------------------------------
 # Ficha completa
 # ---------------------------------------------------------------------------
-def generar_ficha(evento, usar_llm=True):
+def _obtener_redaccion(evento, paquete, con_borrador, usar_llm, usar_artefactos):
+    """Devuelve (redaccion, modelo, metodo).
+    1. Artefacto versionado (artefactos/redacciones.json) si la evidencia no cambió.
+    2. Si no, el LLM (y se guarda el resultado).
+    3. Si no hay LLM o no responde: (None, None, "sin_conexion" / "sin_llm").
+    La huella usa la evidencia y las instrucciones, NO el tema: si el tema cambia,
+    la redacción guardada sigue siendo válida."""
+    huella = artefactos.huella(paquete, con_borrador, evento["posibles_contradicciones"],
+                               evento.get("aviso_alcance"), INSTRUCCIONES)
+    guardadas = artefactos.cargar("redacciones.json") if usar_artefactos else {}
+    g = guardadas.get(evento["id_evento"])
+    if g and g["hash_evidencia"] == huella:
+        return g["redaccion"], g["modelo"], "llm"
+
+    if not usar_llm:
+        return None, None, "sin_llm"
+    try:
+        redaccion, modelo = _redactar(evento, paquete, con_borrador)
+    except LLMNoDisponible:
+        return None, None, "sin_conexion"
+
+    if usar_artefactos:
+        guardadas[evento["id_evento"]] = {"hash_evidencia": huella, "redaccion": redaccion,
+                                          "modelo": modelo, "fecha_utc": artefactos.ahora_utc()}
+        artefactos.guardar("redacciones.json", guardadas)
+    return redaccion, modelo, "llm"
+
+
+def generar_ficha(evento, usar_llm=True, usar_artefactos=True):
     """Devuelve la ficha del evento con el formato de fichas.jsonl (sección 7)."""
     paquete, sospechosos = paquete_evidencia(evento)
     insuficiente = evento["estado_evidencia"] == "insuficiente"
@@ -208,12 +236,15 @@ def generar_ficha(evento, usar_llm=True):
     if sospechosos:
         avisos.append("Uno o más titulares contienen texto que intenta dar instrucciones al sistema; "
                       "se trataron como contenido no confiable y no se usaron para redactar.")
+    if evento.get("tema_por_respaldo"):
+        avisos.append("El tema lo asignó el clasificador de respaldo (sin LLM): confirmarlo en la revisión.")
 
     ficha = {
         "id_caso": f"CASO-{evento['id_evento']}",
         "modalidad": config.MODALIDAD,
         "id_evento": evento["id_evento"],
         "tema": evento["tema"],
+        "tema_por_respaldo": evento.get("tema_por_respaldo", False),
         "titulo_evento": evento["titulo_representativo"],
         "ids_fuente": list(paquete),
         "quien_lo_reporta": quien_lo_reporta(evento),
@@ -240,15 +271,11 @@ def generar_ficha(evento, usar_llm=True):
     redaccion = None
     if not paquete:
         ficha["generado"]["metodo"] = "sin_evidencia_utilizable"
-    elif usar_llm:
-        try:
-            redaccion, modelo = _redactar(evento, paquete, con_borrador)
-            ficha["generado"].update(metodo="llm", modelo=modelo)
-        except LLMNoDisponible:
-            ficha["generado"]["metodo"] = "sin_conexion"
-            ficha["avisos"].append("Redacción no disponible sin conexión: se muestran solo los datos verificables.")
     else:
-        ficha["generado"]["metodo"] = "sin_llm"
+        redaccion, modelo, metodo = _obtener_redaccion(evento, paquete, con_borrador, usar_llm, usar_artefactos)
+        ficha["generado"].update(metodo=metodo, modelo=modelo)
+        if metodo == "sin_conexion":
+            ficha["avisos"].append("Redacción no disponible sin conexión: se muestran solo los datos verificables.")
 
     if redaccion is None:
         ficha.update(que_se_reporta=None, afirmaciones=[], citas=[], que_falta_verificar=[],
@@ -294,9 +321,9 @@ def generar_ficha(evento, usar_llm=True):
     return ficha
 
 
-def generar_fichas(eventos, top_n=config.FICHAS_TOP_N, usar_llm=True):
+def generar_fichas(eventos, top_n=config.FICHAS_TOP_N, usar_llm=True, usar_artefactos=True):
     """Fichas de los primeros `top_n` eventos del ranking (ya ordenados por priorizar)."""
-    return [generar_ficha(e, usar_llm) for e in eventos[:top_n]]
+    return [generar_ficha(e, usar_llm, usar_artefactos) for e in eventos[:top_n]]
 
 
 def guardar_fichas(fichas, ruta):

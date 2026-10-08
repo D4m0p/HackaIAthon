@@ -17,7 +17,7 @@ FECHA_CORTE = "2025-09-30T00:00:00Z"
 
 @pytest.fixture(scope="module")
 def eventos():
-    eventos = organizar(cargar_noticias(DATOS / "noticias_ejemplo.csv"), usar_llm=False)
+    eventos = organizar(cargar_noticias(DATOS / "noticias_ejemplo.csv"), usar_llm=False, usar_artefactos=False)
     contextualizar(eventos,
                    cargar_indicadores(DATOS / "indicadores_ejemplo.csv"),
                    cargar_sismos(DATOS / "eventos_ejemplo.geojson"))

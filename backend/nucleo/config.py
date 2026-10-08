@@ -14,8 +14,11 @@ VERSION_REGLAS = "reglas-v1"
 # separó con margen claro "mismo evento" de "eventos distintos" (ver Notion).
 MODELO_EMBEDDINGS = "BAAI/bge-m3"
 
-# Carpeta donde se guardan embeddings y respuestas del LLM (no se sube a git).
+# Caché temporal del LLM y registro de llamadas (no se sube a git).
 CARPETA_CACHE = "cache"
+# Resultados versionados que permiten la demo sin internet (SÍ se sube a git):
+# temas por titular, redacciones por evento y embeddings ya calculados.
+CARPETA_ARTEFACTOS = "artefactos"
 
 # ---------------------------------------------------------------------------
 # LLM (Gemini)

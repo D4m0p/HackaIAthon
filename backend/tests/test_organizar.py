@@ -18,7 +18,7 @@ RUTA = Path(__file__).parent.parent / "datos_ejemplo" / "noticias_ejemplo.csv"
 # Las pruebas de agrupación no usan el LLM: son deterministas y corren sin internet.
 @pytest.fixture(scope="module")
 def eventos():
-    return {e["id_evento"]: e for e in organizar(cargar_noticias(RUTA), usar_llm=False)}
+    return {e["id_evento"]: e for e in organizar(cargar_noticias(RUTA), usar_llm=False, usar_artefactos=False)}
 
 
 @pytest.fixture(scope="module")
@@ -70,7 +70,7 @@ def test_sismo_agrupado_y_clasificado(eventos):
 
 def test_respaldo_sin_llm_marca_el_metodo():
     noticias = cargar_noticias(RUTA)
-    asignar_temas(noticias, embeber(n["titulo"] for n in noticias), usar_llm=False)
+    asignar_temas(noticias, embeber(n["titulo"] for n in noticias), usar_llm=False, usar_artefactos=False)
     assert all(n["metodo_tema"] == "respaldo_embeddings" for n in noticias)
 
 

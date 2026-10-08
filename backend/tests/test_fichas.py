@@ -21,7 +21,7 @@ DATOS = Path(__file__).parent.parent / "datos_ejemplo"
 
 @pytest.fixture(scope="module")
 def eventos():
-    eventos = organizar(cargar_noticias(DATOS / "noticias_ejemplo.csv"), usar_llm=False)
+    eventos = organizar(cargar_noticias(DATOS / "noticias_ejemplo.csv"), usar_llm=False, usar_artefactos=False)
     contextualizar(eventos,
                    cargar_indicadores(DATOS / "indicadores_ejemplo.csv"),
                    cargar_sismos(DATOS / "eventos_ejemplo.geojson"))
@@ -42,7 +42,7 @@ def fichas_llm(eventos):
 # Sin LLM
 # ---------------------------------------------------------------------------
 def test_ficha_sin_llm_tiene_datos_verificables(eventos):
-    ficha = generar_ficha(eventos["EV-SIN-001"], usar_llm=False)
+    ficha = generar_ficha(eventos["EV-SIN-001"], usar_llm=False, usar_artefactos=False)
     assert ficha["id_caso"] == "CASO-EV-SIN-001" and ficha["modalidad"] == "editorial_tvn"
     assert ficha["fuentes_independientes"] == 2
     assert "cuentan como 1 procedencia" in ficha["quien_lo_reporta"][0]
@@ -51,7 +51,7 @@ def test_ficha_sin_llm_tiene_datos_verificables(eventos):
 
 
 def test_caso_insuficiente_requiere_evidencia(eventos):
-    ficha = generar_ficha(eventos["EV-SIN-010"], usar_llm=False)
+    ficha = generar_ficha(eventos["EV-SIN-010"], usar_llm=False, usar_artefactos=False)
     assert ficha["estado_evidencia"] == "insuficiente"
     assert ficha["estado_revision"] == "requiere evidencia"
 

@@ -1,0 +1,135 @@
+{
+ "SIN-001": {
+  "fecha_utc": "2026-10-08T18:36:59.735445+00:00",
+  "hash_titulo": "47d54ce799aa190b",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Se refiere a restricciones de calado en el Canal de Panamá.",
+  "tema": "logistica_canal"
+ },
+ "SIN-002": {
+  "fecha_utc": "2026-10-08T18:36:59.735552+00:00",
+  "hash_titulo": "47d54ce799aa190b",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Trata sobre restricciones de calado en el Canal de Panamá.",
+  "tema": "logistica_canal"
+ },
+ "SIN-003": {
+  "fecha_utc": "2026-10-08T18:36:59.735583+00:00",
+  "hash_titulo": "c494443b4ee37c1f",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Aborda límites de carga para buques en el Canal.",
+  "tema": "logistica_canal"
+ },
+ "SIN-004": {
+  "fecha_utc": "2026-10-08T18:36:59.735605+00:00",
+  "hash_titulo": "d9d7aa7050e518ee",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Trata sobre la inflación y el precio de la canasta básica.",
+  "tema": "economia"
+ },
+ "SIN-005": {
+  "fecha_utc": "2026-10-08T18:36:59.735625+00:00",
+  "hash_titulo": "2576345d7179ea8f",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Se refiere al aumento de precios de alimentos.",
+  "tema": "economia"
+ },
+ "SIN-006": {
+  "fecha_utc": "2026-10-08T18:36:59.735643+00:00",
+  "hash_titulo": "3e21e21ff3f47056",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Informa sobre un sismo en Chiriquí.",
+  "tema": "eventos_naturales"
+ },
+ "SIN-007": {
+  "fecha_utc": "2026-10-08T18:36:59.735661+00:00",
+  "hash_titulo": "631fdcf37167580c",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Reporta un temblor en Chiriquí y Bocas del Toro.",
+  "tema": "eventos_naturales"
+ },
+ "SIN-008": {
+  "fecha_utc": "2026-10-08T18:36:59.735680+00:00",
+  "hash_titulo": "902b289cc299ee8a",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Trata sobre el crecimiento en la llegada de turistas.",
+  "tema": "turismo"
+ },
+ "SIN-009": {
+  "fecha_utc": "2026-10-08T18:36:59.735699+00:00",
+  "hash_titulo": "caf4e7aeb8398851",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Se refiere a la ocupación hotelera en la Ciudad de Panamá.",
+  "tema": "turismo"
+ },
+ "SIN-010": {
+  "fecha_utc": "2026-10-08T18:36:59.735717+00:00",
+  "hash_titulo": "6798cf2c55c0f528",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Informa sobre un corte de agua potable.",
+  "tema": "servicios_publicos"
+ },
+ "SIN-011": {
+  "fecha_utc": "2026-10-08T18:36:59.735736+00:00",
+  "hash_titulo": "0622dee051566d60",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Se refiere a la aprobación de una reforma de ley.",
+  "tema": "regulacion"
+ },
+ "SIN-012": {
+  "fecha_utc": "2026-10-08T18:36:59.735755+00:00",
+  "hash_titulo": "a09c766b559266bc",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Trata sobre el horario del Metro de Panamá, transporte público.",
+  "tema": "servicios_publicos"
+ },
+ "SIN-013": {
+  "fecha_utc": "2026-10-08T18:36:59.735775+00:00",
+  "hash_titulo": "ddcb8f7925f31374",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Informa sobre lluvias intensas e inundaciones.",
+  "tema": "eventos_naturales"
+ },
+ "SIN-014": {
+  "fecha_utc": "2026-10-08T18:36:59.735840+00:00",
+  "hash_titulo": "14b7c431adfb4dc5",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Trata sobre un nuevo acuerdo de la Superintendencia de Bancos.",
+  "tema": "regulacion"
+ },
+ "SIN-015": {
+  "fecha_utc": "2026-10-08T18:36:59.735873+00:00",
+  "hash_titulo": "aa9e571231aef852",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Se refiere a deportes (fútbol).",
+  "tema": "otro"
+ },
+ "SIN-016": {
+  "fecha_utc": "2026-10-08T18:36:59.735892+00:00",
+  "hash_titulo": "02591bb44340c2fa",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Trata sobre restricciones de calado en el Canal de Panamá.",
+  "tema": "logistica_canal"
+ },
+ "SIN-017": {
+  "fecha_utc": "2026-10-08T18:36:59.735912+00:00",
+  "hash_titulo": "0fd7a9bff7196dda",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Intento de manipulación de instrucciones, clasificado como otro.",
+  "tema": "otro"
+ },
+ "SIN-018": {
+  "fecha_utc": "2026-10-08T18:36:59.735930+00:00",
+  "hash_titulo": "166e601ae958026d",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Informa sobre la tasa de desempleo en el país.",
+  "tema": "economia"
+ },
+ "SIN-019": {
+  "fecha_utc": "2026-10-08T18:36:59.735948+00:00",
+  "hash_titulo": "76423fcef7dc493a",
+  "modelo": "gemini-3.5-flash",
+  "motivo": "Trata sobre la disminución del desempleo.",
+  "tema": "economia"
+ }
+}
