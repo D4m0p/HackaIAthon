@@ -1,0 +1,73 @@
+pais_iso3,indicador_id,anio,valor,unidad,fuente_url,fecha_extraccion,licencia
+PAN,NY.GDP.MKTP.KD.ZG,2019,3.0,% anual,https://ejemplo.invalid/sintetico/PAN/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NY.GDP.MKTP.KD.ZG,2020,-17.7,% anual,https://ejemplo.invalid/sintetico/PAN/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NY.GDP.MKTP.KD.ZG,2021,15.8,% anual,https://ejemplo.invalid/sintetico/PAN/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NY.GDP.MKTP.KD.ZG,2022,10.8,% anual,https://ejemplo.invalid/sintetico/PAN/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NY.GDP.MKTP.KD.ZG,2023,7.3,% anual,https://ejemplo.invalid/sintetico/PAN/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NY.GDP.MKTP.KD.ZG,2024,2.9,% anual,https://ejemplo.invalid/sintetico/PAN/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NY.GDP.MKTP.KD.ZG,2019,2.4,% anual,https://ejemplo.invalid/sintetico/CRI/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NY.GDP.MKTP.KD.ZG,2020,-4.3,% anual,https://ejemplo.invalid/sintetico/CRI/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NY.GDP.MKTP.KD.ZG,2021,7.9,% anual,https://ejemplo.invalid/sintetico/CRI/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NY.GDP.MKTP.KD.ZG,2022,4.6,% anual,https://ejemplo.invalid/sintetico/CRI/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NY.GDP.MKTP.KD.ZG,2023,5.1,% anual,https://ejemplo.invalid/sintetico/CRI/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NY.GDP.MKTP.KD.ZG,2024,4.3,% anual,https://ejemplo.invalid/sintetico/CRI/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NY.GDP.MKTP.KD.ZG,2019,5.1,% anual,https://ejemplo.invalid/sintetico/DOM/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NY.GDP.MKTP.KD.ZG,2020,-6.7,% anual,https://ejemplo.invalid/sintetico/DOM/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NY.GDP.MKTP.KD.ZG,2021,12.3,% anual,https://ejemplo.invalid/sintetico/DOM/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NY.GDP.MKTP.KD.ZG,2022,4.9,% anual,https://ejemplo.invalid/sintetico/DOM/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NY.GDP.MKTP.KD.ZG,2023,2.4,% anual,https://ejemplo.invalid/sintetico/DOM/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NY.GDP.MKTP.KD.ZG,2024,5.0,% anual,https://ejemplo.invalid/sintetico/DOM/NY.GDP.MKTP.KD.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,FP.CPI.TOTL.ZG,2019,-0.4,% anual,https://ejemplo.invalid/sintetico/PAN/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,FP.CPI.TOTL.ZG,2020,-1.6,% anual,https://ejemplo.invalid/sintetico/PAN/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,FP.CPI.TOTL.ZG,2021,1.6,% anual,https://ejemplo.invalid/sintetico/PAN/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,FP.CPI.TOTL.ZG,2022,2.9,% anual,https://ejemplo.invalid/sintetico/PAN/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,FP.CPI.TOTL.ZG,2023,1.5,% anual,https://ejemplo.invalid/sintetico/PAN/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,FP.CPI.TOTL.ZG,2024,0.7,% anual,https://ejemplo.invalid/sintetico/PAN/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,FP.CPI.TOTL.ZG,2019,2.1,% anual,https://ejemplo.invalid/sintetico/CRI/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,FP.CPI.TOTL.ZG,2020,0.7,% anual,https://ejemplo.invalid/sintetico/CRI/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,FP.CPI.TOTL.ZG,2021,1.7,% anual,https://ejemplo.invalid/sintetico/CRI/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,FP.CPI.TOTL.ZG,2022,8.3,% anual,https://ejemplo.invalid/sintetico/CRI/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,FP.CPI.TOTL.ZG,2023,0.5,% anual,https://ejemplo.invalid/sintetico/CRI/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,FP.CPI.TOTL.ZG,2024,-0.4,% anual,https://ejemplo.invalid/sintetico/CRI/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,FP.CPI.TOTL.ZG,2019,1.8,% anual,https://ejemplo.invalid/sintetico/DOM/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,FP.CPI.TOTL.ZG,2020,3.8,% anual,https://ejemplo.invalid/sintetico/DOM/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,FP.CPI.TOTL.ZG,2021,8.2,% anual,https://ejemplo.invalid/sintetico/DOM/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,FP.CPI.TOTL.ZG,2022,8.8,% anual,https://ejemplo.invalid/sintetico/DOM/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,FP.CPI.TOTL.ZG,2023,4.8,% anual,https://ejemplo.invalid/sintetico/DOM/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,FP.CPI.TOTL.ZG,2024,3.3,% anual,https://ejemplo.invalid/sintetico/DOM/FP.CPI.TOTL.ZG,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,SL.UEM.TOTL.ZS,2019,6.6,% de la población activa,https://ejemplo.invalid/sintetico/PAN/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,SL.UEM.TOTL.ZS,2020,18.5,% de la población activa,https://ejemplo.invalid/sintetico/PAN/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,SL.UEM.TOTL.ZS,2021,11.3,% de la población activa,https://ejemplo.invalid/sintetico/PAN/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,SL.UEM.TOTL.ZS,2022,9.9,% de la población activa,https://ejemplo.invalid/sintetico/PAN/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,SL.UEM.TOTL.ZS,2023,7.4,% de la población activa,https://ejemplo.invalid/sintetico/PAN/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,SL.UEM.TOTL.ZS,2024,,% de la población activa,https://ejemplo.invalid/sintetico/PAN/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,SL.UEM.TOTL.ZS,2019,11.8,% de la población activa,https://ejemplo.invalid/sintetico/CRI/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,SL.UEM.TOTL.ZS,2020,17.4,% de la población activa,https://ejemplo.invalid/sintetico/CRI/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,SL.UEM.TOTL.ZS,2021,15.2,% de la población activa,https://ejemplo.invalid/sintetico/CRI/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,SL.UEM.TOTL.ZS,2022,12.2,% de la población activa,https://ejemplo.invalid/sintetico/CRI/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,SL.UEM.TOTL.ZS,2023,8.6,% de la población activa,https://ejemplo.invalid/sintetico/CRI/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,SL.UEM.TOTL.ZS,2024,7.0,% de la población activa,https://ejemplo.invalid/sintetico/CRI/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,SL.UEM.TOTL.ZS,2019,5.8,% de la población activa,https://ejemplo.invalid/sintetico/DOM/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,SL.UEM.TOTL.ZS,2020,5.8,% de la población activa,https://ejemplo.invalid/sintetico/DOM/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,SL.UEM.TOTL.ZS,2021,7.4,% de la población activa,https://ejemplo.invalid/sintetico/DOM/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,SL.UEM.TOTL.ZS,2022,5.5,% de la población activa,https://ejemplo.invalid/sintetico/DOM/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,SL.UEM.TOTL.ZS,2023,5.1,% de la población activa,https://ejemplo.invalid/sintetico/DOM/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,SL.UEM.TOTL.ZS,2024,,% de la población activa,https://ejemplo.invalid/sintetico/DOM/SL.UEM.TOTL.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NE.EXP.GNFS.ZS,2019,41.2,% del PIB,https://ejemplo.invalid/sintetico/PAN/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NE.EXP.GNFS.ZS,2020,37.5,% del PIB,https://ejemplo.invalid/sintetico/PAN/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NE.EXP.GNFS.ZS,2021,41.0,% del PIB,https://ejemplo.invalid/sintetico/PAN/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NE.EXP.GNFS.ZS,2022,47.6,% del PIB,https://ejemplo.invalid/sintetico/PAN/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NE.EXP.GNFS.ZS,2023,46.3,% del PIB,https://ejemplo.invalid/sintetico/PAN/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+PAN,NE.EXP.GNFS.ZS,2024,45.1,% del PIB,https://ejemplo.invalid/sintetico/PAN/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NE.EXP.GNFS.ZS,2019,32.9,% del PIB,https://ejemplo.invalid/sintetico/CRI/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NE.EXP.GNFS.ZS,2020,30.8,% del PIB,https://ejemplo.invalid/sintetico/CRI/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NE.EXP.GNFS.ZS,2021,37.1,% del PIB,https://ejemplo.invalid/sintetico/CRI/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NE.EXP.GNFS.ZS,2022,38.4,% del PIB,https://ejemplo.invalid/sintetico/CRI/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NE.EXP.GNFS.ZS,2023,37.0,% del PIB,https://ejemplo.invalid/sintetico/CRI/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+CRI,NE.EXP.GNFS.ZS,2024,,% del PIB,https://ejemplo.invalid/sintetico/CRI/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NE.EXP.GNFS.ZS,2019,22.6,% del PIB,https://ejemplo.invalid/sintetico/DOM/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NE.EXP.GNFS.ZS,2020,19.7,% del PIB,https://ejemplo.invalid/sintetico/DOM/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NE.EXP.GNFS.ZS,2021,22.4,% del PIB,https://ejemplo.invalid/sintetico/DOM/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NE.EXP.GNFS.ZS,2022,23.6,% del PIB,https://ejemplo.invalid/sintetico/DOM/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NE.EXP.GNFS.ZS,2023,22.0,% del PIB,https://ejemplo.invalid/sintetico/DOM/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas
+DOM,NE.EXP.GNFS.ZS,2024,21.4,% del PIB,https://ejemplo.invalid/sintetico/DOM/NE.EXP.GNFS.ZS,2025-09-30T00:00:00Z,SINTETICO - solo para pruebas

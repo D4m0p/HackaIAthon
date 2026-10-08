@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {"title": "SINTETICO - formato USGS, solo para pruebas"},
+  "features": [
+    {
+      "type": "Feature",
+      "id": "sin-us-0001",
+      "properties": {"mag": 4.8, "place": "32 km S of Boca Chica, Panama", "time": 1758510300000, "updated": 1758520000000, "status": "reviewed", "url": "https://ejemplo.invalid/usgs/sin-us-0001"},
+      "geometry": {"type": "Point", "coordinates": [-82.25, 7.95, 15.2]}
+    },
+    {
+      "type": "Feature",
+      "id": "sin-us-0002",
+      "properties": {"mag": 3.5, "place": "Panama-Costa Rica border region", "time": 1759080000000, "updated": 1759090000000, "status": "reviewed", "url": "https://ejemplo.invalid/usgs/sin-us-0002"},
+      "geometry": {"type": "Point", "coordinates": [-82.9, 8.6, 10.0]}
+    },
+    {
+      "type": "Feature",
+      "id": "sin-us-0003",
+      "properties": {"mag": 4.1, "place": "south of Panama", "time": 1757500000000, "updated": 1757510000000, "status": "reviewed", "url": "https://ejemplo.invalid/usgs/sin-us-0003"},
+      "geometry": {"type": "Point", "coordinates": [-80.1, 5.9, 10.0]}
+    }
+  ]
+}

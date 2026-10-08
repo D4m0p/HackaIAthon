@@ -13,3 +13,10 @@ datos/raw/tvn_rss.xml
 # Respuesta cruda que contiene un registro retirado (ver datos/exclusiones.json).
 # Su huella y su consulta quedan en datos/raw/extraccion.json.
 datos/raw/gdelt/economia_20260918_20260928.json
+
+# Archivos de Windows (metadatos de descarga)
+*:Zone.Identifier
+
+# Documentos de la organización que viven solo en local (no se redistribuyen)
+/hackIAthon - reto TVN Media.pdf
+/WhatsApp Image *.jpeg
