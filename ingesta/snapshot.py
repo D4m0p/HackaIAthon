@@ -292,7 +292,7 @@ def _catalogo(registro: dict, reporte: dict, manifest: dict) -> list[dict]:
             "fuente": "TVN · feed RSS público",
             "url": tvn.URL_RSS,
             "fecha_extraccion": extraccion("tvn"),
-            "cobertura": f"{noticias['por_origen'].get(tvn.ORIGEN, 0)} titulares; el feed solo conserva las últimas horas, no el histórico.",
+            "cobertura": f"{noticias['por_origen'].get(tvn.ORIGEN, 0)} titulares: los del día de la extracción más notas antiguas que el feed mantiene. No conserva el histórico completo.",
             "campos": ["titulo", "url", "fecha_publicacion", "palabras_clave", "seccion"],
             "licencia_condiciones": CONDICIONES["tvn"],
             "transformaciones": "Fechas a UTC, URL normalizada, ID estable. Se descartan descripción e imágenes.",

@@ -1,45 +1,54 @@
 {
   "noticias": {
-    "leidas": 504,
-    "validas": 504,
+    "leidas": 599,
+    "validas": 599,
     "rechazadas": 0,
     "motivos_de_rechazo": {},
-    "duplicados_por_url_fusionados": 24,
+    "duplicados_por_url_fusionados": 79,
     "de_tvn": 154,
     "por_origen": {
-      "gdelt_doc": 350,
+      "gdelt_doc": 445,
       "tvn_rss": 154
     },
     "por_idioma": {
-      "es": 435,
-      "en": 43,
-      "el": 10,
+      "es": 464,
+      "en": 94,
+      "el": 13,
       "zh": 7,
+      "fr": 3,
       "pt": 3,
-      "fr": 2,
-      "de": 1,
+      "ko": 2,
+      "ru": 2,
+      "de": 2,
+      "lithuanian": 1,
+      "bulgarian": 1,
+      "persian": 1,
       "ja": 1,
+      "tr": 1,
       "th": 1,
-      "ar": 1
+      "ar": 1,
+      "ukrainian": 1,
+      "indonesian": 1
     },
     "por_tema_de_consulta": {
       "general": 225,
+      "economia": 191,
       "sin dato": 154,
-      "economia": 125
+      "logistica": 29
     },
-    "medios_distintos": 106,
-    "recirculadas": 100,
-    "sin_fecha_de_publicacion": 310,
+    "medios_distintos": 175,
+    "recirculadas": 101,
+    "sin_fecha_de_publicacion": 396,
     "cobertura_deteccion": {
-      "minimo": "2026-09-11T22:45:00Z",
+      "minimo": "2026-09-11T21:30:00Z",
       "maximo": "2026-10-08T18:41:07Z"
     },
     "nulos_por_campo": {
-      "fecha_publicacion": 310,
+      "fecha_publicacion": 396,
       "tema": 154,
-      "palabras_clave": 350,
-      "seccion": 350,
-      "pais_medio": 159
+      "palabras_clave": 445,
+      "seccion": 445,
+      "pais_medio": 163
     }
   },
   "indicadores": {
@@ -92,9 +101,7 @@
     "nulos_por_campo": {}
   },
   "incidencias": [
-    "Descarga fallida: raw/gdelt/economia_20260928_20261008.json (No se pudo descargar https://api.gdeltproject.org/api/v2/doc/doc?query=panama+%28economy+OR+inflation+OR+employment+OR+investment+OR+econom%C3%ADa+OR+inflaci%C3%B3n+OR+empleo%29&mode=ArtList&format=json&sort=DateDesc&maxrecords=75&startdatetime=20260928184106&enddatetime=20261008184106: HTTP Error 429: Too Many Requests)",
-    "Descarga fallida: raw/gdelt/logistica_20260908_20260918.json (pendiente: GDELT limitó las consultas en esta ejecución)",
-    "Descarga fallida: raw/gdelt/logistica_20260918_20260928.json (pendiente: GDELT limitó las consultas en esta ejecución)",
+    "Descarga fallida: raw/gdelt/logistica_20260918_20260928.json (No se pudo descargar https://api.gdeltproject.org/api/v2/doc/doc?query=panama+%28canal+OR+logistics+OR+shipping+OR+port+OR+log%C3%ADstica+OR+puerto%29&mode=ArtList&format=json&sort=DateDesc&maxrecords=75&startdatetime=20260918184106&enddatetime=20260928184106: HTTP Error 429: Too Many Requests)",
     "Descarga fallida: raw/gdelt/logistica_20260928_20261008.json (pendiente: GDELT limitó las consultas en esta ejecución)",
     "Descarga fallida: raw/gdelt/turismo_20260908_20260918.json (pendiente: GDELT limitó las consultas en esta ejecución)",
     "Descarga fallida: raw/gdelt/turismo_20260918_20260928.json (pendiente: GDELT limitó las consultas en esta ejecución)",
