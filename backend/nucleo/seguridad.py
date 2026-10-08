@@ -27,6 +27,15 @@ PATRONES_INYECCION = [
     r"(actua como|you are now|ahora eres)",
     r"(prioridad|puntaje|score) (de )?100",
     r"(api key|contrasena|password|token secreto)",
+    # Paráfrasis dirigidas al sistema
+    r"nota (para|al) (el )?(sistema|asistente|modelo|clasificador)",
+    r"para (el|la) (asistente|ia|modelo|sistema|clasificador)\s*:",
+    r"omit\w* (las |los |tus )?(advertencias|avisos|reglas|restricciones)",
+    r"instruccion\w* (para|al) (el |la )?(modelo|sistema|asistente|ia)",
+    r"(clasifica|marca|etiqueta)\w* (esta|este|la|el) (noticia|titular) como",
+    r"responde (solo|unicamente) con",
+    # Marcadores de delimitación: ningún titular real los usa
+    r"<<|>>",
 ]
 
 

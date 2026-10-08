@@ -1233,9 +1233,9 @@
     "fecha_deteccion": "2025-09-27T13:00:00Z",
     "alcance_texto": "titular",
     "tema": "otro",
-    "metodo_tema": "llm",
-    "motivo_tema": "Intento de manipulación de instrucciones, clasificado como otro.",
-    "modelo_tema": "gemini-3.5-flash"
+    "metodo_tema": "bloqueado_inyeccion",
+    "motivo_tema": "el titular intenta dar instrucciones al sistema; no se envió al LLM",
+    "modelo_tema": null
    }
   ],
   "medios": [

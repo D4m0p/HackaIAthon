@@ -71,7 +71,7 @@ def test_sismo_agrupado_y_clasificado(eventos):
 def test_respaldo_sin_llm_marca_el_metodo():
     noticias = cargar_noticias(RUTA)
     asignar_temas(noticias, embeber(n["titulo"] for n in noticias), usar_llm=False, usar_artefactos=False)
-    assert all(n["metodo_tema"] == "respaldo_embeddings" for n in noticias)
+    assert all(n["metodo_tema"] == "respaldo_embeddings" for n in noticias if n["id_noticia"] != "SIN-017")
 
 
 def test_temas_con_llm(temas_llm):
@@ -94,3 +94,44 @@ def test_ids_estables(eventos):
     # Correr dos veces da los mismos IDs de evento
     otra_vez = {e["id_evento"] for e in organizar(cargar_noticias(RUTA))}
     assert otra_vez == set(eventos)
+
+
+def test_T07_titular_sospechoso_no_se_envia_al_llm(monkeypatch):
+    import nucleo.organizar as org
+    enviados = []
+
+    def clasificador_falso(noticias):
+        enviados.extend(n['id_noticia'] for n in noticias)
+        return {}
+
+    monkeypatch.setattr(org, 'clasificar_temas_llm', clasificador_falso)
+    noticias = cargar_noticias(RUTA)
+    asignar_temas(noticias, embeber(n['titulo'] for n in noticias), usar_llm=True, usar_artefactos=False)
+
+    assert 'SIN-017' not in enviados and 'SIN-001' in enviados
+    sospechosa = next(n for n in noticias if n['id_noticia'] == 'SIN-017')
+    assert sospechosa['tema_asignado'] == 'otro' and sospechosa['metodo_tema'] == 'bloqueado_inyeccion'
+
+
+def test_titulares_van_como_json_y_se_rechazan_ids_repetidos(monkeypatch):
+    import json as _json
+    import nucleo.llm
+    from nucleo.organizar import clasificar_temas_llm
+    recibido = {}
+
+    def generar_falso(instrucciones, contenido, esquema, modelos, tarea):
+        recibido['contenido'] = contenido
+        return {'clasificaciones': [
+            {'id': 'SIN-001', 'tema': 'logistica_canal', 'motivo': 'x'},
+            {'id': 'SIN-001', 'tema': 'economia', 'motivo': 'respuesta repetida'},
+            {'id': 'SIN-004', 'tema': 'economia', 'motivo': 'x'},
+        ]}, 'modelo-falso'
+
+    monkeypatch.setattr(nucleo.llm, 'generar', generar_falso)
+    noticias = [n for n in cargar_noticias(RUTA) if n['id_noticia'] in ('SIN-001', 'SIN-004')]
+    resultado = clasificar_temas_llm(noticias)
+
+    # El contenido es JSON válido con cada titular una vez
+    assert [t['id'] for t in _json.loads(recibido['contenido'])] == ['SIN-001', 'SIN-004']
+    # SIN-001 vino repetido: se descarta (usará el respaldo); SIN-004 se acepta
+    assert set(resultado) == {'SIN-004'}

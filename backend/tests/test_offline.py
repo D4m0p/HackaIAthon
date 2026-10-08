@@ -39,7 +39,8 @@ def test_T10_ranking_offline_identico_al_de_referencia(corrida_offline):
 
 def test_T10_temas_y_fichas_iguales_a_la_referencia(corrida_offline):
     eventos, fichas = corrida_offline
-    assert all(n["metodo_tema"] == "llm" for e in eventos for n in e["noticias"])
+    # Todas salen del artefacto del LLM, salvo el titular con inyección, que nunca se envía al LLM
+    assert all(n["metodo_tema"] == "llm" for e in eventos for n in e["noticias"] if n["id_noticia"] != "SIN-017")
 
     referencia = {}
     for linea in (ARTEFACTOS / "fichas.jsonl").read_text(encoding="utf-8").splitlines():
@@ -64,6 +65,6 @@ def test_titular_nuevo_sin_conexion_usa_respaldo_sin_afectar_a_los_demas(sin_int
     todas = {n["id_noticia"]: n for e in eventos for n in e["noticias"]}
     assert todas["SIN-NUEVA"]["metodo_tema"] == "respaldo_embeddings"
     # Los demás titulares siguen usando su tema guardado (la caché es por titular, no por lote)
-    assert all(n["metodo_tema"] == "llm" for i, n in todas.items() if i != "SIN-NUEVA")
+    assert all(n["metodo_tema"] == "llm" for i, n in todas.items() if i not in ("SIN-NUEVA", "SIN-017"))
     evento_nuevo = next(e for e in eventos if "SIN-NUEVA" in e["ids_noticias"])
     assert evento_nuevo["tema_por_respaldo"] is True
