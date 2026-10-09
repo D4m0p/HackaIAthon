@@ -131,7 +131,16 @@ python -m nucleo.pipeline --fecha-corte 2025-09-30T00:00:00Z
 
 Comparación de consultas BM25 frente a híbrida: [`backend/eval/resultados/consultas_bm25_vs_hibrida.md`](backend/eval/resultados/consultas_bm25_vs_hibrida.md) (40 de 40 en ambos con el benchmark del equipo C; en 9 paráfrasis, 0 contra 9 respondidas, sin perder abstenciones; con los límites de la medición anotados).
 
-`backend/eval/planilla_etiquetas.xlsx` tiene 100 titulares reales sorteados con semilla fija para etiquetar a mano, a ciegas: tema, relación con Panamá y si merece estar en la agenda de TVN. Esas etiquetas son la referencia para medir macro-F1 de temas (LLM, embeddings y palabras clave) y Precision@5 del ranking. Para regenerarla, desde `backend/`: `python -m eval.crear_planilla`.
+Métricas del núcleo (sección 9.1), desde `backend/`:
+
+```bash
+python -m eval.metricas                              # con la planilla del repo
+python -m eval.metricas copia_1.xlsx copia_2.xlsx    # dos personas: agrega el acuerdo (kappa)
+```
+
+Escribe `backend/eval/resultados/metricas.md` (para Notion) y `metricas.json`, siempre con numerador, denominador y fallos. Sin etiquetas calcula lo automático (cobertura de citas, eficiencia, tokens y costo) y deja el resto como pendiente.
+
+La planilla `backend/eval/planilla_etiquetas.xlsx` se etiqueta a mano y tiene cuatro hojas: **Etiquetas** (100 titulares sorteados: tema y relación con Panamá → macro-F1 de LLM, embeddings y palabras clave), **Agenda** (los 15 primeros eventos mezclados → Precision@5 y @10), **Pares** (pares que el sistema juntó y pares parecidos que separó → precisión y recall de la agrupación) y **Afirmaciones** (afirmaciones y oraciones citadas con lo que citan → validez de sustento). Para regenerarla: `python -m eval.crear_planilla`. Los pendientes del equipo están en [`backend/PENDIENTES.md`](backend/PENDIENTES.md).
 
 ### Pruebas
 
