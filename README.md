@@ -120,7 +120,7 @@ cd backend
 python -m pytest
 ```
 
-Desde la raíz, `python -m pytest` corre solo las pruebas del paquete de datos (ver `pytest.ini`). Las pruebas que llaman a Gemini se saltan solas si no hay clave o conexión.
+Desde la raíz, `python -m pytest` corre las pruebas del paquete de datos y las de la interfaz, que solo usan la biblioteca estándar (ver `pytest.ini`); las del núcleo se corren aquí. Las pruebas que llaman a Gemini se saltan solas si no hay clave o conexión.
 
 | Prueba | Qué comprueba | Archivo |
 |---|---|---|
@@ -146,3 +146,123 @@ Desde la raíz, `python -m pytest` corre solo las pruebas del paquete de datos (
 | `config.py` | — | Umbrales, pesos y reglas, con la versión de reglas vigente |
 
 Las limitaciones conocidas están en [`backend/LIMITACIONES.md`](backend/LIMITACIONES.md).
+
+## Interfaz y revisión (`interfaz/`)
+
+La pantalla del prototipo y la etapa 7 del reto: muestra la bandeja priorizada y la ficha de cada caso, responde consultas en español con cita por afirmación, y registra la decisión humana (aceptar, corregir o descartar) en una bitácora lista para Notion. No recalcula nada: lee lo que producen el paquete de datos y el núcleo de IA.
+
+### Ejecutar
+
+No hay nada que instalar: solo usa la biblioteca estándar de Python y funciona sin internet.
+
+```bash
+python -m interfaz              # abre http://localhost:8765
+python -m interfaz --ejemplo    # datos de ejemplo sintéticos, con un registro aparte
+```
+
+Sin opciones lee `backend/artefactos/eventos.json` y `fichas.jsonl`, es decir, la corrida del núcleo sobre el paquete real. Si esa corrida todavía no existe, muestra los datos de ejemplo de `backend/artefactos/ejemplo/` y lo avisa en pantalla. Otras opciones: `--puerto`, `--sin-navegador`, `--artefactos` y `--datos`.
+
+Las decisiones de revisión se guardan en `interfaz/estado/real/` o en `interfaz/estado/ejemplo/` (fuera de git). Lo que se practica con los datos de ejemplo nunca se mezcla con el registro del reto.
+
+| Vista | Etapa | Qué muestra |
+|---|---|---|
+| Bandeja | 4 | Casos ordenados por puntaje, con sus cinco componentes, el estado de evidencia aparte y el estado de revisión |
+| Ficha | 5 y 6 | Qué se reporta, quién lo reporta por procedencia independiente, afirmaciones con cita, cifras en conflicto, contexto oficial, pendientes y el paquete editorial |
+| Ficha · revisión | 7 | Tomar, pedir evidencia, aprobar como borrador, descartar o reabrir; corrección del borrador con validación de citas |
+| Consulta | — | Preguntas en español sobre el corpus: respuesta con cita o abstención explícita |
+| Registro | 7 | Bitácora de decisiones, tiempos de consulta y exportación de `fichas_revisadas.jsonl` |
+| Datos | 1 | Verificación en vivo del paquete contra su manifest, calidad, fuentes y lo que no entró |
+| Recorrido | — | Guion de la demo: las siete etapas, T01 a T10 y las preguntas del jurado, a un clic |
+
+### Revisión humana
+
+- Los estados son los cinco del reto: nuevo, en revisión, requiere evidencia, aprobado como borrador y descartado. No existe un estado para publicar.
+- Cada decisión la firma una persona y queda en `bitacora.jsonl` con fecha, estado anterior, estado nuevo, nota, puntaje y versión de reglas. La bitácora solo crece.
+- La prioridad no habilita nada: un caso con evidencia insuficiente no se puede aprobar, por alto que sea su puntaje, y tampoco un borrador que el validador bloquea.
+- Descartar, reabrir y aprobar con evidencia parcial o cifras en conflicto exigen una nota.
+- Al corregir el borrador se vuelven a aplicar los controles del núcleo (`nucleo/seguridad.py`): citas válidas y cifras presentes en lo que cita cada oración.
+- Si el núcleo regenera una ficha después de una decisión, el caso queda marcado para revisarse de nuevo.
+
+### Consultas en español
+
+El motor (`consulta.py`) responde solo con el corpus cargado. Cada afirmación cita un elemento y un campo, y antes de mostrarse se verifica que sus cifras estén en lo citado; lo que no pasa se descarta.
+
+| Pregunta | Respuesta |
+|---|---|
+| «¿Qué cinco temas merecen revisión…?» | Los casos del ranking, con por qué suben, qué evidencia hay y qué falta verificar |
+| Un indicador («inflación de Panamá en 2023») | El dato del Banco Mundial con país, año y unidad. Si se pide «hoy» o un año fuera del snapshot, se abstiene y ofrece el último dato anual, marcado como tal |
+| Un sismo con filtro (año, mes, magnitud, lugar) | Los registros de USGS que cumplen, con el aviso de que la caja no equivale a Panamá |
+| Un tema o una cifra en las noticias | Lo que publica cada medio, como declaración atribuida. Si hay cifras distintas se muestran todas |
+| Algo que el corpus no contiene | Abstención, lo más cercano y qué haría falta para responder |
+| Instrucciones, secretos o acciones («publica…») | Rechazo: consultar es solo leer |
+| Veracidad, culpabilidad, rating, inversión, datos personales, predicciones | Fuera de alcance, con el motivo |
+
+La búsqueda es por palabras (BM25 con raíces y sinónimos), sin modelo: es instantánea y no necesita el entorno del núcleo. La cobertura de lo preguntado decide cuándo abstenerse.
+
+### Registro en Notion
+
+En cada ficha, «Copiar para Notion» deja en el portapapeles el documento del caso (IDs, fuentes, puntaje desglosado, estado de evidencia, borrador, validación y revisión humana) para pegarlo en «Casos y evidencias».
+
+El envío automático es opcional. Para activarlo, copie `interfaz/.env.example` como `interfaz/.env` y complete el token de una integración interna y el ID de la base:
+
+```bash
+python -m interfaz.notion --crear-base ID_DE_LA_PAGINA   # crea la base con sus columnas
+python -m interfaz.notion --probar                       # comprueba el acceso
+```
+
+Con eso aparece el botón «Enviar a Notion», que crea la página del caso o agrega la revisión nueva a la que ya existe. Es lo único de la interfaz que usa internet.
+
+### Fichas a pedido
+
+El núcleo genera en lote las primeras fichas del ranking. Para los demás casos la interfaz muestra la evidencia y los pendientes, y ofrece generar la ficha si se ejecuta con el entorno del núcleo:
+
+```bash
+backend/.venv/bin/python -m interfaz        # en Windows: backend\.venv\Scripts\python -m interfaz
+```
+
+### Pruebas
+
+```bash
+python -m pytest interfaz/tests
+```
+
+| Prueba | Qué comprueba | Archivo |
+|---|---|---|
+| T08 | La bandeja y la ficha exponen componentes y regla; prioridad alta con evidencia insuficiente no se puede aprobar; no hay estado para publicar | `interfaz/tests/test_t08_prioridad_alta.py` |
+| T09 | Paquete editorial completo y dentro de límites, citas que resuelven, hechos y declaraciones distinguidos, y bloqueo de una corrección sin respaldo | `interfaz/tests/test_t09_brief_editorial.py` |
+| T04 a T07 | Dato anual con su año, cifras en conflicto, abstención y rechazo de instrucciones, desde la consulta | `interfaz/tests/test_consulta.py` |
+| T10 | El recorrido completo funciona sin abrir conexiones | `interfaz/tests/test_sin_internet.py` |
+| — | Estados, bitácora y separación entre el ejemplo y el reto | `interfaz/tests/test_revision.py` |
+| — | Rutas del servidor, archivos fuera de la carpeta web y peticiones de otro origen | `interfaz/tests/test_servidor.py` |
+| — | Documento para Notion y envío por la API con un Notion simulado | `interfaz/tests/test_notion.py` |
+| — | Benchmark de desarrollo dentro de las metas de la sección 9.1 | `interfaz/tests/test_evaluar.py` |
+
+### Evaluación de consultas
+
+```bash
+python -m interfaz.evaluar interfaz/benchmark_ejemplo.jsonl --ejemplo
+python -m interfaz.evaluar ruta/benchmark.jsonl --salida resultados/    # benchmark de la organización
+```
+
+Corre cada consulta, guarda su salida completa y reporta con numerador y denominador: respuestas sustentadas, contradicciones mostradas, abstenciones correctas e incorrectas, consultas adversariales contenidas, cobertura de citas y tiempo mediano y p95. Los fallos salen listados con su consulta. El resumen es una tabla lista para la página «Pruebas y métricas» de Notion.
+
+`benchmark_ejemplo.jsonl` trae 40 consultas de desarrollo sobre los datos de ejemplo (20 sustentadas, 6 de contradicción, 8 sin respuesta y 6 adversariales). Las escribió el equipo junto con el motor, así que sirven para detectar regresiones, no como evaluación independiente: esa corresponde al benchmark reservado, con etiquetas de revisión humana.
+
+### Módulos
+
+| Módulo | Qué hace |
+|---|---|
+| `fuentes.py` | Carga los artefactos del núcleo y el paquete de datos; arma la evidencia citable de cada evento |
+| `revision.py` | Estados, reglas de aprobación, corrección del borrador y bitácora |
+| `consulta.py`, `recuperacion.py`, `texto.py` | Consultas en español, búsqueda BM25 y tratamiento del texto |
+| `evaluar.py` | Benchmark de consultas con las métricas de la sección 9.1 |
+| `exportar.py`, `notion.py` | Documento de la ficha en Markdown o en bloques de Notion, y cliente de la API |
+| `aplicacion.py`, `servidor.py` | Lo que la pantalla necesita y el servidor local (solo atiende a la propia máquina) |
+| `puente.py` | Reutiliza `config.py`, `seguridad.py` y `plantilla.py` del núcleo sin exigir sus dependencias |
+| `web/` | La pantalla: HTML, CSS y JavaScript sin bibliotecas externas |
+
+### Limitaciones conocidas
+
+- La búsqueda es por palabras: no encuentra una nota en inglés a partir de una pregunta en español, salvo por los sinónimos listados en `texto.py`, y una palabra desconocida en la pregunta puede provocar una abstención de más. Los casos parciales se muestran como «lo más cercano».
+- El envío a Notion por la API se probó contra un Notion simulado; falta verificarlo con el token real del espacio del equipo.
+- La revisión es de una sola máquina: no hay cuentas ni permisos, la persona se identifica con su nombre.

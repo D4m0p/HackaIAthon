@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>De la señal a la decisión</title>
+  <link rel="icon" href="/marca.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="barra">
+    <a class="marca" href="#/bandeja" aria-label="De la señal a la decisión: ir a la bandeja">
+      <svg class="marca__glifo" viewBox="0 0 28 28" aria-hidden="true">
+        <rect x="2" y="16" width="5" height="10" rx="1.5"></rect>
+        <rect x="9.5" y="10" width="5" height="16" rx="1.5"></rect>
+        <rect x="17" y="3" width="5" height="23" rx="1.5"></rect>
+        <circle class="marca__punto" cx="25" cy="5" r="2.5"></circle>
+      </svg>
+      <span class="marca__texto">
+        <strong>De la señal a la decisión</strong>
+        <small>Copiloto editorial · TVN Media</small>
+      </span>
+    </a>
+
+    <nav class="navegacion" aria-label="Secciones">
+      <a href="#/bandeja" data-vista="bandeja">Bandeja</a>
+      <a href="#/consulta" data-vista="consulta">Consulta</a>
+      <a href="#/registro" data-vista="registro">Registro</a>
+      <a href="#/datos" data-vista="datos">Datos</a>
+      <a href="#/recorrido" data-vista="recorrido">Recorrido</a>
+    </nav>
+
+    <div class="barra__lado">
+      <span class="sello" id="sello-datos" hidden></span>
+      <label class="revisor" title="Nombre de la persona responsable: firma cada decisión de revisión">
+        <span class="revisor__rotulo">Revisa</span>
+        <input id="revisor" type="text" autocomplete="name" maxlength="80" placeholder="Su nombre" aria-label="Persona revisora">
+      </label>
+      <button class="icono-boton" id="boton-presentacion" type="button" aria-pressed="false" title="Modo presentación: texto más grande"></button>
+      <button class="icono-boton" id="boton-tema" type="button" title="Cambiar entre tema claro y oscuro"></button>
+    </div>
+  </header>
+
+  <div class="franja" id="franja" hidden></div>
+
+  <main id="contenido" tabindex="-1"></main>
+
+  <dialog class="dialogo" id="dialogo"></dialog>
+  <div class="tostadas" id="tostadas" role="status" aria-live="polite"></div>
+
+  <noscript><p class="sin-js">Esta interfaz necesita JavaScript.</p></noscript>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
