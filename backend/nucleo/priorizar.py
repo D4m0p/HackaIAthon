@@ -47,21 +47,21 @@ def relevancia(evento):
     es_tema_del_reto = evento["tema"] != "otro"
     if not es_tema_del_reto:
         return 0.0, "tema 'otro': fuera de los temas del reto"
+    tema = f"tema '{evento['tema']}' es del reto"
+
+    # Relación con Panamá según el LLM: se toma la más fuerte entre las noticias del evento
+    relaciones = [n.get("relacion_panama") for n in evento["noticias"] if n.get("relacion_panama")]
+    if relaciones:
+        relacion = max(relaciones, key=lambda r: config.VALOR_RELACION_PANAMA[r])
+        valor = 0.5 + 0.5 * config.VALOR_RELACION_PANAMA[relacion]
+        return valor, f"{tema}; relación con Panamá: {relacion} (según el LLM)"
+
+    # Sin LLM: respaldo por mención de lugares de Panamá
     texto = _texto(evento)
     lugar = next((l for l in config.LUGARES_PANAMA if re.search(rf"\b{l}\b", texto)), None)
-    medio_local = next((n["medio"] for n in evento["noticias"]
-                        if normalizar(n["medio"]) in config.MEDIOS_PANAMENOS), None)
-    vinculo_panama = lugar or medio_local
-
-    valor = 0.5 + 0.5 * bool(vinculo_panama)
-    partes = [f"tema '{evento['tema']}' es del reto"]
-    if lugar:
-        partes.append(f"menciona '{lugar}'")
-    elif medio_local:
-        partes.append(f"publicado por {medio_local}")
-    else:
-        partes.append("sin vínculo explícito con Panamá")
-    return valor, "; ".join(partes)
+    valor = 0.5 + 0.5 * bool(lugar)
+    vinculo = f"menciona '{lugar}'" if lugar else "sin vínculo explícito con Panamá"
+    return valor, f"{tema}; {vinculo} (respaldo sin LLM)"
 
 
 def impacto(evento):

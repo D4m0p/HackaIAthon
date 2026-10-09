@@ -123,6 +123,57 @@ def test_modelo_sin_cuota_no_se_reintenta(monkeypatch):
     monkeypatch.setattr(llm.time, 'sleep', lambda s: intentos.append('espera'))
 
     import pytest
-    with pytest.raises(llm.LLMNoDisponible, match='Cuota agotada'):
+    with pytest.raises(llm.LLMNoDisponible, match='Sin cuota'):
         llm.generar('i', 'contenido-unico-de-prueba-429', {'type': 'object'}, ['modelo-a', 'modelo-b'])
     assert intentos == ['modelo-a', 'modelo-b']  # una vez cada uno, sin segunda ronda ni esperas
+
+
+def test_respuesta_que_no_cumple_el_esquema_se_rechaza():
+    from nucleo.llm import _cumple_esquema
+    esquema = {'type': 'object', 'required': ['tema'],
+               'properties': {'tema': {'type': 'string', 'enum': ['economia', 'otro']}}}
+    assert _cumple_esquema({'tema': 'economia'}, esquema)
+    assert not _cumple_esquema({'tema': 'deportes'}, esquema)   # fuera de la lista
+    assert not _cumple_esquema({'otro_campo': 1}, esquema)      # falta un campo obligatorio
+
+
+def test_groq_responde_cuando_gemini_no_tiene_cuota(monkeypatch):
+    import httpx
+    import nucleo.llm as llm
+
+    class ErrorCuota(Exception):
+        code = 429
+
+    class Modelos:
+        def generate_content(self, model, contents, config):
+            raise ErrorCuota()
+
+    class Cliente:
+        models = Modelos()
+
+    class RespuestaGroq:
+        status_code = 200
+        def json(self):
+            return {'choices': [{'message': {'content': '{"tema": "economia"}'}}],
+                    'usage': {'prompt_tokens': 10, 'completion_tokens': 5, 'total_tokens': 15}}
+
+    monkeypatch.setenv('GROQ_API_KEY', 'clave-falsa')
+    monkeypatch.setattr(llm, '_obtener_cliente', lambda: Cliente())
+    monkeypatch.setattr(llm, '_modelos_sin_cuota', set())
+    monkeypatch.setattr(llm, '_registrar', lambda datos: None)
+    monkeypatch.setattr(llm, 'CARPETA_CACHE_LLM', llm.Path('/tmp/cache_llm_prueba_groq'))
+    monkeypatch.setattr(httpx, 'post', lambda *a, **k: RespuestaGroq())
+
+    esquema = {'type': 'object', 'required': ['tema'], 'properties': {'tema': {'type': 'string'}}}
+    resultado, modelo = llm.generar('i', 'contenido-prueba-groq', esquema, ['gemini-x', 'groq:modelo-y'])
+    assert resultado == {'tema': 'economia'} and modelo == 'groq:modelo-y'
+
+
+def test_sin_clave_de_groq_se_salta_sin_romper(monkeypatch):
+    import nucleo.llm as llm
+    monkeypatch.delenv('GROQ_API_KEY', raising=False)
+    monkeypatch.setattr(llm, '_modelos_sin_cuota', set())
+    monkeypatch.setattr(llm, '_registrar', lambda datos: None)
+    import pytest
+    with pytest.raises(llm.LLMNoDisponible, match='Sin cuota o sin clave'):
+        llm.generar('i', 'contenido-sin-clave', {'type': 'object'}, ['groq:modelo-y'])

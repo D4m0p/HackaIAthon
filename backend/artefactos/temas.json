@@ -1,115 +1,5169 @@
 {
+ "N-0010cce1a4c0": {
+  "fecha_utc": "2026-10-09T02:11:04.497638+00:00",
+  "hash_titulo": "cb8db4c27367ec07",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza con el Concurso Nacional de Oratoria en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-009b376481c1": {
+  "fecha_utc": "2026-10-09T02:11:04.497631+00:00",
+  "hash_titulo": "969d9963fa0adb29",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre proyectos de agua potable gestionados por el Estado (Idaan).",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-00d9574f94f5": {
+  "fecha_utc": "2026-10-09T02:11:04.497621+00:00",
+  "hash_titulo": "2b811f25b791477b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la banca, finanzas y cambio de identidad de un banco en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-0134830c6aa0": {
+  "fecha_utc": "2026-10-09T02:11:04.499064+00:00",
+  "hash_titulo": "5dfb73e10f255777",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de transporte público (teleférico) en Panamá y San Miguelito.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-017320ae6875": {
+  "fecha_utc": "2026-10-09T02:11:04.498761+00:00",
+  "hash_titulo": "2618b5053e1cbc5c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Discusión de reformas al Código Electoral en la Asamblea Nacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-01f4fee8f864": {
+  "fecha_utc": "2026-10-09T02:11:04.497895+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Niño y riesgos económicos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-023e672269fd": {
+  "fecha_utc": "2026-10-09T02:11:04.499650+00:00",
+  "hash_titulo": "2caff3646489a031",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gestión deportiva en Pandeportes, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-026671423556": {
+  "fecha_utc": "2026-10-09T02:11:04.497607+00:00",
+  "hash_titulo": "dfa1bbb0525969b6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Ranking de reputación empresarial local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-02fbf10aa64f": {
+  "fecha_utc": "2026-10-09T02:11:04.497932+00:00",
+  "hash_titulo": "ffd8065f7be1ff8e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Crecimiento de créditos y banca local en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-042e21b359dc": {
+  "fecha_utc": "2026-10-09T02:11:04.499883+00:00",
+  "hash_titulo": "c6d4b15e466be80d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Captura policial de un buscado por homicidio.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-048dd22b96f6": {
+  "fecha_utc": "2026-10-09T02:11:04.500562+00:00",
+  "hash_titulo": "ac7303b0c7b89a93",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Préstamo de la CAF para el sector agrícola a un banco en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-04ce9507b41a": {
+  "fecha_utc": "2026-10-09T02:11:04.499294+00:00",
+  "hash_titulo": "8e8ce672f07c6f28",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Estatus fiscal internacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-04d71c66adfa": {
+  "fecha_utc": "2026-10-09T02:11:04.497578+00:00",
+  "hash_titulo": "aa04872637b63b68",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza para destacar iniciativas cívicas locales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-04dbdc7c409d": {
+  "fecha_utc": "2026-10-09T02:11:04.497569+00:00",
+  "hash_titulo": "feb121a553192705",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premio de periodismo y comunicación social en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-05b438df49e4": {
+  "fecha_utc": "2026-10-09T02:11:04.499329+00:00",
+  "hash_titulo": "a2a7f4a62e5ca03e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad internacional de la selección deportiva de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0619c1cc8422": {
+  "fecha_utc": "2026-10-09T02:11:04.497560+00:00",
+  "hash_titulo": "8e61ad8d48250532",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Presentación de documentales culturales en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-06513d90a10c": {
+  "fecha_utc": "2026-10-09T02:11:04.498900+00:00",
+  "hash_titulo": "57a930097e7e522b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reformas al Código Electoral en la Asamblea de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-06e89223a4d5": {
+  "fecha_utc": "2026-10-09T02:11:04.498235+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Hace referencia a la Asamblea Nacional de Panamá y su actividad legislativa.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-0720a484634c": {
+  "fecha_utc": "2026-10-09T02:11:04.497551+00:00",
+  "hash_titulo": "03a0449e3bf5fa18",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un suceso policial/delictivo (ataque a tiros), clasificado como otro.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0793a7f03b1e": {
+  "fecha_utc": "2026-10-09T02:11:04.497544+00:00",
+  "hash_titulo": "264af827a74b3f5e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza estratégica relacionada con una feria local (La Chorrera).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-07a6a4238cdc": {
+  "fecha_utc": "2026-10-09T02:11:04.498431+00:00",
+  "hash_titulo": "0df75a3d7864a1c0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis deportivo sobre la selección de fútbol de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-07c969fee7b4": {
+  "fecha_utc": "2026-10-09T02:11:04.500555+00:00",
+  "hash_titulo": "c236816248578130",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política y comercio exterior enfocado en Venezuela y Estados Unidos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0803c58d1f47": {
+  "fecha_utc": "2026-10-09T02:11:04.497537+00:00",
+  "hash_titulo": "da296e786a47df8c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento a una empresa de medios en un simposio.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0925027270aa": {
+  "fecha_utc": "2026-10-09T02:11:04.499788+00:00",
+  "hash_titulo": "66b90a552a9643e3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Impacto de costos eléctricos en hoteles en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-093d57cbd381": {
+  "fecha_utc": "2026-10-09T02:11:04.498621+00:00",
+  "hash_titulo": "b8af42089a432eb0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Atracción de capital e inversión en América Latina.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-09557e5550fa": {
+  "fecha_utc": "2026-10-09T02:11:04.499823+00:00",
+  "hash_titulo": "188839f1607b0196",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Operativos de seguridad policial y naval en Veraguas.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-095a7b080989": {
+  "fecha_utc": "2026-10-09T02:11:04.498393+00:00",
+  "hash_titulo": "35dcf7b50c0dce70",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Emergencia y rescate por incidente natural en Chiriquí.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-0969f8653207": {
+  "fecha_utc": "2026-10-09T02:11:04.497889+00:00",
+  "hash_titulo": "c1d7ebca56015ee7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Niño y riesgos económicos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-0a3b33c9d50d": {
+  "fecha_utc": "2026-10-09T02:11:04.498399+00:00",
+  "hash_titulo": "98886817368c13e0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Marcador de posición genérico sin contenido panameño claro.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0a505b83e387": {
+  "fecha_utc": "2026-10-09T02:11:04.498228+00:00",
+  "hash_titulo": "12aa27c74419057c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre cargos y salarios públicos en el gobierno de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0a5be791b097": {
+  "fecha_utc": "2026-10-09T02:11:04.497952+00:00",
+  "hash_titulo": "98886817368c13e0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "URL genérica sin información.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0c207439728a": {
+  "fecha_utc": "2026-10-09T02:11:04.499509+00:00",
+  "hash_titulo": "4ad26194f3e486ce",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis sobre la economía y demografía de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-0c22e7ead9bc": {
+  "fecha_utc": "2026-10-09T02:11:04.497660+00:00",
+  "hash_titulo": "0dab74e35e742edb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Concentración de la Selección Femenina de Fútbol de Panamá (deportes).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0c76696a43c9": {
+  "fecha_utc": "2026-10-09T02:11:04.499287+00:00",
+  "hash_titulo": "35d9de1a1058c6d8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acciones judiciales de gremios de la seguridad social en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-0c83b0b49ebb": {
+  "fecha_utc": "2026-10-09T02:11:04.497875+00:00",
+  "hash_titulo": "98886817368c13e0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "URL genérica sin información.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0cb6e241331c": {
+  "fecha_utc": "2026-10-09T02:11:04.498614+00:00",
+  "hash_titulo": "ca6ab9c4410af220",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política de Argentina, sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0cc21beb95d5": {
+  "fecha_utc": "2026-10-09T02:11:04.500440+00:00",
+  "hash_titulo": "3efab33333a0e78a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Perfil de una ingeniera directiva del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-0ce6bef5f323": {
+  "fecha_utc": "2026-10-09T02:11:04.497530+00:00",
+  "hash_titulo": "15416ef444e952ec",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento político y de gobierno en Estados Unidos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0d4f265e7aef": {
+  "fecha_utc": "2026-10-09T02:11:04.497520+00:00",
+  "hash_titulo": "07e49bd6d16bfaab",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad de voluntariado local en beneficio de una fundación panameña.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0debb9a492fc": {
+  "fecha_utc": "2026-10-09T02:11:04.499765+00:00",
+  "hash_titulo": "cca4a421fb4030c3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Sucesos policiales y detención en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-0e5cbfb7c64a": {
+  "fecha_utc": "2026-10-09T02:11:04.499502+00:00",
+  "hash_titulo": "1b154a6f34d13bd5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aerolínea mexicana deja aeropuerto en Tulum, sin impacto en Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-0efe5765ab32": {
+  "fecha_utc": "2026-10-09T02:11:04.499322+00:00",
+  "hash_titulo": "25bb1589d85d966c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Informe oficial del MEF sobre las finanzas y deuda pública de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-10426d3f0ac4": {
+  "fecha_utc": "2026-10-09T02:11:04.499420+00:00",
+  "hash_titulo": "2d9cc32a1f83cc45",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el futuro de una mina en Panamá y su impacto económico.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-105a1e624791": {
+  "fecha_utc": "2026-10-09T02:11:04.498893+00:00",
+  "hash_titulo": "a4c38bfe9a5b242d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Columna de opinión o sección general de un medio panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-10bdf0711b24": {
+  "fecha_utc": "2026-10-09T02:11:04.498754+00:00",
+  "hash_titulo": "37904d22e0bf2071",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Artículo de opinión o entretenimiento extranjero.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-136b920dc822": {
+  "fecha_utc": "2026-10-09T02:11:04.497513+00:00",
+  "hash_titulo": "0acccf78dc52071e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso o situación internacional sin efecto directo en Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-13dd7d47059a": {
+  "fecha_utc": "2026-10-09T02:11:04.497652+00:00",
+  "hash_titulo": "a61e6d911a67d2c9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Negocio de ciudadanías en Argentina, sin efecto directo en Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-13fc389505f8": {
+  "fecha_utc": "2026-10-09T02:11:04.497505+00:00",
+  "hash_titulo": "47f49223bdc32c79",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza institucional y de liderazgo en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1433c6cc7cd2": {
+  "fecha_utc": "2026-10-09T02:11:04.500398+00:00",
+  "hash_titulo": "fc544ee0c12fd5d3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula y entretenimiento sin vínculo con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-14447c0d5d2e": {
+  "fecha_utc": "2026-10-09T02:11:04.498466+00:00",
+  "hash_titulo": "b348700de97eff70",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acuerdo interinstitucional de salud y educación pública en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-150877b7c77b": {
+  "fecha_utc": "2026-10-09T02:11:04.497497+00:00",
+  "hash_titulo": "8b439d9fb18eae66",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento a la reputación corporativa de un medio panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1588fb434f75": {
+  "fecha_utc": "2026-10-09T02:11:04.500548+00:00",
+  "hash_titulo": "58a2dcb57602d542",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el programa de empleo y vacantes laborales en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-1759deb0aa25": {
+  "fecha_utc": "2026-10-09T02:11:04.497490+00:00",
+  "hash_titulo": "cbf9420150b8f551",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza sobre el Carnaval de La Villa de Los Santos.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-183c3bd91c8a": {
+  "fecha_utc": "2026-10-09T02:11:04.497482+00:00",
+  "hash_titulo": "000762baf9592a29",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de deportes y fútbol internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-185f3b3f9833": {
+  "fecha_utc": "2026-10-09T02:11:04.498886+00:00",
+  "hash_titulo": "1e7d83d3e27d748e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Desperdicio de alimentos como problema económico en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-18b69feaf74f": {
+  "fecha_utc": "2026-10-09T02:11:04.498006+00:00",
+  "hash_titulo": "44ea987060fe3e33",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Involucra directamente el presupuesto y operaciones del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-18fb2324db75": {
+  "fecha_utc": "2026-10-09T02:11:04.499729+00:00",
+  "hash_titulo": "aac56633d4fdcdba",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reflexión social sobre la sociedad panameña.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-19cb675d17cd": {
+  "fecha_utc": "2026-10-09T02:11:04.499302+00:00",
+  "hash_titulo": "3b2e5e6f1e15c381",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento recreativo y comunitario en un parque público de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1a8d986bf866": {
+  "fecha_utc": "2026-10-09T02:11:04.497475+00:00",
+  "hash_titulo": "2181730083fc2a56",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la presión en el transporte público en Panamá Este.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-1af6371f378c": {
+  "fecha_utc": "2026-10-09T02:11:04.498593+00:00",
+  "hash_titulo": "751b20fd8162386a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Pronóstico de lluvias y tormentas en el país.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-1b60c24cbe00": {
+  "fecha_utc": "2026-10-09T02:11:04.498586+00:00",
+  "hash_titulo": "963afee0e54503ec",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Lamentos de autoridades por rescates y emergencias climáticas en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-1bf13edf246c": {
+  "fecha_utc": "2026-10-09T02:11:04.497999+00:00",
+  "hash_titulo": "0b5519285382d643",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Habla sobre salud y bienestar personal (Alzheimer) sin mención a Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1c82fc5a1a2e": {
+  "fecha_utc": "2026-10-09T02:11:04.497468+00:00",
+  "hash_titulo": "d2f97a64b2ea3a2d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Perfil gastronómico y cultural local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1cccdecc17b5": {
+  "fecha_utc": "2026-10-09T02:11:04.497855+00:00",
+  "hash_titulo": "02ac81b9b1ce26db",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Capacidad operativa de los bomberos como servicio público en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-1cd08cd503c4": {
+  "fecha_utc": "2026-10-09T02:11:04.498796+00:00",
+  "hash_titulo": "82bdfad26d3af575",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inversiones en aeropuertos de América Latina y su tráfico.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-1e2392e39e0b": {
+  "fecha_utc": "2026-10-09T02:11:04.498953+00:00",
+  "hash_titulo": "4f14a69c03082d44",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política exterior y asuntos políticos de Venezuela.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1e8e367e71af": {
+  "fecha_utc": "2026-10-09T02:11:04.498579+00:00",
+  "hash_titulo": "44b834689b2a3742",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Tema general internacional sobre mujeres, paz y seguridad.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1ecfd3a02c14": {
+  "fecha_utc": "2026-10-09T02:11:04.499057+00:00",
+  "hash_titulo": "41e3af4dbce06c76",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Retención policial por porte de arma en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1f8842579757": {
+  "fecha_utc": "2026-10-09T02:11:04.498035+00:00",
+  "hash_titulo": "a75ac3d332ba85c6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre farándula y polémicas locales de personajes públicos en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-1fc8bb03fb1b": {
+  "fecha_utc": "2026-10-09T02:11:04.497460+00:00",
+  "hash_titulo": "4298a0e7c987422a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premio corporativo otorgado a un medio de comunicación panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2017f1b96d8a": {
+  "fecha_utc": "2026-10-09T02:11:04.500392+00:00",
+  "hash_titulo": "361a6cec25363b61",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial que involucra antecedentes de un criminal en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-202431d6a2c0": {
+  "fecha_utc": "2026-10-09T02:11:04.500034+00:00",
+  "hash_titulo": "6768b6a02c8de932",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre deportes y obras en Rosario, Argentina, sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-20f851c2fd60": {
+  "fecha_utc": "2026-10-09T02:11:04.499758+00:00",
+  "hash_titulo": "867e9f24fb37201b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia deportiva local de béisbol.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-213a3545c0ff": {
+  "fecha_utc": "2026-10-09T02:11:04.497452+00:00",
+  "hash_titulo": "dc074ddf80e5d23a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Promoción cultural y de medios en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-216df2f64f80": {
+  "fecha_utc": "2026-10-09T02:11:04.498879+00:00",
+  "hash_titulo": "a111df341211c027",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Asuntos de listas fiscales y finanzas internacionales de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-2204f89c4205": {
+  "fecha_utc": "2026-10-09T02:11:04.499377+00:00",
+  "hash_titulo": "13cd9587c62726ec",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Presupuesto de inversión gubernamental para el Despacho de la Primera Dama en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-22b6d45abc6d": {
+  "fecha_utc": "2026-10-09T02:11:04.499516+00:00",
+  "hash_titulo": "8a3cd66e04932882",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la gestión de residuos sólidos y reciclaje.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-22bfb01c55f3": {
+  "fecha_utc": "2026-10-09T02:11:04.497688+00:00",
+  "hash_titulo": "21152afcf6f3347d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Contratación de construcción en Israel sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-23280e05ba46": {
+  "fecha_utc": "2026-10-09T02:11:04.497443+00:00",
+  "hash_titulo": "ea5beadc7c48d571",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza para impulsar el emprendimiento en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-24046b2b48b3": {
+  "fecha_utc": "2026-10-09T02:11:04.499940+00:00",
+  "hash_titulo": "235270b7aa9696ac",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Consejos generales de ciberseguridad sobre IA.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-241399dbd187": {
+  "fecha_utc": "2026-10-09T02:11:04.497436+00:00",
+  "hash_titulo": "ac019e23d28d6449",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre béisbol de las Grandes Ligas (MLB) en Estados Unidos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-24cd4f18ef80": {
+  "fecha_utc": "2026-10-09T02:11:04.498940+00:00",
+  "hash_titulo": "df7468e293374956",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Sección de opinión o entretenimiento local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-253a26067a13": {
+  "fecha_utc": "2026-10-09T02:11:04.500014+00:00",
+  "hash_titulo": "7371f44bfc5d46ba",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Cultura y música rock de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2571a308d95c": {
+  "fecha_utc": "2026-10-09T02:11:04.497428+00:00",
+  "hash_titulo": "769121bb5670b709",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Conversatorio académico y periodístico local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-25d416a9b607": {
+  "fecha_utc": "2026-10-09T02:11:04.497992+00:00",
+  "hash_titulo": "af27e518fddd88ee",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aborda el tema minero e industrial en el contexto económico de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-25f548572e91": {
+  "fecha_utc": "2026-10-09T02:11:04.497848+00:00",
+  "hash_titulo": "5fa00bd2cf675939",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Explicación del MEF sobre el precio del combustible y la economía panameña.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-25f706ff3ab6": {
+  "fecha_utc": "2026-10-09T02:11:04.499413+00:00",
+  "hash_titulo": "faa0abb781943c93",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianzas tecnológicas de figuras públicas extranjeras.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-262bdb691718": {
+  "fecha_utc": "2026-10-09T02:11:04.499051+00:00",
+  "hash_titulo": "fda87b86966e2920",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial y hallazgo de cuerpo en El Chirú.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-26ab02cca5e9": {
+  "fecha_utc": "2026-10-09T02:11:04.498775+00:00",
+  "hash_titulo": "ea0edc4737473e3c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis sobre regulaciones y presupuestos en el ámbito nacional.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-26cefa4637f9": {
+  "fecha_utc": "2026-10-09T02:11:04.498129+00:00",
+  "hash_titulo": "5d18703a171639f4",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre análisis de la selección de fútbol de Panamá (deportes).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-28b2a1f75e7a": {
+  "fecha_utc": "2026-10-09T02:11:04.498725+00:00",
+  "hash_titulo": "3c6b94a6fe680989",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Plan de emergencia del MIDA para auxiliar la producción agropecuaria ante efectos climáticos.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-2a37a0bad1d6": {
+  "fecha_utc": "2026-10-09T02:11:04.499816+00:00",
+  "hash_titulo": "f8bd5d5e2a764d69",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Discusión sobre la aprobación del presupuesto en la Asamblea.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-2a41592af821": {
+  "fecha_utc": "2026-10-09T02:11:04.497417+00:00",
+  "hash_titulo": "3412c426ed5a51ad",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Establece plazos y normas de entrega de becas por parte de una institución pública (Ifarhu).",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-2a50f430799e": {
+  "fecha_utc": "2026-10-09T02:11:04.497348+00:00",
+  "hash_titulo": "d9ab88b69c753c81",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Donación benéfica a la Teletón 20-30 en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2abe9570c61f": {
+  "fecha_utc": "2026-10-09T02:11:04.498768+00:00",
+  "hash_titulo": "c198962ad797f881",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Conflicto en Oriente Medio y resoluciones de la ONU.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2b94ad11b7db": {
+  "fecha_utc": "2026-10-09T02:11:04.500296+00:00",
+  "hash_titulo": "038c1bbcfbb22ac4",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis geopolítico internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2d65e2fc19f9": {
+  "fecha_utc": "2026-10-09T02:11:04.497925+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Niño y riesgos económicos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-2d9fd125ae2f": {
+  "fecha_utc": "2026-10-09T02:11:04.497789+00:00",
+  "hash_titulo": "df7468e293374956",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Columna o sección de opinión local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2dd531b2dc65": {
+  "fecha_utc": "2026-10-09T02:11:04.499244+00:00",
+  "hash_titulo": "54ba2b48f80995a8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia deportiva internacional sin vínculo directo con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2dd76812ff29": {
+  "fecha_utc": "2026-10-09T02:11:04.497341+00:00",
+  "hash_titulo": "079088d2e3cca597",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acción social y de beneficencia realizada por un medio de comunicación.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-2fdf3f6d899b": {
+  "fecha_utc": "2026-10-09T02:11:04.498120+00:00",
+  "hash_titulo": "754f8df38e67737d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la posible reactivación de la producción minera y su modelo económico en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-2ffeea1ffd0f": {
+  "fecha_utc": "2026-10-09T02:11:04.497334+00:00",
+  "hash_titulo": "e22b8594c71980d5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acuerdo institucional educativo y de desarrollo social.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-30559e21891d": {
+  "fecha_utc": "2026-10-09T02:11:04.498635+00:00",
+  "hash_titulo": "e53cd7f73a7e5a14",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política y controles legislativos de Chile.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-30d1adda0e12": {
+  "fecha_utc": "2026-10-09T02:11:04.498385+00:00",
+  "hash_titulo": "7ee75774de9476a4",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Sanción del presupuesto oficial del Canal de Panamá por el Ejecutivo.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-326b5d9ab00e": {
+  "fecha_utc": "2026-10-09T02:11:04.497326+00:00",
+  "hash_titulo": "7e8aa112de393977",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Anuncio de programa televisivo y empresarial local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-32e0aae9504b": {
+  "fecha_utc": "2026-10-09T02:11:04.497319+00:00",
+  "hash_titulo": "09d2667367738a56",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza estratégica entre medios locales de comunicación.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-32ec4d0ac742": {
+  "fecha_utc": "2026-10-09T02:11:04.497309+00:00",
+  "hash_titulo": "f856b4fa20add2f3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre patrocinios y eventos de medios de comunicación.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-331e09783345": {
+  "fecha_utc": "2026-10-09T02:11:04.498445+00:00",
+  "hash_titulo": "8fb0c973067c4af5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Medidas energéticas internacionales de EE. UU. con posible impacto global.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-33711694dd21": {
+  "fecha_utc": "2026-10-09T02:11:04.498872+00:00",
+  "hash_titulo": "d4382e10cd048c19",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proceso de investigación judicial y de contraloría local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-337a2c7f9e6c": {
+  "fecha_utc": "2026-10-09T02:11:04.498718+00:00",
+  "hash_titulo": "a50f72b6dfbcef99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-33bf4c83bea6": {
+  "fecha_utc": "2026-10-09T02:11:04.497868+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Riesgos del Fenómeno del Niño en la región.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-33f2663b5f67": {
+  "fecha_utc": "2026-10-09T02:11:04.497301+00:00",
+  "hash_titulo": "8f4cc0cfa8bfb4f3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre obras viales y carreteras a cargo del Estado en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-345ae8823de8": {
+  "fecha_utc": "2026-10-09T02:11:04.499781+00:00",
+  "hash_titulo": "72c5555f1b41031e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Comercio internacional y rutas marítimas sin mención a Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-348583200e22": {
+  "fecha_utc": "2026-10-09T02:11:04.499237+00:00",
+  "hash_titulo": "5234c7dfb18ec0cb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecciones sobre la deuda pública de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-34877dd09e6b": {
+  "fecha_utc": "2026-10-09T02:11:04.497293+00:00",
+  "hash_titulo": "6701d66a19e32fb3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Informa sobre la proyección de crecimiento económico de Panamá por parte del FMI.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-34dcad4d5db7": {
+  "fecha_utc": "2026-10-09T02:11:04.498666+00:00",
+  "hash_titulo": "4a7a6b2f42e0a6c0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política internacional sobre Venezuela.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-353eec47104b": {
+  "fecha_utc": "2026-10-09T02:11:04.498572+00:00",
+  "hash_titulo": "08e01b6a8ae2dfa6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis de regulación sobre el servicio de electricidad en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-35522b5ef9e8": {
+  "fecha_utc": "2026-10-09T02:11:04.499723+00:00",
+  "hash_titulo": "41fdabcadf7d885d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Crónica o memoria histórica local de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3568f9c171b4": {
+  "fecha_utc": "2026-10-09T02:11:04.498711+00:00",
+  "hash_titulo": "560abe75ebe66a27",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fluctuación en los precios de los combustibles en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-35c3390a72c8": {
+  "fecha_utc": "2026-10-09T02:11:04.497286+00:00",
+  "hash_titulo": "048b9f3ea91685ce",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un festival cultural y alianzas de medios en Panamá, no encaja en temas económicos o regulatorios principales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-369e8f583cb4": {
+  "fecha_utc": "2026-10-09T02:11:04.499890+00:00",
+  "hash_titulo": "b0db99b0c1c1330c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de saneamiento ambiental en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-36d0ee5d3ade": {
+  "fecha_utc": "2026-10-09T02:11:04.499044+00:00",
+  "hash_titulo": "be6d06daaa7c9dd4",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial de hurto en Penonomé.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3713de7a232f": {
+  "fecha_utc": "2026-10-09T02:11:04.497278+00:00",
+  "hash_titulo": "e1222440aac8bdfa",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acuerdo de colaboración educativa en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-37640d843a97": {
+  "fecha_utc": "2026-10-09T02:11:04.497270+00:00",
+  "hash_titulo": "edca6f21e8a911e9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Festival artístico y cultural en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-37bbb8722ba8": {
+  "fecha_utc": "2026-10-09T02:11:04.499876+00:00",
+  "hash_titulo": "0cdfc17f56bff2c6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Presentación de artista panameño en Costa Rica.",
+  "relacion_panama": "indirecta",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-37f369f97452": {
+  "fecha_utc": "2026-10-09T02:11:04.497839+00:00",
+  "hash_titulo": "15a53a5f642f563d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reunión de Primeras Damas.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-385abe80a802": {
+  "fecha_utc": "2026-10-09T02:11:04.497263+00:00",
+  "hash_titulo": "7235637307c8ad16",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento cultural y de entretenimiento en Colón.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-39aa0e29cfba": {
+  "fecha_utc": "2026-10-09T02:11:04.499230+00:00",
+  "hash_titulo": "a7a8820f4870da09",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de transporte público (Metro y teleférico) en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-3a156bd80415": {
+  "fecha_utc": "2026-10-09T02:11:04.498222+00:00",
+  "hash_titulo": "fbb794cb5d02f16a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre procesos electorales históricos o internacionales sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3a3115278e1a": {
+  "fecha_utc": "2026-10-09T02:11:04.499976+00:00",
+  "hash_titulo": "5ca3855f5c097b3a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Nombramiento directivo en la administración del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-3a3d19d236aa": {
+  "fecha_utc": "2026-10-09T02:11:04.498996+00:00",
+  "hash_titulo": "34bf37f90235e009",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Legalidad de firmas de agrupación política local.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-3a7287fdd261": {
+  "fecha_utc": "2026-10-09T02:11:04.499643+00:00",
+  "hash_titulo": "fdb9a181205498e6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de infraestructura aeroportuaria estatal en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-3b80ea91b9bb": {
+  "fecha_utc": "2026-10-09T02:11:04.499919+00:00",
+  "hash_titulo": "c7e359d9c789c7c8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Perfil de directiva del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-3bb3bfce36bf": {
+  "fecha_utc": "2026-10-09T02:11:04.498214+00:00",
+  "hash_titulo": "e9e7714e743e553c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el desempeño de un deportista panameño en el béisbol profesional.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3c0e8629a26a": {
+  "fecha_utc": "2026-10-09T02:11:04.499809+00:00",
+  "hash_titulo": "350c2520d487fc35",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aclaración sobre el sistema de pago del Metro y Metrobús.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-3c7ac1965b38": {
+  "fecha_utc": "2026-10-09T02:11:04.497256+00:00",
+  "hash_titulo": "9cc04f2f165d373c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de farándula y música internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3caa90ccd905": {
+  "fecha_utc": "2026-10-09T02:11:04.498207+00:00",
+  "hash_titulo": "b4631ec740e3fb6e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el pronóstico de lluvias y tormentas climáticas en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-3d58bd578f4b": {
+  "fecha_utc": "2026-10-09T02:11:04.497250+00:00",
+  "hash_titulo": "8c3e57104221795d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento de innovación y tecnología impulsado por empresa privada en Veraguas, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-3d80200c9e25": {
+  "fecha_utc": "2026-10-09T02:11:04.498703+00:00",
+  "hash_titulo": "4a00519aeda888c2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reanudación de obras viales en el Cuarto Puente sobre el Canal.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-3dacaff5ea32": {
+  "fecha_utc": "2026-10-09T02:11:04.499315+00:00",
+  "hash_titulo": "bd2753e16653bdce",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Operaciones y calado del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-3db8c2d3563c": {
+  "fecha_utc": "2026-10-09T02:11:04.497243+00:00",
+  "hash_titulo": "f2c5cd65d642b31b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premios de excelencia otorgados a medios nacionales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3de4582ff6a4": {
+  "fecha_utc": "2026-10-09T02:11:04.500176+00:00",
+  "hash_titulo": "dc745169a37001da",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la política militar de EE. UU.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3f1ab22d1e63": {
+  "fecha_utc": "2026-10-09T02:11:04.497236+00:00",
+  "hash_titulo": "107233db19f7631b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Testimonio personal sobre salud de una figura pública panameña.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3fa64b8fad78": {
+  "fecha_utc": "2026-10-09T02:11:04.498320+00:00",
+  "hash_titulo": "b45d44b8633437df",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Deporte internacional con participación de un pelotero panameño.",
+  "relacion_panama": "indirecta",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-3fc0b8f58f07": {
+  "fecha_utc": "2026-10-09T02:11:04.500385+00:00",
+  "hash_titulo": "46d2fb8a7f4fd85c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el deportista panameño Édgar Yoel Bárcenas.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4061a3e5a64e": {
+  "fecha_utc": "2026-10-09T02:11:04.499223+00:00",
+  "hash_titulo": "4dec0e806a6f09b5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis sobre competitividad y economía nacional.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-4062ef29edc8": {
+  "fecha_utc": "2026-10-09T02:11:04.498862+00:00",
+  "hash_titulo": "ad8a1188539c1888",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Campaña y estadísticas de salud pública sobre VIH en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-406f4f08342c": {
+  "fecha_utc": "2026-10-09T02:11:04.499406+00:00",
+  "hash_titulo": "ddac2338f7d853d7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Investigación sobre lavado de dinero y carteles sin impacto directo en Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-40cbac2aaf10": {
+  "fecha_utc": "2026-10-09T02:11:04.499217+00:00",
+  "hash_titulo": "580879794262af4c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad institucional vinculada a campañas ambientales y ministeriales.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-40e03a36285a": {
+  "fecha_utc": "2026-10-09T02:11:04.498933+00:00",
+  "hash_titulo": "a5802504075df0d1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aprobación del presupuesto del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-411d89db3e69": {
+  "fecha_utc": "2026-10-09T02:11:04.499003+00:00",
+  "hash_titulo": "ab418a8864b06afd",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Panorama económico y crisis fiscal general en Latinoamérica.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-41fa87e52c43": {
+  "fecha_utc": "2026-10-09T02:11:04.497733+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Efectos económicos del Fenómeno del Niño en Latinoamérica.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-42186a23c2a5": {
+  "fecha_utc": "2026-10-09T02:11:04.497229+00:00",
+  "hash_titulo": "d009859355661ae5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Iniciativa de fundación de salud y bienestar social en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-43041c46521c": {
+  "fecha_utc": "2026-10-09T02:11:04.499131+00:00",
+  "hash_titulo": "1129acc0d290d492",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Mención general de un medio informativo de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4313161f8a36": {
+  "fecha_utc": "2026-10-09T02:11:04.498451+00:00",
+  "hash_titulo": "549f27d2ba93077f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de farándula local relacionada con un espectáculo en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4353a19b1f30": {
+  "fecha_utc": "2026-10-09T02:11:04.498438+00:00",
+  "hash_titulo": "1f9b34576612943c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad comercial e inversión centrada en El Salvador.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-438971e86c21": {
+  "fecha_utc": "2026-10-09T02:11:04.497222+00:00",
+  "hash_titulo": "86032bafe3dfbf0a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza institucional educativa en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4398b858929f": {
+  "fecha_utc": "2026-10-09T02:11:04.500283+00:00",
+  "hash_titulo": "ac93f5802289cecb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre cine y cultura (apuesta cinematográfica de Panamá).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-43fa57923119": {
+  "fecha_utc": "2026-10-09T02:11:04.500371+00:00",
+  "hash_titulo": "0de5ccefcc18f30e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de entretenimiento y deportes en Nueva York.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4443897b0af2": {
+  "fecha_utc": "2026-10-09T02:11:04.499209+00:00",
+  "hash_titulo": "b3de387a2bb54a13",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Columna de opinión general de un diario panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-44d364d2d26a": {
+  "fecha_utc": "2026-10-09T02:11:04.497939+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Niño y riesgos económicos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-4525aa132f37": {
+  "fecha_utc": "2026-10-09T02:11:04.497215+00:00",
+  "hash_titulo": "006f56c285cf7d25",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premios universitarios otorgados en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4631bc3db951": {
+  "fecha_utc": "2026-10-09T02:11:04.497207+00:00",
+  "hash_titulo": "893409f323bb41da",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Consejos de salud y bienestar personal.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-47f8ee7205c7": {
+  "fecha_utc": "2026-10-09T02:11:04.500276+00:00",
+  "hash_titulo": "9c67062220779d65",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre consejos de salud mental y vacaciones escolares generales.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4844a941084a": {
+  "fecha_utc": "2026-10-09T02:11:04.497199+00:00",
+  "hash_titulo": "b3fbd2cfa2b43ff0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Promoción de la cultura y gastronomía de Colón.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-48f6c918fb8c": {
+  "fecha_utc": "2026-10-09T02:11:04.497192+00:00",
+  "hash_titulo": "8e22f08fe8abc931",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alerta sanitaria internacional en Rusia.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-492273ddbdec": {
+  "fecha_utc": "2026-10-09T02:11:04.497831+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Impacto del Fenómeno del Niño en Latinoamérica.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-49806e0e0d5a": {
+  "fecha_utc": "2026-10-09T02:11:04.497183+00:00",
+  "hash_titulo": "9371cfed3668b2e7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proceso judicial y político en Estados Unidos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4aa9d3d6f123": {
+  "fecha_utc": "2026-10-09T02:11:04.500538+00:00",
+  "hash_titulo": "b66de652e742193f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Migración y deportación de un hombre hacia Cuba desde EE. UU.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4aea272913e7": {
+  "fecha_utc": "2026-10-09T02:11:04.497176+00:00",
+  "hash_titulo": "779b5b625212aa3f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Participación institucional en iniciativa de voluntariado.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4b2fc0678f6c": {
+  "fecha_utc": "2026-10-09T02:11:04.497170+00:00",
+  "hash_titulo": "35870c9d31ae6a90",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gestión diplomática e institucional migratoria del Estado panameño.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-4b7b3ab6ca7e": {
+  "fecha_utc": "2026-10-09T02:11:04.500083+00:00",
+  "hash_titulo": "e50581aae169ccb7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Previsiones generales sin especificar contexto panameño.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4ba0d048d89d": {
+  "fecha_utc": "2026-10-09T02:11:04.497161+00:00",
+  "hash_titulo": "40996fe3cec69a48",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Deportes (béisbol de Grandes Ligas) con participación de un deportista panameño.",
+  "relacion_panama": "indirecta",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4bc6fbfbdada": {
+  "fecha_utc": "2026-10-09T02:11:04.497782+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fenómeno del Niño y riesgos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-4c5955fa622d": {
+  "fecha_utc": "2026-10-09T02:11:04.500270+00:00",
+  "hash_titulo": "d7f6e1f25cf7a18f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la oficialización de una norma bancaria en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-4d4d3eb02d66": {
+  "fecha_utc": "2026-10-09T02:11:04.497152+00:00",
+  "hash_titulo": "cbc2d121d60d786a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reporte sobre sequía y afectación al campo en Coclé, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-4e8be96ab6f5": {
+  "fecha_utc": "2026-10-09T02:11:04.497145+00:00",
+  "hash_titulo": "ae33d194c9051d9a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resultados de béisbol de las Grandes Ligas en el exterior.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4f361fe28706": {
+  "fecha_utc": "2026-10-09T02:11:04.497138+00:00",
+  "hash_titulo": "e9c93f6cd319c95c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Promoción cultural y artística nacional.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4f46e8182810": {
+  "fecha_utc": "2026-10-09T02:11:04.499716+00:00",
+  "hash_titulo": "9ff5773224a5471f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Procesos judiciales relevantes en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-4f61bebfa4bc": {
+  "fecha_utc": "2026-10-09T02:11:04.498479+00:00",
+  "hash_titulo": "922406f1f11c3d39",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acuerdos y políticas de seguridad exterior de Estados Unidos con alcance regional.",
+  "relacion_panama": "indirecta",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-4f8ec17ce07d": {
+  "fecha_utc": "2026-10-09T02:11:04.498966+00:00",
+  "hash_titulo": "4c84cf5327274bd9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Artículo cultural o de interés general sobre Gibraltar.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-4fe154dcb219": {
+  "fecha_utc": "2026-10-09T02:11:04.498313+00:00",
+  "hash_titulo": "aa38a1ffcd36959b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia sobre boxeo y reconocimiento deportivo en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5038106bfef5": {
+  "fecha_utc": "2026-10-09T02:11:04.498854+00:00",
+  "hash_titulo": "15a4ca4d71f9be82",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el reglamento de gas en edificaciones en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-5123e66d9b69": {
+  "fecha_utc": "2026-10-09T02:11:04.497824+00:00",
+  "hash_titulo": "fad2cda4c7034e75",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Detenciones en China y su impacto en el registro de naves de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-518a4629c2e6": {
+  "fecha_utc": "2026-10-09T02:11:04.500261+00:00",
+  "hash_titulo": "f4d5358e1bef9bda",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre Tocumen preparando arbitraje por infraestructura aeroportuaria en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-523b00c1c199": {
+  "fecha_utc": "2026-10-09T02:11:04.499954+00:00",
+  "hash_titulo": "dd6fda95bc1f942a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Cine nacional seleccionado para premios internacionales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-52cf60bc5719": {
+  "fecha_utc": "2026-10-09T02:11:04.499546+00:00",
+  "hash_titulo": "2c356083efc0a596",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inspección de un proyecto de infraestructura eléctrica en Colón, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-5319f5573ca5": {
+  "fecha_utc": "2026-10-09T02:11:04.497131+00:00",
+  "hash_titulo": "2c3bea4714c647b6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento de la industria de la televisión y medios.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-540e3ca014c6": {
+  "fecha_utc": "2026-10-09T02:11:04.497124+00:00",
+  "hash_titulo": "bf82c4c334584e40",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de farándula y espectáculos internacionales.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-543d10d0dd55": {
+  "fecha_utc": "2026-10-09T02:11:04.497117+00:00",
+  "hash_titulo": "b3f934f88b9fbb9d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Encuentro de liderazgo y desarrollo profesional.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-54bca8baa5c7": {
+  "fecha_utc": "2026-10-09T02:11:04.498306+00:00",
+  "hash_titulo": "328cacf970b0aa35",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial de capturas por homicidio en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-55b407fbdce8": {
+  "fecha_utc": "2026-10-09T02:11:04.497110+00:00",
+  "hash_titulo": "9267bd1f9c6cbd4c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Apoyo a concurso de emprendimiento juvenil.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-56cd4f26cd6a": {
+  "fecha_utc": "2026-10-09T02:11:04.497104+00:00",
+  "hash_titulo": "625afb0ea677dd79",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Operativo policial contra el microtráfico en territorio panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-56d8b2f2261e": {
+  "fecha_utc": "2026-10-09T02:11:04.497097+00:00",
+  "hash_titulo": "175614287c86d7bf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Jornada solidaria y de voluntariado local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-57594d746487": {
+  "fecha_utc": "2026-10-09T02:11:04.498473+00:00",
+  "hash_titulo": "e7329bb9bd4026ab",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gestión administrativa de la Universidad de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-575af22d943c": {
+  "fecha_utc": "2026-10-09T02:11:04.497090+00:00",
+  "hash_titulo": "301bd7fc1e19686f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento histórico periodístico en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-577a99076293": {
+  "fecha_utc": "2026-10-09T02:11:04.497083+00:00",
+  "hash_titulo": "3a272e58d1449d03",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política internacional sobre un mandatario extranjero.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5840970a1dce": {
+  "fecha_utc": "2026-10-09T02:11:04.497076+00:00",
+  "hash_titulo": "dc117b41696c1536",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso de interés humano y social ocurrido en España.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-585dbcd0c409": {
+  "fecha_utc": "2026-10-09T02:11:04.498424+00:00",
+  "hash_titulo": "310cff9108e31bc1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Asuntos universitarios e institucionales de la Universidad de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-59b23931cb33": {
+  "fecha_utc": "2026-10-09T02:11:04.499482+00:00",
+  "hash_titulo": "8e9d7fd994fa1630",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reunión del canciller panameño para impulsar acuerdos comerciales.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-5a318343deb0": {
+  "fecha_utc": "2026-10-09T02:11:04.497069+00:00",
+  "hash_titulo": "dfb3653c7780635f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad benéfica interna de una empresa.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5a3fd6dddbcb": {
+  "fecha_utc": "2026-10-09T02:11:04.497062+00:00",
+  "hash_titulo": "93678cd7b8af3e81",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza institucional para obra benéfica nacional.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5a5bbb5a7533": {
+  "fecha_utc": "2026-10-09T02:11:04.498514+00:00",
+  "hash_titulo": "df2f73d82b0574f2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Ranking de ciudades que incluye de manera general a la región centroamericana.",
+  "relacion_panama": "indirecta",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5a8984e3c6be": {
+  "fecha_utc": "2026-10-09T02:11:04.497055+00:00",
+  "hash_titulo": "b3e9871504d08a52",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Convenio educativo entre un medio y una universidad.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5ad84e990e46": {
+  "fecha_utc": "2026-10-09T02:11:04.497048+00:00",
+  "hash_titulo": "df66a2ccebf8b500",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad de responsabilidad social empresarial.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5bcd311844a6": {
+  "fecha_utc": "2026-10-09T02:11:04.499912+00:00",
+  "hash_titulo": "c7e359d9c789c7c8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Perfil de directiva del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-5bf4576df900": {
+  "fecha_utc": "2026-10-09T02:11:04.497041+00:00",
+  "hash_titulo": "f125264f1a095be7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Debate legislativo sobre contratos y exoneraciones fiscales en la Asamblea.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-5c81dbb8385d": {
+  "fecha_utc": "2026-10-09T02:11:04.497033+00:00",
+  "hash_titulo": "f47e117897d5006a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premio de periodismo otorgado a nivel nacional.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5d46ef257889": {
+  "fecha_utc": "2026-10-09T02:11:04.497022+00:00",
+  "hash_titulo": "531036236f8e095a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acuerdo institucional educativo y corporativo.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5d8c4cfe2f22": {
+  "fecha_utc": "2026-10-09T02:11:04.497014+00:00",
+  "hash_titulo": "00701d3aceeeae69",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento corporativo a un medio de comunicación.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5dd1c06af6e5": {
+  "fecha_utc": "2026-10-09T02:11:04.498907+00:00",
+  "hash_titulo": "6b213cba6fa90259",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política interior de Venezuela y declaraciones de funcionarios de EE. UU.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5dd6e6227d59": {
+  "fecha_utc": "2026-10-09T02:11:04.500134+00:00",
+  "hash_titulo": "df28994b38b0896c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Titular misceláneo sobre temas eclesiásticos y internacionales.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5de508b8221d": {
+  "fecha_utc": "2026-10-09T02:11:04.498299+00:00",
+  "hash_titulo": "c90fdde6c84c6308",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento de entretenimiento o concierto en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5f01d8ad42d7": {
+  "fecha_utc": "2026-10-09T02:11:04.498071+00:00",
+  "hash_titulo": "98886817368c13e0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Titular vacío o genérico sin contenido clasificable.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5f20fa1e2c66": {
+  "fecha_utc": "2026-10-09T02:11:04.497007+00:00",
+  "hash_titulo": "d9df2a857b244c98",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza corporativa de medios de comunicación en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-5f49f4f504db": {
+  "fecha_utc": "2026-10-09T02:11:04.499350+00:00",
+  "hash_titulo": "9037da97dd599897",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Atención habitacional y emergencias urbanas en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-5f7a08d7e644": {
+  "fecha_utc": "2026-10-09T02:11:04.499636+00:00",
+  "hash_titulo": "bf221004fafa1fc1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Participación de hoteles en el mercado eléctrico mayorista panameño.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-5f960815999a": {
+  "fecha_utc": "2026-10-09T02:11:04.499435+00:00",
+  "hash_titulo": "a1dad8b454bc403b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre inversión extranjera y relaciones comerciales de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-5f9947f31985": {
+  "fecha_utc": "2026-10-09T02:11:04.496998+00:00",
+  "hash_titulo": "0647777bda3ab412",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia sobre programación de medios, entretenimiento y deportes.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6016ba6021a1": {
+  "fecha_utc": "2026-10-09T02:11:04.497862+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Riesgos del Fenómeno del Niño en la región.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-60fc93934ea3": {
+  "fecha_utc": "2026-10-09T02:11:04.496984+00:00",
+  "hash_titulo": "88e8860534886659",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inversión y expansión de franquicia comercial internacional en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-6153333629d5": {
+  "fecha_utc": "2026-10-09T02:11:04.498379+00:00",
+  "hash_titulo": "d273384bac2b5260",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gestión financiera e institucional del Banco de Desarrollo Agropecuario.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-620a679e9fcf": {
+  "fecha_utc": "2026-10-09T02:11:04.499856+00:00",
+  "hash_titulo": "1129acc0d290d492",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Portal de noticias general de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6276aeb0b476": {
+  "fecha_utc": "2026-10-09T02:11:04.499202+00:00",
+  "hash_titulo": "f86815b8c5a2ddc2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política interna y disputas de partidos en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-627d1cf3d2c2": {
+  "fecha_utc": "2026-10-09T02:11:04.496943+00:00",
+  "hash_titulo": "a67bd7a0ea03d37d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Carrera caminata inclusiva realizada en la Cinta Costera de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-62a7f210c818": {
+  "fecha_utc": "2026-10-09T02:11:04.500041+00:00",
+  "hash_titulo": "4ea1eb8237ac4592",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Involucra la visita del Ministro de Comercio de Francia al Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-63347e61f50a": {
+  "fecha_utc": "2026-10-09T02:11:04.498659+00:00",
+  "hash_titulo": "b1e2744776631d98",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Subasta de bienes inmuebles en España.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-635255307275": {
+  "fecha_utc": "2026-10-09T02:11:04.496932+00:00",
+  "hash_titulo": "586865b043c9f86e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Iniciativa cultural en La Chorrera, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-64a1fae98dc4": {
+  "fecha_utc": "2026-10-09T02:11:04.496920+00:00",
+  "hash_titulo": "1bc04ee9b2ce2bcf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acciones de Estados Unidos sobre embarques de combustible que afectan el comercio marítimo exterior.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-6569c9fb0568": {
+  "fecha_utc": "2026-10-09T02:11:04.499933+00:00",
+  "hash_titulo": "e2d5693e1ca6e37a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Sucesos judiciales e historial de un prófugo en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6570ab2b4dde": {
+  "fecha_utc": "2026-10-09T02:11:04.498200+00:00",
+  "hash_titulo": "a5d967626a7dab48",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre pronunciamientos del Tribunal Electoral respecto a la legislación electoral en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-657c9556e8d2": {
+  "fecha_utc": "2026-10-09T02:11:04.496910+00:00",
+  "hash_titulo": "e7c5e189235c575d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento municipal a programa de entretenimiento local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-65ce9083d40d": {
+  "fecha_utc": "2026-10-09T02:11:04.500007+00:00",
+  "hash_titulo": "c7e359d9c789c7c8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Perfil de directiva del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-6616df5d4f08": {
+  "fecha_utc": "2026-10-09T02:11:04.498413+00:00",
+  "hash_titulo": "0bc3708f888821af",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Logro deportivo internacional de una atleta panameña.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6698387e0c6d": {
+  "fecha_utc": "2026-10-09T02:11:04.500076+00:00",
+  "hash_titulo": "4d16e34d444bfda5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Involucra a la Corte Suprema de Panamá procesando demandas sobre la policía municipal.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-669ea991a0e0": {
+  "fecha_utc": "2026-10-09T02:11:04.499628+00:00",
+  "hash_titulo": "448df891a0667625",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis histórico sobre relaciones bilaterales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-67760aa91239": {
+  "fecha_utc": "2026-10-09T02:11:04.496899+00:00",
+  "hash_titulo": "f733df94f70b87df",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la operación del metro de Panamá en la vía Tumba Muerto.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-687e5a41cdfb": {
+  "fecha_utc": "2026-10-09T02:11:04.496889+00:00",
+  "hash_titulo": "d122d65c1a12afeb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento ambiental otorgado en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-68c57b12f603": {
+  "fecha_utc": "2026-10-09T02:11:04.498372+00:00",
+  "hash_titulo": "6f888612ad4f401d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Decomisos de mercancía ilegal y fiscalización comercial en Chiriquí.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-68fbb044020e": {
+  "fecha_utc": "2026-10-09T02:11:04.496878+00:00",
+  "hash_titulo": "8c5d5c2ceef84a76",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premios de la industria televisiva y de medios en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-693f04b7a966": {
+  "fecha_utc": "2026-10-09T02:11:04.498960+00:00",
+  "hash_titulo": "dfb53f6fa7aa74e1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Compara el turismo de Guatemala con el de Panamá y otros países.",
+  "relacion_panama": "indirecta",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-6995afb03d09": {
+  "fecha_utc": "2026-10-09T02:11:04.497712+00:00",
+  "hash_titulo": "98886817368c13e0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "URL genérica sin contenido claro.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-69dd1d31c34e": {
+  "fecha_utc": "2026-10-09T02:11:04.499462+00:00",
+  "hash_titulo": "c1eb810c4d822891",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reflexión general sin vinculación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6a30f080cee0": {
+  "fecha_utc": "2026-10-09T02:11:04.500103+00:00",
+  "hash_titulo": "f577b79eb4497957",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre seguridad y crimen en Perú y Chile.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6a6bb6116df4": {
+  "fecha_utc": "2026-10-09T02:11:04.500363+00:00",
+  "hash_titulo": "fbe5254a99309c65",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Opinión sobre periodismo y tecnología de carácter general.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6a890a61e091": {
+  "fecha_utc": "2026-10-09T02:11:04.496867+00:00",
+  "hash_titulo": "efb799dbcc35132b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Conflicto armado y ataques en Medio Oriente.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6b265d83ab37": {
+  "fecha_utc": "2026-10-09T02:11:04.496855+00:00",
+  "hash_titulo": "7fc3ba104784fda9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Encuentro de liderazgo femenino y empresarial en la región.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6b5413e103f3": {
+  "fecha_utc": "2026-10-09T02:11:04.498629+00:00",
+  "hash_titulo": "ce037846b3087d74",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Legislación y política de Chile.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6ccfebe68382": {
+  "fecha_utc": "2026-10-09T02:11:04.498652+00:00",
+  "hash_titulo": "a9cfdaf59b4f98f5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Declaraciones académicas sin impacto directo en Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6cec5988db38": {
+  "fecha_utc": "2026-10-09T02:11:04.497740+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Efectos económicos del Fenómeno del Niño en Latinoamérica.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-6d4ec26f25e6": {
+  "fecha_utc": "2026-10-09T02:11:04.498733+00:00",
+  "hash_titulo": "6d7be590b3563914",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Subasta de bienes inmuebles en España.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6ecb18bd184a": {
+  "fecha_utc": "2026-10-09T02:11:04.498064+00:00",
+  "hash_titulo": "b4ba15b3df3b0b27",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre política de Tamaulipas, México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6ee2c23634fa": {
+  "fecha_utc": "2026-10-09T02:11:04.498607+00:00",
+  "hash_titulo": "394ddc26e8b4e3eb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de farándula y certámenes de belleza en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6ef375aef474": {
+  "fecha_utc": "2026-10-09T02:11:04.498747+00:00",
+  "hash_titulo": "d3a567844f52da8d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Riesgos en la minería de América Latina con impacto regional.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-6f0f5de359ff": {
+  "fecha_utc": "2026-10-09T02:11:04.499195+00:00",
+  "hash_titulo": "958a13251be9ab5f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Convenios académicos internacionales del gobierno panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-6ffd1c40b65f": {
+  "fecha_utc": "2026-10-09T02:11:04.496843+00:00",
+  "hash_titulo": "369bdd65be51d666",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Publicación de vacantes de empleo oficiales por parte del Mitradel en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-70292e99a990": {
+  "fecha_utc": "2026-10-09T02:11:04.500049+00:00",
+  "hash_titulo": "cbec2fff6384bed8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un suceso histórico y militar en Chile.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-708d946607f6": {
+  "fecha_utc": "2026-10-09T02:11:04.498694+00:00",
+  "hash_titulo": "b67648cc8842c87e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento de compras y turismo comercial Black Weekend en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-725094d5dd6a": {
+  "fecha_utc": "2026-10-09T02:11:04.496832+00:00",
+  "hash_titulo": "1463fcb9763c1dcc",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Homenaje a una periodista panameña.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-729987434438": {
+  "fecha_utc": "2026-10-09T02:11:04.496820+00:00",
+  "hash_titulo": "35dc090149e2d405",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza institucional para visibilizar labor social en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-729fbbda2dab": {
+  "fecha_utc": "2026-10-09T02:11:04.496809+00:00",
+  "hash_titulo": "d32d9162a336bfc4",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Posicionamiento de una empresa panameña en ranking de responsabilidad.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-730c419f4cf2": {
+  "fecha_utc": "2026-10-09T02:11:04.500312+00:00",
+  "hash_titulo": "3bf77551e3e9edc6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el derecho de paso y operaciones en el Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-73631ad14df4": {
+  "fecha_utc": "2026-10-09T02:11:04.498564+00:00",
+  "hash_titulo": "d72d728c488b4238",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial en Florida, sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-75199f9be0f1": {
+  "fecha_utc": "2026-10-09T02:11:04.498079+00:00",
+  "hash_titulo": "194b4dc57983eb61",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre sucesos de violencia escolar e institucional en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7548234a74c2": {
+  "fecha_utc": "2026-10-09T02:11:04.497882+00:00",
+  "hash_titulo": "e6f0515ddb3046a3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Comportamiento bursátil global con efecto en economías.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-75d30d184a8e": {
+  "fecha_utc": "2026-10-09T02:11:04.500255+00:00",
+  "hash_titulo": "9c67062220779d65",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre consejos de salud mental y vacaciones escolares generales.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7608fdd9e47b": {
+  "fecha_utc": "2026-10-09T02:11:04.497776+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fenómeno del Niño y riesgos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-77c67edf034c": {
+  "fecha_utc": "2026-10-09T02:11:04.498973+00:00",
+  "hash_titulo": "e2a5912b143419bd",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Administración tributaria y economía digital en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-78827c51559b": {
+  "fecha_utc": "2026-10-09T02:11:04.498193+00:00",
+  "hash_titulo": "98886817368c13e0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Titular genérico sin contenido clasificable.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-790f94bdab40": {
+  "fecha_utc": "2026-10-09T02:11:04.499108+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resumen o avance sobre la Asamblea Nacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7993d2b1f3b7": {
+  "fecha_utc": "2026-10-09T02:11:04.498107+00:00",
+  "hash_titulo": "98886817368c13e0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Titular genérico sin contenido clasificable.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7a09777f49d8": {
+  "fecha_utc": "2026-10-09T02:11:04.499592+00:00",
+  "hash_titulo": "b9ff14bf30f136bf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Opinión sobre educación y minería local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7a2b25e073f6": {
+  "fecha_utc": "2026-10-09T02:11:04.499532+00:00",
+  "hash_titulo": "2645d600687dd641",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reseña de libro o estilo de vida sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7a752b31c5cd": {
+  "fecha_utc": "2026-10-09T02:11:04.499442+00:00",
+  "hash_titulo": "a675d1f78332077f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El entretenimiento digital no encaja en las categorías principales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7a8ebad57bee": {
+  "fecha_utc": "2026-10-09T02:11:04.499559+00:00",
+  "hash_titulo": "2578fbeb15505dac",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Artículo de opinión sobre historia o política global.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7b43c52ddd84": {
+  "fecha_utc": "2026-10-09T02:11:04.497726+00:00",
+  "hash_titulo": "3a5defd782e592a6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Declaraciones del rector de la Universidad de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7b5560141fe6": {
+  "fecha_utc": "2026-10-09T02:11:04.500320+00:00",
+  "hash_titulo": "76b9bde101ec3627",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Discute iniciativas relacionadas con el mercado energético nacional.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-7b739feeade0": {
+  "fecha_utc": "2026-10-09T02:11:04.500420+00:00",
+  "hash_titulo": "ebb36ea06a6f2f84",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso de seguridad y policía nacional en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7b7cb4bf6e6b": {
+  "fecha_utc": "2026-10-09T02:11:04.500356+00:00",
+  "hash_titulo": "f4bb2fccc602ee6a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Contenido general de estilo de vida sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7bd9d18569c3": {
+  "fecha_utc": "2026-10-09T02:11:04.499188+00:00",
+  "hash_titulo": "863c97e5a826c268",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Declaraciones diplomáticas oficiales de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7bfa4afea453": {
+  "fecha_utc": "2026-10-09T02:11:04.498292+00:00",
+  "hash_titulo": "208ec61c24bfc37e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia deportiva sobre la selección de fútbol de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7cd61013f45b": {
+  "fecha_utc": "2026-10-09T02:11:04.498186+00:00",
+  "hash_titulo": "cc6105e4995a87b5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la fijación de precios y subsidios del combustible gestionados por el MEF en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-7d042def93e7": {
+  "fecha_utc": "2026-10-09T02:11:04.498946+00:00",
+  "hash_titulo": "182c4b77e3366b5e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Entrenamiento de los bomberos en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7d997488e625": {
+  "fecha_utc": "2026-10-09T02:11:04.500021+00:00",
+  "hash_titulo": "3408a967ec6d3bbf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Calendario de entrega del beneficio estatal PASE-U.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-7dc53f071bcf": {
+  "fecha_utc": "2026-10-09T02:11:04.499844+00:00",
+  "hash_titulo": "f7b80f8adaccdfb7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Cine y cultura nacional rumbo a premios internacionales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7e5b2f34119d": {
+  "fecha_utc": "2026-10-09T02:11:04.500248+00:00",
+  "hash_titulo": "738117ce212af682",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un sismo que afecta la frontera entre Panamá y Costa Rica.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-7e5b6210df00": {
+  "fecha_utc": "2026-10-09T02:11:04.497769+00:00",
+  "hash_titulo": "e469e8e4e01d1c30",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Lista fiscal de la UE y la situación de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-7f268fa2f97b": {
+  "fecha_utc": "2026-10-09T02:11:04.496794+00:00",
+  "hash_titulo": "42e52510009d4f13",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Entrevista a personalidades locales en un noticiero matutino.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-7f5a31e89279": {
+  "fecha_utc": "2026-10-09T02:11:04.496782+00:00",
+  "hash_titulo": "e3372a175f38f07d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Simulacro de evacuación ante emergencias en la provincia de Bocas del Toro.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-80812a724907": {
+  "fecha_utc": "2026-10-09T02:11:04.496769+00:00",
+  "hash_titulo": "dce2eec22e2aa9c5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre mejoras viales y de transporte en la Carretera Panamericana.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-826f25bf5062": {
+  "fecha_utc": "2026-10-09T02:11:04.498365+00:00",
+  "hash_titulo": "abf13cdc8ff86af3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento deportivo internacional que ocurre en Chihuahua, México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8284c5683cae": {
+  "fecha_utc": "2026-10-09T02:11:04.497645+00:00",
+  "hash_titulo": "5ab7867e81d44a35",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de carácter deportivo (softbol) local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-84203e35b344": {
+  "fecha_utc": "2026-10-09T02:11:04.500242+00:00",
+  "hash_titulo": "d5df6708f976f43d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la figura histórica panameña Justo Arosemena.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-844ff55749a2": {
+  "fecha_utc": "2026-10-09T02:11:04.498114+00:00",
+  "hash_titulo": "c36c6ac89ba740a1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre medidas de seguridad en Veracruz, México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8492f1f7d4bc": {
+  "fecha_utc": "2026-10-09T02:11:04.496759+00:00",
+  "hash_titulo": "0e2d9b02d66c8774",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula internacional sobre celebridades.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-849e70da922c": {
+  "fecha_utc": "2026-10-09T02:11:04.497945+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Niño y riesgos económicos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-851e97e0339d": {
+  "fecha_utc": "2026-10-09T02:11:04.496752+00:00",
+  "hash_titulo": "e87c1b2a2d72735a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza para la organización de carnavales locales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8698883c6869": {
+  "fecha_utc": "2026-10-09T02:11:04.500155+00:00",
+  "hash_titulo": "c7b96af1ba3c9292",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre cruceros de MSC en Alaska.",
+  "relacion_panama": "ninguna",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-88d570d700c2": {
+  "fecha_utc": "2026-10-09T02:11:04.496745+00:00",
+  "hash_titulo": "e98125c8893a4ca8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad deportiva y social en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-896ac7aac1e3": {
+  "fecha_utc": "2026-10-09T02:11:04.499585+00:00",
+  "hash_titulo": "08dc08c25ebe5618",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento benéfico social local en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-89e39c647101": {
+  "fecha_utc": "2026-10-09T02:11:04.499343+00:00",
+  "hash_titulo": "99516a8dc8fc2f5e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Programa de entretenimiento y farándula en la televisión panameña.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8a6947d21d69": {
+  "fecha_utc": "2026-10-09T02:11:04.499037+00:00",
+  "hash_titulo": "e07808a108c88f95",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Operativo policial y captura en Guna Yala.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8a855d3a5ade": {
+  "fecha_utc": "2026-10-09T02:11:04.497762+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Riesgos económicos del Fenómeno del Niño en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-8b37ef953361": {
+  "fecha_utc": "2026-10-09T02:11:04.498555+00:00",
+  "hash_titulo": "3a3fe47718153284",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de política exterior e institucional presentado por la Cancillería de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-8b3ae10841e0": {
+  "fecha_utc": "2026-10-09T02:11:04.498178+00:00",
+  "hash_titulo": "f0aec0bef9e6090b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre actividades culturales y recreativas para visitantes en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-8bb09cbbdeb8": {
+  "fecha_utc": "2026-10-09T02:11:04.498982+00:00",
+  "hash_titulo": "6b213cba6fa90259",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política y eventos relacionados con Venezuela.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8be4d869a3a7": {
+  "fecha_utc": "2026-10-09T02:11:04.498172+00:00",
+  "hash_titulo": "2ba43bf5e70053fa",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre decisiones del Tribunal Electoral y reformas a leyes en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-8cbe9f6e2f87": {
+  "fecha_utc": "2026-10-09T02:11:04.499357+00:00",
+  "hash_titulo": "6a0a35a9b51d4a38",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Calificación crediticia y financiera de entidad bancaria en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-8cc21a0dba20": {
+  "fecha_utc": "2026-10-09T02:11:04.499102+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resumen o avance sobre la Asamblea Nacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8cc7e97416a1": {
+  "fecha_utc": "2026-10-09T02:11:04.496737+00:00",
+  "hash_titulo": "bff49ac271746b1d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acontecimientos militares y políticos de Estados Unidos e Irán.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8ce89e5a94f3": {
+  "fecha_utc": "2026-10-09T02:11:04.498600+00:00",
+  "hash_titulo": "d72d728c488b4238",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial en Florida, sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8cf43fdcc543": {
+  "fecha_utc": "2026-10-09T02:11:04.496730+00:00",
+  "hash_titulo": "e5607e4b3f59d6f1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento a la trayectoria de periodistas panameños.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8daaf1022b39": {
+  "fecha_utc": "2026-10-09T02:11:04.497967+00:00",
+  "hash_titulo": "920f796eeea6700d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis político y social general.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8e491c4dfbce": {
+  "fecha_utc": "2026-10-09T02:11:04.499280+00:00",
+  "hash_titulo": "8ab45c387a3de57c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de transporte público masivo en San Miguelito, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-8ecf4b8b7218": {
+  "fecha_utc": "2026-10-09T02:11:04.499096+00:00",
+  "hash_titulo": "5e1e568cb883e371",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de suministro de agua potable del IDAAN en Capira.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-8f1666394512": {
+  "fecha_utc": "2026-10-09T02:11:04.496723+00:00",
+  "hash_titulo": "db588011ff32d062",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Presentación de documental sobre reciclaje escolar en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-8fe9c7059ab0": {
+  "fecha_utc": "2026-10-09T02:11:04.498847+00:00",
+  "hash_titulo": "08a58f0ce52f39d3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Apetito de inversión y confianza bancaria en la economía de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-9043a1c2396c": {
+  "fecha_utc": "2026-10-09T02:11:04.498816+00:00",
+  "hash_titulo": "a667241a131801c8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inversión en infraestructura energética global con impacto en rutas de transporte.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-909d87460626": {
+  "fecha_utc": "2026-10-09T02:11:04.500090+00:00",
+  "hash_titulo": "f14792c09dea0a6b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el impacto fiscal del alza de combustibles, un tema económico regional aplicable.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-90f14cebbfb4": {
+  "fecha_utc": "2026-10-09T02:11:04.496716+00:00",
+  "hash_titulo": "92614f94f4199c6b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento a periodistas locales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9177616cde9b": {
+  "fecha_utc": "2026-10-09T02:11:04.496708+00:00",
+  "hash_titulo": "293e307f9d639c81",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Jornada solidaria en un hospital de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-91b4a51ae705": {
+  "fecha_utc": "2026-10-09T02:11:04.498810+00:00",
+  "hash_titulo": "a667241a131801c8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inversión en infraestructura energética global con impacto en rutas de transporte.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-923371f62c36": {
+  "fecha_utc": "2026-10-09T02:11:04.496702+00:00",
+  "hash_titulo": "1a1fc48cf9f868d2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula y deportes internacional sobre Lionel Messi.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-943fc20171bf": {
+  "fecha_utc": "2026-10-09T02:11:04.496695+00:00",
+  "hash_titulo": "7eba42f172a9cfcf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento de entretenimiento y carnaval en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-94f1bec3106d": {
+  "fecha_utc": "2026-10-09T02:11:04.498493+00:00",
+  "hash_titulo": "b3727517d4f48caf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Competencia deportiva internacional donde jugará la selección panameña.",
+  "relacion_panama": "indirecta",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-95b5bc6945da": {
+  "fecha_utc": "2026-10-09T02:11:04.500190+00:00",
+  "hash_titulo": "304a902459bec29c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre informe de gobierno local en México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-95d8fe191731": {
+  "fecha_utc": "2026-10-09T02:11:04.496687+00:00",
+  "hash_titulo": "a9508f97707d0d75",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Deportes sobre la liga de fútbol local (LPF).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-963543ab9883": {
+  "fecha_utc": "2026-10-09T02:11:04.500182+00:00",
+  "hash_titulo": "7a331da3d030148e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre historia de la República Dominicana (Trujillo).",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-963d516417fa": {
+  "fecha_utc": "2026-10-09T02:11:04.497982+00:00",
+  "hash_titulo": "e4444329f246c183",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el impacto financiero y ambiental de la actividad minera en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-973224e9b4c7": {
+  "fecha_utc": "2026-10-09T02:11:04.499837+00:00",
+  "hash_titulo": "b14806594ddb85da",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Llamado de atención ambiental a pescadores locales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-97b5e0990c82": {
+  "fecha_utc": "2026-10-09T02:11:04.499180+00:00",
+  "hash_titulo": "7c4ccd869172b9a8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Columna o comentario de política nacional.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-97e773785a2f": {
+  "fecha_utc": "2026-10-09T02:11:04.499428+00:00",
+  "hash_titulo": "dc3d6c8d4349d93c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Se refiere a una entidad pública en Panamá y sus contratos de arrendamiento.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-98a0c8afd03e": {
+  "fecha_utc": "2026-10-09T02:11:04.500235+00:00",
+  "hash_titulo": "a395aca7e3a4c54a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el fallecimiento del boxeador panameño 'El Tigre' Laguna.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-990651067520": {
+  "fecha_utc": "2026-10-09T02:11:04.498837+00:00",
+  "hash_titulo": "ffdf0207e7d57f3d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gestión económica y fiscal de Panamá ante la Unión Europea.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-99b4e505adb7": {
+  "fecha_utc": "2026-10-09T02:11:04.500228+00:00",
+  "hash_titulo": "d9b9185ffe6fa0ab",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Titular de carácter policial o de seguridad sin contexto panameño explícito.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9a34c2503311": {
+  "fecha_utc": "2026-10-09T02:11:04.496680+00:00",
+  "hash_titulo": "1a0239988a7afdfd",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premios de periodismo otorgados a un medio panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9ae4706ee843": {
+  "fecha_utc": "2026-10-09T02:11:04.497959+00:00",
+  "hash_titulo": "8a57b988a0220754",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Tour ciclístico de Panamá y deporte.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9bb0aa3d19b0": {
+  "fecha_utc": "2026-10-09T02:11:04.498252+00:00",
+  "hash_titulo": "a2245c0cc0e5d592",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre talleres de justicia y normativas de justicia juvenil coordinados por el Estado panameño.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-9c06822f33bc": {
+  "fecha_utc": "2026-10-09T02:11:04.496674+00:00",
+  "hash_titulo": "6288aba78a6fe0fc",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Programa de liderazgo social y comunitario en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9c2eaed9bff9": {
+  "fecha_utc": "2026-10-09T02:11:04.496667+00:00",
+  "hash_titulo": "8703a76a7289d315",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula internacional de celebridades.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9c94ac90e2e8": {
+  "fecha_utc": "2026-10-09T02:11:04.498789+00:00",
+  "hash_titulo": "8ec96e9f29ec9e68",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resultados financieros de corporación estadounidense.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-9ca453868eb4": {
+  "fecha_utc": "2026-10-09T02:11:04.499469+00:00",
+  "hash_titulo": "3ce18e14b94b45cb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inversiones de peruanos en EE. UU., sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-9d1b7207b1a0": {
+  "fecha_utc": "2026-10-09T02:11:04.500568+00:00",
+  "hash_titulo": "9677eb8b7806cee1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fenómeno climático previsto para Washington, EE. UU.",
+  "relacion_panama": "ninguna",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-9d1e48338daa": {
+  "fecha_utc": "2026-10-09T02:11:04.496660+00:00",
+  "hash_titulo": "fc35488a624aeddd",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Estreno de un documental sobre la identidad de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9d6e812d8f9f": {
+  "fecha_utc": "2026-10-09T02:11:04.498990+00:00",
+  "hash_titulo": "ea543cce0165c788",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gastos de una entidad judicial extranjera o no especificada de forma local clara.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9f0fdecbb73b": {
+  "fecha_utc": "2026-10-09T02:11:04.496653+00:00",
+  "hash_titulo": "6b3285e3cebb6ac9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia sobre organización interna de un medio de comunicación.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9f50ee47e8e7": {
+  "fecha_utc": "2026-10-09T02:11:04.496645+00:00",
+  "hash_titulo": "57c703c82dd44eb8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aniversario de un medio de comunicación local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9fe9cd9cb58e": {
+  "fecha_utc": "2026-10-09T02:11:04.500169+00:00",
+  "hash_titulo": "3680043437f4012c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la política militar de EE. UU.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-9ff28e293ca9": {
+  "fecha_utc": "2026-10-09T02:11:04.497817+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Impacto del Fenómeno del Niño en Latinoamérica.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-a011fc57a235": {
+  "fecha_utc": "2026-10-09T02:11:04.496638+00:00",
+  "hash_titulo": "153bd75907fff044",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza institucional para promover la ciencia en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a131a880e21e": {
+  "fecha_utc": "2026-10-09T02:11:04.496628+00:00",
+  "hash_titulo": "df9c3b793138f76a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula y entretenimiento internacional sobre músicos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a1f19e911ec8": {
+  "fecha_utc": "2026-10-09T02:11:04.496621+00:00",
+  "hash_titulo": "e8288662903f270a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad de responsabilidad social corporativa de un medio de comunicación.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a28a7bda9ddf": {
+  "fecha_utc": "2026-10-09T02:11:04.499870+00:00",
+  "hash_titulo": "e3893980e1ab9146",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Sucesos policiales de homicidio en Arraiján.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a2b38044e854": {
+  "fecha_utc": "2026-10-09T02:11:04.496613+00:00",
+  "hash_titulo": "7e216fa4ba91915f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Menciona el uso del transporte público en relación con el turismo.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-a2f3c55d959c": {
+  "fecha_utc": "2026-10-09T02:11:04.499690+00:00",
+  "hash_titulo": "638a220efa8d9bd0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Discusión sobre la normativa migratoria y leyes aplicadas en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-a33bda96af12": {
+  "fecha_utc": "2026-10-09T02:11:04.496605+00:00",
+  "hash_titulo": "0765b6a15d5749ef",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre procesos judiciales de exfuncionarios locales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a370fa402fd9": {
+  "fecha_utc": "2026-10-09T02:11:04.500433+00:00",
+  "hash_titulo": "373b967c18acd4fe",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Ensayo o columna de opinión sobre geopolítica general.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a3bd83ff11cc": {
+  "fecha_utc": "2026-10-09T02:11:04.499831+00:00",
+  "hash_titulo": "2a7ff2de18438967",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inversión extranjera enfocada exclusivamente en Colombia.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-a3dc468c4003": {
+  "fecha_utc": "2026-10-09T02:11:04.498459+00:00",
+  "hash_titulo": "7a143487c4163193",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Calendario de partidos de la selección de fútbol de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a4ab0c6b1801": {
+  "fecha_utc": "2026-10-09T02:11:04.499124+00:00",
+  "hash_titulo": "9b688a9184f0308e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aumento de tránsitos y calado en el Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-a4f58213429a": {
+  "fecha_utc": "2026-10-09T02:11:04.496598+00:00",
+  "hash_titulo": "b1a8f5193c6f1fd0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Habla de salud mental y educación en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a6a7cf947f0a": {
+  "fecha_utc": "2026-10-09T02:11:04.500027+00:00",
+  "hash_titulo": "65f5e04bb7ce1a67",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis de la economía global sin impacto específico detallado.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-a711c284e458": {
+  "fecha_utc": "2026-10-09T02:11:04.496590+00:00",
+  "hash_titulo": "d8247e81b003a3f6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre propuestas de turismo sostenible y desarrollo para Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-a71293e7e88c": {
+  "fecha_utc": "2026-10-09T02:11:04.497681+00:00",
+  "hash_titulo": "16d705943e344e0c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la inversión extranjera directa (FDI) en América Latina, afectando económicamente a la región incluyendo Panamá.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-a7fe48213970": {
+  "fecha_utc": "2026-10-09T02:11:04.499683+00:00",
+  "hash_titulo": "438bd4ad0997bd0c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Deportes, participación de atletas panameños en juegos suramericanos.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a86266b6c6c3": {
+  "fecha_utc": "2026-10-09T02:11:04.500141+00:00",
+  "hash_titulo": "becdec2211d86cf0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el precio del combustible específicamente en Perú.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-a87febb04ef0": {
+  "fecha_utc": "2026-10-09T02:11:04.497811+00:00",
+  "hash_titulo": "32151cc76602002f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Operativo policial y aprehensiones en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-a8a8d54ba185": {
+  "fecha_utc": "2026-10-09T02:11:04.499579+00:00",
+  "hash_titulo": "ab3dc51640143e2e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Interés de Francia en el Canal de Panamá e inversiones.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-aa2927006e35": {
+  "fecha_utc": "2026-10-09T02:11:04.500504+00:00",
+  "hash_titulo": "204d3704c934c026",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Discute la prevención de pérdidas financieras en obras y arbitrajes estatales.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-aa32193e50db": {
+  "fecha_utc": "2026-10-09T02:11:04.499677+00:00",
+  "hash_titulo": "4a0296ecf598c108",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Titular ambiguo de opinión general.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-aa95e2b01c90": {
+  "fecha_utc": "2026-10-09T02:11:04.496582+00:00",
+  "hash_titulo": "388d5d5c11e62ea2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza institucional benéfica local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-aba41071b4e5": {
+  "fecha_utc": "2026-10-09T02:11:04.497755+00:00",
+  "hash_titulo": "554b48e4af8e121b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Riesgos del Fenómeno del Niño en la región.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-abacdfa35252": {
+  "fecha_utc": "2026-10-09T02:11:04.500117+00:00",
+  "hash_titulo": "69e2d2c08dcbdd78",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre cargos por fraude fiscal en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-ac4a14b5e38b": {
+  "fecha_utc": "2026-10-09T02:11:04.498528+00:00",
+  "hash_titulo": "c4c46d05ccc2f754",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Conflicto bélico y suministro de armas en Europa (Ucrania y Rusia).",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-acc0591b9308": {
+  "fecha_utc": "2026-10-09T02:11:04.496575+00:00",
+  "hash_titulo": "e0d3058044640357",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Preparación de la selección de fútbol de Panamá para partidos amistosos.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-accb0e021a68": {
+  "fecha_utc": "2026-10-09T02:11:04.497803+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fenómeno del Niño y riesgos económicos regionales.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-acce918241f7": {
+  "fecha_utc": "2026-10-09T02:11:04.500532+00:00",
+  "hash_titulo": "9637a2db6fad81f3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso trágico y humano ocurrido en Pedasí, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-acda0e91bd04": {
+  "fecha_utc": "2026-10-09T02:11:04.499090+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resumen o avance sobre la Asamblea Nacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ad0ff8061684": {
+  "fecha_utc": "2026-10-09T02:11:04.497719+00:00",
+  "hash_titulo": "e4eb0fda2f01bfb3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Magistrados del Tribunal Electoral de Panamá sobre reformas.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-ad1eda4b07ea": {
+  "fecha_utc": "2026-10-09T02:11:04.499455+00:00",
+  "hash_titulo": "1c2f240f92996414",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Opinión sobre geopolítica internacional general.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ad2160392862": {
+  "fecha_utc": "2026-10-09T02:11:04.498285+00:00",
+  "hash_titulo": "557a07ccdae57e38",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Nota de farándula o política local sobre figuras públicas en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ad5299e55159": {
+  "fecha_utc": "2026-10-09T02:11:04.500474+00:00",
+  "hash_titulo": "e7a51b290cca99d8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre beneficios para viajeros colombianos que visitan Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-ad76ad23c7aa": {
+  "fecha_utc": "2026-10-09T02:11:04.499983+00:00",
+  "hash_titulo": "c43869fb56515e29",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gestiones para llevar servicio eléctrico a comunidad rural.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-ae3be4a30052": {
+  "fecha_utc": "2026-10-09T02:11:04.499383+00:00",
+  "hash_titulo": "6edd18a52990870f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política exterior y geopolítica ajena a Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-affce6b8befa": {
+  "fecha_utc": "2026-10-09T02:11:04.499030+00:00",
+  "hash_titulo": "e468abecc541f1ad",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Petición de regulación sobre vapeadores en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-b06ae1dd4bfc": {
+  "fecha_utc": "2026-10-09T02:11:04.498507+00:00",
+  "hash_titulo": "d0f719efb28b3aa2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Comentarios y análisis sobre el desempeño deportivo de un equipo panameño.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b101044fd8b4": {
+  "fecha_utc": "2026-10-09T02:11:04.500498+00:00",
+  "hash_titulo": "376b18be04063dd3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de farándula local sobre una figura pública de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b10a85aa49f8": {
+  "fecha_utc": "2026-10-09T02:11:04.498357+00:00",
+  "hash_titulo": "c3d87b97d0fa1da0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Artículo de opinión o historia electoral de Estados Unidos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b13d2135dbf6": {
+  "fecha_utc": "2026-10-09T02:11:04.499862+00:00",
+  "hash_titulo": "d6b1e8b70a08d535",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Promoción de cultura indígena panameña en aeropuerto extranjero.",
+  "relacion_panama": "indirecta",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-b16c57d0755c": {
+  "fecha_utc": "2026-10-09T02:11:04.499572+00:00",
+  "hash_titulo": "858c52701ebce5d8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Falla en el servicio público de electricidad en Panamá y San Miguelito.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-b18f023342f1": {
+  "fecha_utc": "2026-10-09T02:11:04.496567+00:00",
+  "hash_titulo": "5dfeea53c89f749d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento a la reputación laboral corporativa en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b1a3f3391951": {
+  "fecha_utc": "2026-10-09T02:11:04.500222+00:00",
+  "hash_titulo": "d9b9185ffe6fa0ab",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Titular de carácter policial o de seguridad sin contexto panameño explícito.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b283bd36da4e": {
+  "fecha_utc": "2026-10-09T02:11:04.500216+00:00",
+  "hash_titulo": "5c25f58367590451",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre colocación de fondos de la CAF en Panamá para agro y pymes.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-b3ce5526d5f6": {
+  "fecha_utc": "2026-10-09T02:11:04.500290+00:00",
+  "hash_titulo": "455fadc874d3bdf8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Opinión política internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b3db09038ea0": {
+  "fecha_utc": "2026-10-09T02:11:04.496558+00:00",
+  "hash_titulo": "69c7431f31a57026",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Perfil de deportista panameño que compite internacionalmente.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b422f83c3990": {
+  "fecha_utc": "2026-10-09T02:11:04.498244+00:00",
+  "hash_titulo": "1341f826a8160dc6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la diplomacia comercial y foros económicos internacionales impulsados por la cancillería de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-b44a36a28755": {
+  "fecha_utc": "2026-10-09T02:11:04.500070+00:00",
+  "hash_titulo": "f33ab376d1d540ae",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un caso judicial y de fraude fiscal en la DGI de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-b460504a27c6": {
+  "fecha_utc": "2026-10-09T02:11:04.500162+00:00",
+  "hash_titulo": "70199ec0f47955e9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la Corte Suprema de Panamá tramitando demandas contra la policía municipal.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-b5065d483a4f": {
+  "fecha_utc": "2026-10-09T02:11:04.500461+00:00",
+  "hash_titulo": "48d242ea53352fb3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aborda el empleo, la minería y el crecimiento económico en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-b6841091a70c": {
+  "fecha_utc": "2026-10-09T02:11:04.499968+00:00",
+  "hash_titulo": "b4420ae0717e4ca8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento de turismo y alianzas internacionales en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-b6c1a4aaab64": {
+  "fecha_utc": "2026-10-09T02:11:04.496551+00:00",
+  "hash_titulo": "13c936cb18c22e2a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Concurso escolar de reciclaje en San Miguelito, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b82d14cdb686": {
+  "fecha_utc": "2026-10-09T02:11:04.499566+00:00",
+  "hash_titulo": "2e84e87edb452e68",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Cifras de exportaciones de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-b8c36c576356": {
+  "fecha_utc": "2026-10-09T02:11:04.496542+00:00",
+  "hash_titulo": "d9ab88b69c753c81",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Donación benéfica local para la Teletón.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b8f3506bcb62": {
+  "fecha_utc": "2026-10-09T02:11:04.499274+00:00",
+  "hash_titulo": "6f7ac4cd8d622a4a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Informe sobre condiciones climáticas e hídricas por el Imhpa.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-b976e5b68f91": {
+  "fecha_utc": "2026-10-09T02:11:04.498057+00:00",
+  "hash_titulo": "b3cc3c4ae41465ee",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre política interna de Venezuela.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-b9f54d3faf01": {
+  "fecha_utc": "2026-10-09T02:11:04.496535+00:00",
+  "hash_titulo": "2e1d6f465b5ed2a4",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Festival musical y cultural en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ba452274775b": {
+  "fecha_utc": "2026-10-09T02:11:04.500209+00:00",
+  "hash_titulo": "8fa8315d128ee629",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la revisión de hospitales públicos en Chiriquí tras un sismo.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-bad2ee33b54e": {
+  "fecha_utc": "2026-10-09T02:11:04.499449+00:00",
+  "hash_titulo": "20586ca923c6647b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Iniciativa de seguridad marítima de Liberia e India sin efecto directo en Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-bb6623b6bdee": {
+  "fecha_utc": "2026-10-09T02:11:04.499751+00:00",
+  "hash_titulo": "93aa84a461d6c372",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Presupuesto y contratos de la Alcaldía de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-bbb6b0847738": {
+  "fecha_utc": "2026-10-09T02:11:04.498350+00:00",
+  "hash_titulo": "2158f35c75af5b5e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Iniciativa de atención educativa en hospitales públicos de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-bbc7a8fc9869": {
+  "fecha_utc": "2026-10-09T02:11:04.498803+00:00",
+  "hash_titulo": "558f8158a9063d35",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Desafíos en la cadena logística regional de suministros.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-bc0c4a46f2c5": {
+  "fecha_utc": "2026-10-09T02:11:04.496528+00:00",
+  "hash_titulo": "c4ab8eda45ab7d70",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis económico sobre tasas de interés e impacto en la economía panameña.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-bc1ff42d5c5b": {
+  "fecha_utc": "2026-10-09T02:11:04.499173+00:00",
+  "hash_titulo": "0a9e8ba40b301d99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Relaciones exteriores y cooperación bilateral de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-bc7f9cf1fa55": {
+  "fecha_utc": "2026-10-09T02:11:04.498927+00:00",
+  "hash_titulo": "37ea64c21e6658bf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Deuda de una universidad estatal con la Caja de Seguro Social.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-bd08bf079f36": {
+  "fecha_utc": "2026-10-09T02:11:04.496520+00:00",
+  "hash_titulo": "29b8a51c642dd185",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Patrocinio de feria cultural en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-be5e2cba8c68": {
+  "fecha_utc": "2026-10-09T02:11:04.496513+00:00",
+  "hash_titulo": "d68e1bf5c1dbe2dc",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Campaña social e infantil en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-be682f6ee6ec": {
+  "fecha_utc": "2026-10-09T02:11:04.500525+00:00",
+  "hash_titulo": "e46a20f7a032ff8e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Visita oficial del ministro francés centrada en el Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-bf599988a47d": {
+  "fecha_utc": "2026-10-09T02:11:04.496506+00:00",
+  "hash_titulo": "219b5c2c85847fe0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Informe de sostenibilidad corporativa local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c012515267f4": {
+  "fecha_utc": "2026-10-09T02:11:04.500148+00:00",
+  "hash_titulo": "658fac6785193890",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre relaciones internacionales entre Marruecos y Rusia.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c09db7d98572": {
+  "fecha_utc": "2026-10-09T02:11:04.498830+00:00",
+  "hash_titulo": "dd5e0f66539fb45a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Opinión política general.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c0c3e5bd15ab": {
+  "fecha_utc": "2026-10-09T02:11:04.499670+00:00",
+  "hash_titulo": "ec5658313be99439",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Columna de opinión general sin referencia a Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c13ce0c9ef35": {
+  "fecha_utc": "2026-10-09T02:11:04.500413+00:00",
+  "hash_titulo": "270abb1374305b27",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis político internacional general.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c18389695681": {
+  "fecha_utc": "2026-10-09T02:11:04.496498+00:00",
+  "hash_titulo": "2d8bd0d6fc288019",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acreditación de calidad en centros de salud privados en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-c25a5925cdb3": {
+  "fecha_utc": "2026-10-09T02:11:04.499166+00:00",
+  "hash_titulo": "e6cc2822bf247bbc",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Diplomacia y política internacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c294b5781931": {
+  "fecha_utc": "2026-10-09T02:11:04.499476+00:00",
+  "hash_titulo": "1a8f2737702ed47c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política internacional sobre Israel.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c2dd6dea9430": {
+  "fecha_utc": "2026-10-09T02:11:04.497918+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Niño y riesgos económicos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-c3bbe68493d0": {
+  "fecha_utc": "2026-10-09T02:11:04.498343+00:00",
+  "hash_titulo": "d178bba95d44850b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Competición deportiva de ciclismo (Tour de Panamá).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c3bf6c58e3f6": {
+  "fecha_utc": "2026-10-09T02:11:04.498266+00:00",
+  "hash_titulo": "6a7d29087ee71ba9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial en Panamá relacionado con drogas.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c4339fd4cfad": {
+  "fecha_utc": "2026-10-09T02:11:04.496490+00:00",
+  "hash_titulo": "9f0a6ce5d2dcaf59",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecto de ley sobre beneficios y descuentos regulatorios en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-c43ac23160ea": {
+  "fecha_utc": "2026-10-09T02:11:04.496483+00:00",
+  "hash_titulo": "dea6940909b617c3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza cultural institucional en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c4f715516942": {
+  "fecha_utc": "2026-10-09T02:11:04.496472+00:00",
+  "hash_titulo": "9d7ad6da82423701",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Lanzamiento comercial de vehículos en el mercado panameño.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-c53d81bbfc62": {
+  "fecha_utc": "2026-10-09T02:11:04.499904+00:00",
+  "hash_titulo": "d64dde9db688944b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Información sobre días libres y festividades en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c589902b41d5": {
+  "fecha_utc": "2026-10-09T02:11:04.496465+00:00",
+  "hash_titulo": "b6238cb256e7fa93",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Cumbre de liderazgo empresarial local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c5d83a1012cf": {
+  "fecha_utc": "2026-10-09T02:11:04.499664+00:00",
+  "hash_titulo": "adcb7cbba49a2966",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Deportes, participación de Panamá en los Juegos Codicader.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c5fdb968d109": {
+  "fecha_utc": "2026-10-09T02:11:04.499154+00:00",
+  "hash_titulo": "dd2725ac1bf229fd",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Involucra a la CSS y acciones legales relacionadas con el sector salud.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-c626c4f80762": {
+  "fecha_utc": "2026-10-09T02:11:04.499399+00:00",
+  "hash_titulo": "e5eb930b117f0be0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gremios industriales discutiendo el futuro económico de la mina Cobre Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-c6484b2dd2ac": {
+  "fecha_utc": "2026-10-09T02:11:04.497748+00:00",
+  "hash_titulo": "610ac4bd0f7751ff",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Investigación sobre dominicanos y la guerra en Ucrania.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c6c172b21834": {
+  "fecha_utc": "2026-10-09T02:11:04.496457+00:00",
+  "hash_titulo": "dcb8e5a97b1718a7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento corporativo de tecnología en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c70e94f905d2": {
+  "fecha_utc": "2026-10-09T02:11:04.498165+00:00",
+  "hash_titulo": "cd734a13ee1d5e41",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el rendimiento de la selección de fútbol de Panamá (deportes).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c939ac48caf9": {
+  "fecha_utc": "2026-10-09T02:11:04.496450+00:00",
+  "hash_titulo": "da2d8583dbab3e18",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento de béisbol de las Grandes Ligas (MLB) en Estados Unidos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-c97b11fe0ce2": {
+  "fecha_utc": "2026-10-09T02:11:04.499267+00:00",
+  "hash_titulo": "f025bfd4fdfe2316",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Atención social y reubicación por desastres o siniestros en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-c9c0832cfa23": {
+  "fecha_utc": "2026-10-09T02:11:04.496442+00:00",
+  "hash_titulo": "e75c362474dcbe9e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza social local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ca8f8f793b7e": {
+  "fecha_utc": "2026-10-09T02:11:04.500000+00:00",
+  "hash_titulo": "1210c294e7ede542",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula y polémicas entre artistas locales.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ccc10d1326b7": {
+  "fecha_utc": "2026-10-09T02:11:04.498028+00:00",
+  "hash_titulo": "5da1c356663519f7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre tratamientos médicos de cáncer sin relación directa con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-cd02065a8989": {
+  "fecha_utc": "2026-10-09T02:11:04.496434+00:00",
+  "hash_titulo": "76c5e7e2346a47ea",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Concierto y entretenimiento musical local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-cda3953101bf": {
+  "fecha_utc": "2026-10-09T02:11:04.499496+00:00",
+  "hash_titulo": "1425ecc308ec8995",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inversión y préstamos de un banco estatal en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-cdd27a09d4c0": {
+  "fecha_utc": "2026-10-09T02:11:04.497796+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fenómeno del Niño y riesgos económicos regionales.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-cde0c5dbedbb": {
+  "fecha_utc": "2026-10-09T02:11:04.499251+00:00",
+  "hash_titulo": "c995943d3c133b7d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Situación política interna de Venezuela.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ce6df47b9608": {
+  "fecha_utc": "2026-10-09T02:11:04.500447+00:00",
+  "hash_titulo": "dc894e31b4bd864f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un torneo deportivo local de béisbol infantil.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-cea438514e2b": {
+  "fecha_utc": "2026-10-09T02:11:04.498021+00:00",
+  "hash_titulo": "36d010d09160df49",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un suceso policial y judicial (crimen y detención) ocurrido en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-cfb4443c404b": {
+  "fecha_utc": "2026-10-09T02:11:04.498486+00:00",
+  "hash_titulo": "ec37be2df6bff147",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actualización de infraestructura naval militar en EE. UU.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-cfe900fe541d": {
+  "fecha_utc": "2026-10-09T02:11:04.496427+00:00",
+  "hash_titulo": "c617575d3271216b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento cultural y turístico tradicional en el interior de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-d0819b0c8565": {
+  "fecha_utc": "2026-10-09T02:11:04.497974+00:00",
+  "hash_titulo": "8fec4345c253a3e1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre inversión y proyectos de energía en Corea del Sur y Estados Unidos sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-d0aa2d86541e": {
+  "fecha_utc": "2026-10-09T02:11:04.500576+00:00",
+  "hash_titulo": "221168f6c44f995a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Oportunidades para migrantes venezolanos en México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d13544194fcc": {
+  "fecha_utc": "2026-10-09T02:11:04.499023+00:00",
+  "hash_titulo": "6c021c489f4e442b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Prácticas de pilotos de aviación en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d1d83694c6d6": {
+  "fecha_utc": "2026-10-09T02:11:04.499084+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resumen o avance sobre la Asamblea Nacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d3c3f7970bca": {
+  "fecha_utc": "2026-10-09T02:11:04.499743+00:00",
+  "hash_titulo": "8bc385766e75d8eb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula internacional sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d4ab4247bcbc": {
+  "fecha_utc": "2026-10-09T02:11:04.499657+00:00",
+  "hash_titulo": "906a548691a70f02",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reflexión sobre el transporte público y el tráfico en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-d4d440e4f60b": {
+  "fecha_utc": "2026-10-09T02:11:04.499391+00:00",
+  "hash_titulo": "c67938d7846e625d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Gestión académica institucional de la Universidad de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d68bca7e17ce": {
+  "fecha_utc": "2026-10-09T02:11:04.496419+00:00",
+  "hash_titulo": "6503bb259fce82ac",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actividad de responsabilidad social comunitaria en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d6b4d86d3dcb": {
+  "fecha_utc": "2026-10-09T02:11:04.497911+00:00",
+  "hash_titulo": "47bd6fd05e7809bd",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Exportaciones de banano en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-d71e798a0511": {
+  "fecha_utc": "2026-10-09T02:11:04.500342+00:00",
+  "hash_titulo": "37b36a4ca312685c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre pueblos indígenas de manera general en Latinoamérica.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d97d2a501369": {
+  "fecha_utc": "2026-10-09T02:11:04.496412+00:00",
+  "hash_titulo": "f155fd0c35020fea",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premio de periodismo local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-d9f58555ddfc": {
+  "fecha_utc": "2026-10-09T02:11:04.496403+00:00",
+  "hash_titulo": "8dac3720c386dd0b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Convenio corporativo en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-da296e3e604b": {
+  "fecha_utc": "2026-10-09T02:11:04.498158+00:00",
+  "hash_titulo": "65850de76bf141ac",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre análisis político interno en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-da3c56ca2c74": {
+  "fecha_utc": "2026-10-09T02:11:04.498100+00:00",
+  "hash_titulo": "fe8fd14f95278770",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la entrega de suministros médicos estatales e internacionales en áreas indígenas de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-dbdbcb3e448f": {
+  "fecha_utc": "2026-10-09T02:11:04.499077+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resumen o avance sobre la Asamblea Nacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-dbff424687fd": {
+  "fecha_utc": "2026-10-09T02:11:04.500349+00:00",
+  "hash_titulo": "70d2c7e6d0c53b85",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Informa sobre el informe de gobierno en Tamaulipas, México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-dc5cea3ff0ce": {
+  "fecha_utc": "2026-10-09T02:11:04.500062+00:00",
+  "hash_titulo": "dd9247a251d126ee",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Habla sobre el ave nacional de Panamá, la harpía.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-dd32c6a3ff45": {
+  "fecha_utc": "2026-10-09T02:11:04.496396+00:00",
+  "hash_titulo": "4ffe7b9ea5322388",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento ambiental a una empresa local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-dd34c48ca6b0": {
+  "fecha_utc": "2026-10-09T02:11:04.500056+00:00",
+  "hash_titulo": "a1cf5ba7e3efeec3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El fenómeno de El Niño afecta a Centroamérica y República Dominicana, incluyendo a Panamá.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-de13cc85a415": {
+  "fecha_utc": "2026-10-09T02:11:04.496389+00:00",
+  "hash_titulo": "4fd686e870f0d66f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alertas meteorológicas y climáticas emitidas en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-debe94590ae6": {
+  "fecha_utc": "2026-10-09T02:11:04.499802+00:00",
+  "hash_titulo": "d98cb061855c054b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Medio de comunicación internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-dff7b1007273": {
+  "fecha_utc": "2026-10-09T02:11:04.496380+00:00",
+  "hash_titulo": "f54528b546bdda74",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fallecimiento de artista internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e0ee216032af": {
+  "fecha_utc": "2026-10-09T02:11:04.499553+00:00",
+  "hash_titulo": "80bf0d644a0a0cf6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fenómeno climático global (El Niño) que afecta el transporte marítimo internacional.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-e1523bc564b1": {
+  "fecha_utc": "2026-10-09T02:11:04.499147+00:00",
+  "hash_titulo": "1b889e15e1dde083",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Artículo de opinión o columna de interés general.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e15b55e7ef4c": {
+  "fecha_utc": "2026-10-09T02:11:04.498687+00:00",
+  "hash_titulo": "cdd4c80c7eef06f0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Pronóstico del IMHPA sobre lluvias en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-e1d7f9421dbb": {
+  "fecha_utc": "2026-10-09T02:11:04.498824+00:00",
+  "hash_titulo": "050dd90a146b3ac5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Premios de publicidad y marketing a empresa en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e27bdb2e71a4": {
+  "fecha_utc": "2026-10-09T02:11:04.499016+00:00",
+  "hash_titulo": "3c902a9c18d09690",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Retención de efectivo en aduanas del aeropuerto Panamá Pacífico.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e29de4c68577": {
+  "fecha_utc": "2026-10-09T02:11:04.496372+00:00",
+  "hash_titulo": "41fe9b9ffd5604b8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proceso judicial de la Corte Penal Internacional ajeno a Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-e2e7ae51395c": {
+  "fecha_utc": "2026-10-09T02:11:04.496365+00:00",
+  "hash_titulo": "ddac919fb005f346",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Iniciativa de formación para proyectar un producto comercial agrícola panameño.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-e3ab0a7ff39a": {
+  "fecha_utc": "2026-10-09T02:11:04.498548+00:00",
+  "hash_titulo": "4504fbc53649b6ca",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Denuncias administrativas y de gestión municipal en Arraiján, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e3ce02a98eb6": {
+  "fecha_utc": "2026-10-09T02:11:04.499308+00:00",
+  "hash_titulo": "0a8a0c3a023b0924",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Desempeño de deportistas panameños en el extranjero (MLB).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e3dbf6bac3e5": {
+  "fecha_utc": "2026-10-09T02:11:04.500518+00:00",
+  "hash_titulo": "8fb4f3e5334269c7",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Homenaje póstumo al deportista panameño Ismael Laguna.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e467f34b3d59": {
+  "fecha_utc": "2026-10-09T02:11:04.500511+00:00",
+  "hash_titulo": "1df3f631aaf0b57e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Declaraciones de Silvio Rodríguez sobre Cuba.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e4e6f5213d0b": {
+  "fecha_utc": "2026-10-09T02:11:04.499118+00:00",
+  "hash_titulo": "8ba66222d6152f38",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Disputas políticas internas de un partido en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e4f74cb50037": {
+  "fecha_utc": "2026-10-09T02:11:04.499140+00:00",
+  "hash_titulo": "dbec559f3c53950d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre asuntos fiscales y gubernamentales de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-e503738805f4": {
+  "fecha_utc": "2026-10-09T02:11:04.499370+00:00",
+  "hash_titulo": "15f9e7078289bb6f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Propuesta sobre la reanudación de actividades mineras en Cobre Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-e53e4ec1c19c": {
+  "fecha_utc": "2026-10-09T02:11:04.500110+00:00",
+  "hash_titulo": "9a017ee577a31508",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia sobre expansión de empresa de insumos médicos sin ubicación clara de Panamá.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-e6249e88386f": {
+  "fecha_utc": "2026-10-09T02:11:04.500491+00:00",
+  "hash_titulo": "d077c6feb55e1ed2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Declaraciones de la cancillería sobre comercio exterior y relaciones de Panamá con Brasil.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-e68becdf8008": {
+  "fecha_utc": "2026-10-09T02:11:04.499336+00:00",
+  "hash_titulo": "69d43f1c07f86965",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Informes de programas estatales y manejo financiero del MEF.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-e6d244cd041a": {
+  "fecha_utc": "2026-10-09T02:11:04.498680+00:00",
+  "hash_titulo": "91461da8d0424330",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Refuerzo de vigilancia y conservación en el Parque Nacional Coiba.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-e6d736875efb": {
+  "fecha_utc": "2026-10-09T02:11:04.499260+00:00",
+  "hash_titulo": "318f66821ea3e999",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Actualización de norma de salud pública por el Minsa.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-e6e54e5a0512": {
+  "fecha_utc": "2026-10-09T02:11:04.500203+00:00",
+  "hash_titulo": "fcde10452946cfb3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Involucra la detección de tala ilegal y protección ambiental en el Parque La Amistad en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-e6f0b71b1152": {
+  "fecha_utc": "2026-10-09T02:11:04.500097+00:00",
+  "hash_titulo": "1640195b73c136d2",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la geopolítica energética de China y Malaca.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e729fd30836b": {
+  "fecha_utc": "2026-10-09T02:11:04.496357+00:00",
+  "hash_titulo": "a7d0fb3edc7e6244",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza institucional educativa local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e72c1a3b4ee8": {
+  "fecha_utc": "2026-10-09T02:11:04.498673+00:00",
+  "hash_titulo": "37ea64c21e6658bf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Deuda de la Universidad Autónoma de Chiriquí con la CSS.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-e7673d45b48a": {
+  "fecha_utc": "2026-10-09T02:11:04.496350+00:00",
+  "hash_titulo": "78ba470fcb04511c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proceso judicial de alto perfil en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-e77de823a932": {
+  "fecha_utc": "2026-10-09T02:11:04.498783+00:00",
+  "hash_titulo": "a667241a131801c8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Decisiones de inversión en GNL con impacto en el comercio energético global.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-e78221d046c5": {
+  "fecha_utc": "2026-10-09T02:11:04.498500+00:00",
+  "hash_titulo": "306465e9dcceaf01",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política interna y situación de partidos políticos en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e8b1d3b74e5f": {
+  "fecha_utc": "2026-10-09T02:11:04.496341+00:00",
+  "hash_titulo": "9d7e1365d964f6bf",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Alianza empresarial e institucional en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e8e3ca711f60": {
+  "fecha_utc": "2026-10-09T02:11:04.499364+00:00",
+  "hash_titulo": "3100fb961647b607",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evaluación internacional sobre la situación fiscal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-e93a1cd82fcd": {
+  "fecha_utc": "2026-10-09T02:11:04.500481+00:00",
+  "hash_titulo": "a9440ab24538bae8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Información institucional del Ministerio de Relaciones Exteriores de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e95270b461ce": {
+  "fecha_utc": "2026-10-09T02:11:04.498335+00:00",
+  "hash_titulo": "734b34c33cec3cea",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Nombramiento oficial en la administración del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-e99913393519": {
+  "fecha_utc": "2026-10-09T02:11:04.496333+00:00",
+  "hash_titulo": "2b9a57668b01ec1e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Convenio cultural y educativo local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e9d5866d7e48": {
+  "fecha_utc": "2026-10-09T02:11:04.499990+00:00",
+  "hash_titulo": "9efb1ef5791bb425",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Entrega de beneficios estatales estudiantiles (PASE-U).",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-e9d77591bac3": {
+  "fecha_utc": "2026-10-09T02:11:04.498093+00:00",
+  "hash_titulo": "459a5ec2506e56cd",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre asuntos internos y transformación académica de la Universidad de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-e9fe9757b822": {
+  "fecha_utc": "2026-10-09T02:11:04.497903+00:00",
+  "hash_titulo": "554b48e4af8e121b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Niño y riesgos económicos en LatAm.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-ea284f4c2b84": {
+  "fecha_utc": "2026-10-09T02:11:04.498014+00:00",
+  "hash_titulo": "b62f3d4b216bebda",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre financiamiento e inversiones del BID para América Latina desde Miami.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-ea345f69b1c5": {
+  "fecha_utc": "2026-10-09T02:11:04.497702+00:00",
+  "hash_titulo": "4e893e73d0fbbb99",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "El Fenómeno del Niño afecta económicamente a América Latina incluyendo Panamá.",
+  "relacion_panama": "indirecta",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
+ },
+ "N-eb7ec7ddc6aa": {
+  "fecha_utc": "2026-10-09T02:11:04.498643+00:00",
+  "hash_titulo": "49dc3575e3e67a33",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Inauguración de espacio comunitario panameño en Brooklyn.",
+  "relacion_panama": "indirecta",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ec1242c41667": {
+  "fecha_utc": "2026-10-09T02:11:04.496323+00:00",
+  "hash_titulo": "ea3aaaf89ffe9eba",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento benéfico de salud y bienestar en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ec489c443bb7": {
+  "fecha_utc": "2026-10-09T02:11:04.498137+00:00",
+  "hash_titulo": "93c15e135b807cf3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre negocios corporativos en Colombia con impacto regional.",
+  "relacion_panama": "indirecta",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-ed44fda9b8dd": {
+  "fecha_utc": "2026-10-09T02:11:04.499926+00:00",
+  "hash_titulo": "9545639129330f51",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Declaraciones sobre el crecimiento económico nacional.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-ed497abba9c3": {
+  "fecha_utc": "2026-10-09T02:11:04.499539+00:00",
+  "hash_titulo": "cf2914b8c82a4217",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Evento ganadero en Uruguay u otro país, sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ed7d0da31824": {
+  "fecha_utc": "2026-10-09T02:11:04.499897+00:00",
+  "hash_titulo": "904971549b4d0a3f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Fútbol de la Liga MX sin relación con Panamá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-edb41ddbaffc": {
+  "fecha_utc": "2026-10-09T02:11:04.498151+00:00",
+  "hash_titulo": "c8b7b19eabb7ae13",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre sucesos policiales, narcotráfico e investigaciones criminales en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ee823aa78d11": {
+  "fecha_utc": "2026-10-09T02:11:04.496315+00:00",
+  "hash_titulo": "6c8aa978cc1b17b1",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Entretenimiento y deportes internacionales.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-efdea8719999": {
+  "fecha_utc": "2026-10-09T02:11:04.496306+00:00",
+  "hash_titulo": "73b4888eba21f1b8",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Reconocimiento corporativo de medios en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f01abb1ca2c8": {
+  "fecha_utc": "2026-10-09T02:11:04.497674+00:00",
+  "hash_titulo": "07157c8c92b93d7a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Análisis sobre el comercio y la cadena logística centroamericana que impacta indirectamente a Panamá.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-f08f2733f528": {
+  "fecha_utc": "2026-10-09T02:11:04.498042+00:00",
+  "hash_titulo": "aab0764434d86d9b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Aborda el costo de vida y la economía de los hogares en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-f0adadfa72c3": {
+  "fecha_utc": "2026-10-09T02:11:04.499010+00:00",
+  "hash_titulo": "c58bba2376f61db0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Suceso policial fronterizo que involucra a un panameño en Costa Rica.",
+  "relacion_panama": "indirecta",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f0ef31187e7a": {
+  "fecha_utc": "2026-10-09T02:11:04.499070+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resumen o avance sobre la Asamblea Nacional de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f1d0c4dfb95a": {
+  "fecha_utc": "2026-10-09T02:11:04.500407+00:00",
+  "hash_titulo": "5eea7b0b0cd63cc6",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Propuesta de normativa sobre adopciones y menores.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-f1e0e44c28d7": {
+  "fecha_utc": "2026-10-09T02:11:04.498407+00:00",
+  "hash_titulo": "794835a4374afc36",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Campaña y directrices de salud pública sobre mamografías en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-f23f1c84fd57": {
+  "fecha_utc": "2026-10-09T02:11:04.496298+00:00",
+  "hash_titulo": "01138ae906520e41",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula internacional de México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f2add6a174cc": {
+  "fecha_utc": "2026-10-09T02:11:04.496289+00:00",
+  "hash_titulo": "f43ad5a17f9f85ae",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Acuerdo institucional educativo en Panamá, clasificado como otro.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f3551b42978b": {
+  "fecha_utc": "2026-10-09T02:11:04.498920+00:00",
+  "hash_titulo": "d2ad1343804e964d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Movimiento de carga y competitividad logística de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-f3583997ae8e": {
+  "fecha_utc": "2026-10-09T02:11:04.499795+00:00",
+  "hash_titulo": "5eae05617b00ebc5",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Resumen general de noticias sin tema específico.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f3cb4958d2f4": {
+  "fecha_utc": "2026-10-09T02:11:04.500426+00:00",
+  "hash_titulo": "952f447740d7a54b",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Construcción de barcos compatibles con las esclusas del Canal de Panamá.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-f459fe75d799": {
+  "fecha_utc": "2026-10-09T02:11:04.498143+00:00",
+  "hash_titulo": "7c42b9f1254cbf1a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Hace referencia a la Asamblea Nacional de Panamá y su actividad legislativa.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
+ },
+ "N-f4e88b54a70f": {
+  "fecha_utc": "2026-10-09T02:11:04.498541+00:00",
+  "hash_titulo": "4e9444e4bb3ba762",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Informe de seguridad internacional del Consejo de Seguridad de la ONU sobre Kosovo.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f514186a7ea1": {
+  "fecha_utc": "2026-10-09T02:11:04.500305+00:00",
+  "hash_titulo": "020d97f8ba2feb17",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre obras históricas en Chicago, EE. UU.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f534be670480": {
+  "fecha_utc": "2026-10-09T02:11:04.500124+00:00",
+  "hash_titulo": "0888e01309552499",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la ingeniera que dirige el Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-f54fdb9accd0": {
+  "fecha_utc": "2026-10-09T02:11:04.500453+00:00",
+  "hash_titulo": "219623cf86e261da",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Estrategia financiera y de banca de Banistmo en Panamá y Centroamérica.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-f617468a828d": {
+  "fecha_utc": "2026-10-09T02:11:04.499774+00:00",
+  "hash_titulo": "09844d179297e046",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Menciona el impacto del Canal de Panamá en la economía mundial.",
+  "relacion_panama": "indirecta",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-f62a15cc0223": {
+  "fecha_utc": "2026-10-09T02:11:04.497695+00:00",
+  "hash_titulo": "bb09996f9c04d221",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Importaciones y trabajo forzoso en Canadá.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f6491b8c9f6a": {
+  "fecha_utc": "2026-10-09T02:11:04.497667+00:00",
+  "hash_titulo": "55d76d23284722fa",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Asuntos de seguridad y gobierno en Culiacán, México.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f689bb13cda8": {
+  "fecha_utc": "2026-10-09T02:11:04.500335+00:00",
+  "hash_titulo": "ef24426a49017486",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Sceso policial y migratorio relacionado con la entrega de un ciudadano en el Darién.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f6be10344a57": {
+  "fecha_utc": "2026-10-09T02:11:04.500467+00:00",
+  "hash_titulo": "70c93f9b70cf43eb",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Arresto de ICE y operaciones militares en Estados Unidos.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f6ce8d1bf80c": {
+  "fecha_utc": "2026-10-09T02:11:04.499489+00:00",
+  "hash_titulo": "35fdec455d87874d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política de Venezuela.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f711eb77b7e6": {
+  "fecha_utc": "2026-10-09T02:11:04.498259+00:00",
+  "hash_titulo": "15ebc9957804b91f",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un proyecto de obtención de agua potable en una escuela de La Chorrera, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-f71eda7cfa9d": {
+  "fecha_utc": "2026-10-09T02:11:04.498534+00:00",
+  "hash_titulo": "1eb6009727cf6a9d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trámites y atención al ciudadano en la Alcaldía de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-f9281e1a12bd": {
+  "fecha_utc": "2026-10-09T02:11:04.500327+00:00",
+  "hash_titulo": "6d474a4d45efbab3",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Involucra a la Autoridad del Canal de Panamá entregando títulos de propiedad.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-f92b47d87e7d": {
+  "fecha_utc": "2026-10-09T02:11:04.498740+00:00",
+  "hash_titulo": "3dc14070a155036d",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Política internacional sobre Venezuela.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-f93b53dbaffa": {
+  "fecha_utc": "2026-10-09T02:11:04.498521+00:00",
+  "hash_titulo": "1fc8b1ec668ec3f4",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Entrevista o política exterior de la ONU sobre países de Medio Oriente y Asia.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-fac249feff29": {
+  "fecha_utc": "2026-10-09T02:11:04.496277+00:00",
+  "hash_titulo": "c4fd367ad9535364",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Noticia de farándula y entretenimiento nacional.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-fade6133d15b": {
+  "fecha_utc": "2026-10-09T02:11:04.499736+00:00",
+  "hash_titulo": "be650b52e534ab08",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Cumbre y geopolítica económica del grupo BRICS.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-faeeef9f5036": {
+  "fecha_utc": "2026-10-09T02:11:04.500196+00:00",
+  "hash_titulo": "097ce997b331bd9c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre turismo y conectividad en México y Brasil.",
+  "relacion_panama": "ninguna",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-faff2d9daa3b": {
+  "fecha_utc": "2026-10-09T02:11:04.498913+00:00",
+  "hash_titulo": "7c57fcf730c35241",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Proyecciones del MEF sobre el crecimiento de la deuda pública.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-fbcc9e5a020b": {
+  "fecha_utc": "2026-10-09T02:11:04.498049+00:00",
+  "hash_titulo": "0565beff095d57d0",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre premios al turismo en Sinaloa, México.",
+  "relacion_panama": "ninguna",
+  "tema": "turismo",
+  "version": "temas-v2"
+ },
+ "N-fe1e5505bf42": {
+  "fecha_utc": "2026-10-09T02:11:04.499961+00:00",
+  "hash_titulo": "17f9b6b53bc5689c",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Certamen de belleza internacional.",
+  "relacion_panama": "ninguna",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-fe5ca57b21e3": {
+  "fecha_utc": "2026-10-09T02:11:04.496243+00:00",
+  "hash_titulo": "1b8fc2339f60f92a",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el desarrollo del sector logístico y de aviación en Panamá con Copa Airlines.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
+ },
+ "N-feb7b27f7be8": {
+  "fecha_utc": "2026-10-09T02:11:04.498086+00:00",
+  "hash_titulo": "6111f686375e4de9",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la instalación de fuentes de agua potable en La Chorrera, Panamá.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
+ },
+ "N-fecade679828": {
+  "fecha_utc": "2026-10-09T02:11:04.498328+00:00",
+  "hash_titulo": "03cd02eeccb42d7e",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Farándula y bienestar personal de una figura pública local.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ff3688018c33": {
+  "fecha_utc": "2026-10-09T02:11:04.500377+00:00",
+  "hash_titulo": "be6ff5657710a089",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Se refiere a la selección de fútbol Sub-17 de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
+ },
+ "N-ff746db89352": {
+  "fecha_utc": "2026-10-09T02:11:04.499523+00:00",
+  "hash_titulo": "3a75501c73c9dc19",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Transacción bursátil de empresa minera en el extranjero.",
+  "relacion_panama": "ninguna",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
+ "N-ffe85b9a9510": {
+  "fecha_utc": "2026-10-09T02:11:04.499947+00:00",
+  "hash_titulo": "93aa84a461d6c372",
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Presupuesto y contratos de la Alcaldía de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
+ },
  "SIN-001": {
-  "fecha_utc": "2026-10-08T18:36:59.735445+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622677+00:00",
   "hash_titulo": "47d54ce799aa190b",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Se refiere a restricciones de calado en el Canal de Panamá.",
-  "tema": "logistica_canal"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre operaciones del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
  },
  "SIN-002": {
-  "fecha_utc": "2026-10-08T18:36:59.735552+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622737+00:00",
   "hash_titulo": "47d54ce799aa190b",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Trata sobre restricciones de calado en el Canal de Panamá.",
-  "tema": "logistica_canal"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre operaciones del Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
  },
  "SIN-003": {
-  "fecha_utc": "2026-10-08T18:36:59.735583+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622762+00:00",
   "hash_titulo": "c494443b4ee37c1f",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Aborda límites de carga para buques en el Canal.",
-  "tema": "logistica_canal"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el tránsito de buques en el Canal.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
  },
  "SIN-004": {
-  "fecha_utc": "2026-10-08T18:36:59.735605+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622783+00:00",
   "hash_titulo": "d9d7aa7050e518ee",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Trata sobre la inflación y el precio de la canasta básica.",
-  "tema": "economia"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre inflación y precios en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
  },
  "SIN-005": {
-  "fecha_utc": "2026-10-08T18:36:59.735625+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622824+00:00",
   "hash_titulo": "2576345d7179ea8f",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Se refiere al aumento de precios de alimentos.",
-  "tema": "economia"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre precios de alimentos en comercios panameños.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
  },
  "SIN-006": {
-  "fecha_utc": "2026-10-08T18:36:59.735643+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622845+00:00",
   "hash_titulo": "3e21e21ff3f47056",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Informa sobre un sismo en Chiriquí.",
-  "tema": "eventos_naturales"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un sismo ocurrido en Chiriquí.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
  },
  "SIN-007": {
-  "fecha_utc": "2026-10-08T18:36:59.735661+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622864+00:00",
   "hash_titulo": "631fdcf37167580c",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Reporta un temblor en Chiriquí y Bocas del Toro.",
-  "tema": "eventos_naturales"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre un temblor percibido en provincias panameñas.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
  },
  "SIN-008": {
-  "fecha_utc": "2026-10-08T18:36:59.735680+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622883+00:00",
   "hash_titulo": "902b289cc299ee8a",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Trata sobre el crecimiento en la llegada de turistas.",
-  "tema": "turismo"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la llegada de turistas a Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
  },
  "SIN-009": {
-  "fecha_utc": "2026-10-08T18:36:59.735699+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622902+00:00",
   "hash_titulo": "caf4e7aeb8398851",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Se refiere a la ocupación hotelera en la Ciudad de Panamá.",
-  "tema": "turismo"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre ocupación hotelera en Ciudad de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "turismo",
+  "version": "temas-v2"
  },
  "SIN-010": {
-  "fecha_utc": "2026-10-08T18:36:59.735717+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622919+00:00",
   "hash_titulo": "6798cf2c55c0f528",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Informa sobre un corte de agua potable.",
-  "tema": "servicios_publicos"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre cortes de agua potable en San Miguelito.",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
  },
  "SIN-011": {
-  "fecha_utc": "2026-10-08T18:36:59.735736+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622939+00:00",
   "hash_titulo": "0622dee051566d60",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Se refiere a la aprobación de una reforma de ley.",
-  "tema": "regulacion"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre la aprobación de leyes en la Asamblea de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
  },
  "SIN-012": {
-  "fecha_utc": "2026-10-08T18:36:59.735755+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622957+00:00",
   "hash_titulo": "a09c766b559266bc",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Trata sobre el horario del Metro de Panamá, transporte público.",
-  "tema": "servicios_publicos"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el funcionamiento del transporte público (Metro de Panamá).",
+  "relacion_panama": "directa",
+  "tema": "servicios_publicos",
+  "version": "temas-v2"
  },
  "SIN-013": {
-  "fecha_utc": "2026-10-08T18:36:59.735775+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622972+00:00",
   "hash_titulo": "ddcb8f7925f31374",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Informa sobre lluvias intensas e inundaciones.",
-  "tema": "eventos_naturales"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre inundaciones causadas por lluvias en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "eventos_naturales",
+  "version": "temas-v2"
  },
  "SIN-014": {
-  "fecha_utc": "2026-10-08T18:36:59.735840+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.622990+00:00",
   "hash_titulo": "14b7c431adfb4dc5",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Trata sobre un nuevo acuerdo de la Superintendencia de Bancos.",
-  "tema": "regulacion"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre acuerdos de superintendencias bancarias en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "regulacion",
+  "version": "temas-v2"
  },
  "SIN-015": {
-  "fecha_utc": "2026-10-08T18:36:59.735873+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.623009+00:00",
   "hash_titulo": "aa9e571231aef852",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Se refiere a deportes (fútbol).",
-  "tema": "otro"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre deportes (fútbol).",
+  "relacion_panama": "directa",
+  "tema": "otro",
+  "version": "temas-v2"
  },
  "SIN-016": {
-  "fecha_utc": "2026-10-08T18:36:59.735892+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.623027+00:00",
   "hash_titulo": "02591bb44340c2fa",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Trata sobre restricciones de calado en el Canal de Panamá.",
-  "tema": "logistica_canal"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre restricciones operativas en el Canal de Panamá.",
+  "relacion_panama": "directa",
+  "tema": "logistica_canal",
+  "version": "temas-v2"
  },
  "SIN-017": {
   "fecha_utc": "2026-10-08T18:36:59.735912+00:00",
@@ -119,17 +5173,21 @@
   "tema": "otro"
  },
  "SIN-018": {
-  "fecha_utc": "2026-10-08T18:36:59.735930+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.623043+00:00",
   "hash_titulo": "166e601ae958026d",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Informa sobre la tasa de desempleo en el país.",
-  "tema": "economia"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre el desempleo en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
  },
  "SIN-019": {
-  "fecha_utc": "2026-10-08T18:36:59.735948+00:00",
+  "fecha_utc": "2026-10-08T23:39:04.623061+00:00",
   "hash_titulo": "76423fcef7dc493a",
-  "modelo": "gemini-3.5-flash",
-  "motivo": "Trata sobre la disminución del desempleo.",
-  "tema": "economia"
+  "modelo": "gemini-3.5-flash-lite",
+  "motivo": "Trata sobre cifras de empleo en Panamá.",
+  "relacion_panama": "directa",
+  "tema": "economia",
+  "version": "temas-v2"
  }
 }

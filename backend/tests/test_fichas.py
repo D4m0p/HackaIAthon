@@ -123,3 +123,43 @@ def test_no_inventa_acciones_de_la_redaccion(fichas_llm):
         if ficha["borrador"]:
             texto = " ".join(ficha["borrador"][k] for k in ("brief", "guion_45_60s", "copy_digital"))
             assert not re.search(r"\bestamos (investigando|verificando|consultando)\b", texto.lower())
+
+
+def _redaccion_falsa(brief):
+    return {'que_se_reporta': 'Restricciones en el Canal.',
+            'afirmaciones': [{'texto': 'Medio A reporta restricciones', 'tipo': 'declaracion',
+                              'citas': [{'id_evidencia': 'SIN-001', 'campo': 'titulo'}]}],
+            'que_falta_verificar': ['Fuente primaria'], 'accion_recomendada': 'Verificar.',
+            'preguntas_investigacion': ['a', 'b', 'c'],
+            'borrador': {'titulo_propuesto': 'Canal', 'enfoque_interes_publico': 'Comercio',
+                         'brief': brief, 'verificaciones_pendientes': [],
+                         'guion_45_60s': 'Medio A reporta restricciones de calado [SIN-001:titulo].',
+                         'copy_digital': 'Restricciones en el Canal [SIN-001:titulo].'}}
+
+
+def test_si_el_validador_bloquea_se_pide_una_correccion(eventos, monkeypatch):
+    import nucleo.fichas as fichas
+    pedidos = []
+
+    def redactar_falso(evento, paquete, con_borrador, correccion=None):
+        pedidos.append(correccion)
+        if correccion is None:  # primera respuesta: cifra inventada -> se bloquea
+            return _redaccion_falsa('El Canal restringe el calado durante 45 días [SIN-001:titulo].'), 'modelo-x'
+        return _redaccion_falsa('El Canal anuncia restricciones de calado [SIN-001:titulo].'), 'modelo-x'
+
+    monkeypatch.setattr(fichas, '_redactar', redactar_falso)
+    ficha = fichas.generar_ficha(eventos['EV-SIN-001'], usar_llm=True, usar_artefactos=False)
+
+    assert len(pedidos) == 2 and '45' in pedidos[1]          # la corrección incluye el motivo exacto
+    assert ficha['generado']['reintento_por_bloqueo'] is True
+    assert ficha['validacion']['bloqueada'] is False
+    assert '45' not in ficha['borrador']['brief']
+
+
+def test_si_la_correccion_no_mejora_queda_la_primera_bloqueada(eventos, monkeypatch):
+    import nucleo.fichas as fichas
+    monkeypatch.setattr(fichas, '_redactar', lambda evento, paquete, con_borrador, correccion=None: (
+        _redaccion_falsa('Durante 45 días habrá restricciones [SIN-001:titulo].'), 'modelo-x'))
+    ficha = fichas.generar_ficha(eventos['EV-SIN-001'], usar_llm=True, usar_artefactos=False)
+    assert ficha['generado']['reintento_por_bloqueo'] is False
+    assert ficha['validacion']['bloqueada'] is True and ficha['estado_revision'] == 'requiere evidencia'

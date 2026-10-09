@@ -124,9 +124,9 @@ def test_titulares_van_como_json_y_se_rechazan_ids_repetidos(monkeypatch):
     def generar_falso(instrucciones, contenido, esquema, modelos, tarea):
         recibido['contenido'] = contenido
         return {'clasificaciones': [
-            {'id': 'SIN-001', 'tema': 'logistica_canal', 'motivo': 'x'},
-            {'id': 'SIN-001', 'tema': 'economia', 'motivo': 'respuesta repetida'},
-            {'id': 'SIN-004', 'tema': 'economia', 'motivo': 'x'},
+            {'id': 'SIN-001', 'tema': 'logistica_canal', 'relacion_panama': 'directa', 'motivo': 'x'},
+            {'id': 'SIN-001', 'tema': 'economia', 'relacion_panama': 'directa', 'motivo': 'respuesta repetida'},
+            {'id': 'SIN-004', 'tema': 'economia', 'relacion_panama': 'directa', 'motivo': 'x'},
         ]}, 'modelo-falso'
 
     monkeypatch.setattr(nucleo.llm, 'generar', generar_falso)

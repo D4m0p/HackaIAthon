@@ -26,29 +26,63 @@ CARPETA_ARTEFACTOS = "artefactos"
 # Cada tarea tiene una lista de modelos en orden de preferencia. Si uno está
 # saturado o no responde, se pasa al siguiente sin esperar.
 # Modelos rápidos para tareas simples en lote (clasificar temas).
-MODELOS_RAPIDOS = ["gemini-3.5-flash-lite", "gemini-3.5-flash"]
+# Groq va al final como respaldo gratuito ("groq:" = proveedor Groq). Plan gratis:
+# 1.000 llamadas/día y 8.000 tokens/minuto POR MODELO, por eso se usan dos modelos.
+# En los 18 titulares de ejemplo ambos coincidieron con Gemini en el tema (18/18).
+MODELOS_GROQ = ["groq:openai/gpt-oss-120b", "groq:qwen/qwen3.8-27b"]
+MODELOS_RAPIDOS = ["gemini-3.5-flash-lite", "gemini-3.5-flash", *MODELOS_GROQ]
 # Modelos de mejor calidad para fichas y borradores.
-MODELOS_REDACCION = ["gemini-3.8-flash", "gemini-3.5-flash"]
+MODELOS_REDACCION = ["gemini-3.8-flash", "gemini-3.5-flash", *MODELOS_GROQ]
+# Tope de tokens de salida por llamada a Groq (una ficha completa usa menos de 3.000).
+GROQ_MAX_TOKENS_SALIDA = 3000
+# Si Groq pide esperar hasta esto (límite por minuto), se espera y se reintenta una vez.
+GROQ_ESPERA_MAXIMA = 60
+# Espera entre rondas cuando todos los modelos disponibles fallaron por límite por minuto.
+ESPERA_LIMITE_POR_MINUTO = 30
 # Temperatura 0 = respuestas lo más consistentes posible.
 TEMPERATURA = 0
-# Cuántos titulares se mandan por llamada al clasificar temas.
-TAMANO_LOTE_TEMAS = 50
+# Cuántos titulares se mandan por llamada al clasificar temas (40 cabe en el
+# límite de tokens por minuto de Groq, contando el motivo y la relación con Panamá).
+TAMANO_LOTE_TEMAS = 40
 # Rondas de intentos: en cada ronda se prueban todos los modelos de la lista;
 # entre rondas se espera un poco (2 s, 4 s...).
 REINTENTOS_LLM = 2
 # Tiempo máximo de espera por llamada.
 TIMEOUT_LLM_SEGUNDOS = 60
 
-# Definición de cada tema, tal como se le explica al LLM.
+# Versión de la clasificación de temas. Cambiarla obliga a reclasificar: los temas
+# guardados con otra versión dejan de usarse.
+# v2: definiciones con exclusiones explícitas + relación con Panamá (tras ver con los
+#     datos reales que "salud pública" atraía consejos médicos y farándula).
+VERSION_CLASIFICACION = "temas-v2"
+
+# Definición de cada tema, tal como se le explica al LLM. Incluye qué NO entra.
 DEFINICION_TEMAS = {
-    "economia": "inflación, precios, crecimiento, empleo y desempleo, deuda, impuestos, finanzas públicas",
-    "logistica_canal": "Canal de Panamá, buques, puertos, contenedores, comercio exterior y cadena logística",
-    "turismo": "turistas, hoteles, vuelos, aerolíneas, cruceros y actividad turística",
-    "servicios_publicos": "agua potable, electricidad, transporte público, metro, salud pública, recolección de basura",
-    "eventos_naturales": "sismos, lluvias, inundaciones, sequías, deslizamientos y fenómenos climáticos",
-    "regulacion": "leyes, decretos, normas, acuerdos de superintendencias, fallos judiciales y cambios regulatorios",
-    "otro": "cualquier tema que no encaje claramente en los anteriores (deportes, farándula, sucesos, etc.)",
+    "economia": ("inflación, precios, crecimiento, empleo y desempleo, deuda, impuestos, finanzas "
+                 "públicas, inversión y comercio. NO: consejos de finanzas personales."),
+    "logistica_canal": ("Canal de Panamá, buques, puertos, contenedores, comercio exterior y cadena "
+                        "logística. NO: sanciones o conflictos de otros países sin efecto en esa logística."),
+    "turismo": "turistas, hoteles, vuelos, aerolíneas, cruceros y actividad turística.",
+    "servicios_publicos": ("servicios que presta el Estado: agua potable, electricidad, transporte "
+                           "público, metro, carreteras, recolección de basura, hospitales públicos, CSS "
+                           "y campañas del Ministerio de Salud. NO: consejos de salud personal, "
+                           "testimonios o historias de vida, farándula, ni sucesos policiales."),
+    "eventos_naturales": ("sismos, lluvias, inundaciones, sequías, deslizamientos, fenómenos climáticos "
+                          "y simulacros o alertas ante ellos."),
+    "regulacion": ("leyes, decretos, normas, acuerdos de superintendencias y fallos judiciales de "
+                   "Panamá. NO: procesos judiciales de otros países."),
+    "otro": ("lo que no encaja claramente en los anteriores: deportes, farándula, entretenimiento, "
+             "salud y bienestar personal, sucesos policiales, política o justicia de otros países."),
 }
+
+# Relación de la noticia con Panamá, la decide el LLM al clasificar. Se usa en R.
+RELACIONES_PANAMA = {
+    "directa": "ocurre en Panamá o involucra directamente a instituciones, personas o empresas de Panamá",
+    "indirecta": "ocurre fuera, pero tiene un efecto concreto y explicable en Panamá (ej. comercio, Canal, migración)",
+    "ninguna": "no ocurre en Panamá ni tiene un efecto concreto en Panamá",
+}
+# Aporte de cada relación a la mitad "Panamá" de R.
+VALOR_RELACION_PANAMA = {"directa": 1.0, "indirecta": 0.5, "ninguna": 0.0}
 
 # ---------------------------------------------------------------------------
 # Temas del reto (sección 3, etapa 2)
@@ -179,13 +213,15 @@ PESOS = {"R": 30, "I": 25, "U": 20, "N": 15, "E": 10}
 # Rangos sin solapamiento: bajo [0,40), medio [40,70), alto [70,100]
 NIVELES = [(70, "alto"), (40, "medio"), (0, "bajo")]
 
-# R · Relevancia: lugares e instituciones que vinculan una noticia con Panamá.
+# R · Relevancia. La relación con Panamá la decide el LLM (RELACIONES_PANAMA). Si no
+# hay LLM, se usa la mención de estos lugares como respaldo.
+# Nota: "lo publicó TVN" NO cuenta como relación con Panamá (TVN también publica
+# noticias de Siberia o Filipinas); se quitó esa regla al ver los datos reales.
 LUGARES_PANAMA = [
     "panama", "canal", "gatun", "tocumen", "chiriqui", "bocas del toro", "cocle",
     "colon", "darien", "herrera", "los santos", "veraguas", "san miguelito",
     "arraijan", "chorrera", "guna yala", "embera", "ngabe",
 ]
-MEDIOS_PANAMENOS = ["tvn"]
 
 # I · Impacto: peso base por tema (alcance sectorial típico en Panamá).
 # Es una decisión editorial: ajustarla con la persona editorial y registrar el cambio.

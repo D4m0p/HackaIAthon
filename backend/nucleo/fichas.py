@@ -12,6 +12,7 @@ Reparto del trabajo:
 - seguridad.py valida todo lo que devuelve el LLM antes de guardarlo.
 """
 
+import copy
 import json
 from datetime import datetime, timezone
 
@@ -189,18 +190,21 @@ def _problemas_de_limites(borrador):
     return problemas
 
 
-def _redactar(evento, paquete, con_borrador):
-    """Llama al LLM; si se pasa de los límites de palabras, reintenta una vez."""
+def _redactar(evento, paquete, con_borrador, correccion=None):
+    """Llama al LLM; si se pasa de los límites de palabras, reintenta una vez.
+    `correccion`: motivos por los que el validador rechazó una respuesta anterior."""
     instrucciones = INSTRUCCIONES.format(
         brief=config.LIMITE_PALABRAS_BRIEF, copy=config.LIMITE_PALABRAS_COPY,
         guion_min=config.RANGO_PALABRAS_GUION[0], guion_max=config.RANGO_PALABRAS_GUION[1])
     esquema = _esquema(con_borrador)
 
-    respuesta, modelo = generar(instrucciones, _contenido(evento, paquete, con_borrador), esquema,
-                                config.MODELOS_REDACCION, tarea="ficha")
+    tarea = "ficha_correccion" if correccion else "ficha"
+    respuesta, modelo = generar(instrucciones, _contenido(evento, paquete, con_borrador, correccion), esquema,
+                                config.MODELOS_REDACCION, tarea=tarea)
     problemas = _problemas_de_limites(respuesta.get("borrador"))
     if problemas:
-        respuesta, modelo = generar(instrucciones, _contenido(evento, paquete, con_borrador, "; ".join(problemas)),
+        pedido = "; ".join(([correccion] if correccion else []) + problemas)
+        respuesta, modelo = generar(instrucciones, _contenido(evento, paquete, con_borrador, pedido),
                                     esquema, config.MODELOS_REDACCION, tarea="ficha_reintento")
     return respuesta, modelo
 
@@ -284,10 +288,21 @@ def validar_redaccion(evento, paquete, redaccion, borrador):
     }
 
 
+def _validar(evento, paquete, redaccion, con_borrador):
+    """Prepara el borrador (aviso de solo titular al inicio del brief) y lo valida.
+    Devuelve (borrador, afirmaciones_validas, validacion). No modifica `redaccion`."""
+    borrador = copy.deepcopy(redaccion.get("borrador")) if con_borrador else None
+    if borrador and evento.get("aviso_alcance") and not borrador["brief"].startswith(evento["aviso_alcance"]):
+        borrador["brief"] = f"{evento['aviso_alcance']} {borrador['brief']}"
+    validas, validacion = validar_redaccion(evento, paquete, redaccion, borrador)
+    return borrador, validas, validacion
+
+
 def _obtener_redaccion(evento, paquete, con_borrador, usar_llm, usar_artefactos):
-    """Devuelve (redaccion, modelo, metodo).
+    """Devuelve (redaccion, modelo, metodo, corregida).
     1. Artefacto versionado (artefactos/redacciones.json) si la evidencia no cambió.
-    2. Si no, el LLM (y se guarda el resultado).
+    2. Si no, el LLM. Si el validador bloquea la respuesta, se le pide UNA corrección
+       con los motivos exactos y se usa solo si mejora. Se guarda el resultado final.
     3. Si no hay LLM o no responde: (None, None, "sin_conexion" / "sin_llm").
     La huella usa la evidencia y las instrucciones, NO el tema: si el tema cambia,
     la redacción guardada sigue siendo válida."""
@@ -296,20 +311,37 @@ def _obtener_redaccion(evento, paquete, con_borrador, usar_llm, usar_artefactos)
     guardadas = artefactos.cargar("redacciones.json") if usar_artefactos else {}
     g = guardadas.get(evento["id_evento"])
     if g and g["hash_evidencia"] == huella:
-        return g["redaccion"], g["modelo"], "llm"
+        redaccion, modelo = g["redaccion"], g["modelo"]
+        # Guardada antes de existir la corrección automática: se intenta una vez si hay LLM
+        if not usar_llm or g.get("correccion_intentada"):
+            return redaccion, modelo, "llm", g.get("corregida", False)
+    else:
+        if not usar_llm:
+            return None, None, "sin_llm", False
+        try:
+            redaccion, modelo = _redactar(evento, paquete, con_borrador)
+        except LLMNoDisponible:
+            return None, None, "sin_conexion", False
 
-    if not usar_llm:
-        return None, None, "sin_llm"
-    try:
-        redaccion, modelo = _redactar(evento, paquete, con_borrador)
-    except LLMNoDisponible:
-        return None, None, "sin_conexion"
+    corregida = False
+    motivos = _validar(evento, paquete, redaccion, con_borrador)[2]["motivos_bloqueo"]
+    if motivos:
+        pedido = ("El validador rechazó tu respuesta por estos motivos: " + " | ".join(motivos) +
+                  ". Corrige SOLO eso: cada cifra o fecha debe ir con la cita del campo que la contiene "
+                  "(una fecha se cita con :fecha), o elimínala; no nombres entidades que no estén en la evidencia.")
+        try:
+            nueva, modelo_nuevo = _redactar(evento, paquete, con_borrador, correccion=pedido)
+            if len(_validar(evento, paquete, nueva, con_borrador)[2]["motivos_bloqueo"]) < len(motivos):
+                redaccion, modelo, corregida = nueva, modelo_nuevo, True
+        except LLMNoDisponible:
+            pass  # se queda la primera versión (bloqueada, con sus motivos visibles)
 
     if usar_artefactos:
-        guardadas[evento["id_evento"]] = {"hash_evidencia": huella, "redaccion": redaccion,
-                                          "modelo": modelo, "fecha_utc": artefactos.ahora_utc()}
+        guardadas[evento["id_evento"]] = {"hash_evidencia": huella, "redaccion": redaccion, "modelo": modelo,
+                                          "corregida": corregida, "correccion_intentada": True,
+                                          "fecha_utc": artefactos.ahora_utc()}
         artefactos.guardar("redacciones.json", guardadas)
-    return redaccion, modelo, "llm"
+    return redaccion, modelo, "llm", corregida
 
 
 def generar_ficha(evento, usar_llm=True, usar_artefactos=True):
@@ -363,8 +395,9 @@ def generar_ficha(evento, usar_llm=True, usar_artefactos=True):
     if not paquete:
         ficha["generado"]["metodo"] = "sin_evidencia_utilizable"
     else:
-        redaccion, modelo, metodo = _obtener_redaccion(evento, paquete, con_borrador, usar_llm, usar_artefactos)
-        ficha["generado"].update(metodo=metodo, modelo=modelo)
+        redaccion, modelo, metodo, corregida = _obtener_redaccion(evento, paquete, con_borrador,
+                                                                  usar_llm, usar_artefactos)
+        ficha["generado"].update(metodo=metodo, modelo=modelo, reintento_por_bloqueo=corregida)
         if redaccion is None:
             # Sin LLM (sin conexión o desactivado): ficha por plantilla, sin inventar nada
             redaccion = redaccion_por_plantilla(evento, paquete, con_borrador)
@@ -380,11 +413,7 @@ def generar_ficha(evento, usar_llm=True, usar_artefactos=True):
                                  "advertencias": []})
         return ficha
 
-    borrador = redaccion.get("borrador") if con_borrador else None
-    if borrador and evento.get("aviso_alcance") and not borrador["brief"].startswith(evento["aviso_alcance"]):
-        borrador["brief"] = f"{evento['aviso_alcance']} {borrador['brief']}"
-
-    validas, validacion = validar_redaccion(evento, paquete, redaccion, borrador)
+    borrador, validas, validacion = _validar(evento, paquete, redaccion, con_borrador)
     if validacion["bloqueada"]:
         ficha["estado_revision"] = "requiere evidencia"
         ficha["avisos"].append("Ficha bloqueada por el validador: hay contenido sin respaldo en la evidencia "
