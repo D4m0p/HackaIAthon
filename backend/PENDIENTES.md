@@ -28,8 +28,10 @@ Lista viva: se tacha cuando se completa. Lo que dependa de otra persona dice de 
 - [ ] Aportar a **Plan y decisiones**: decisiones justificadas (bge-m3, Gemini + Groq,
   agrupación híbrida, quitar la regla "publicado por TVN", temas v2, datos de ejemplo congelados,
   consultas híbridas).
-- [ ] Aportar a **Pruebas y métricas**: pruebas fallidas y su corrección (cuota 429, ranking
-  con Siberia/Duterte, fichas bloqueadas, pruebas de C rotas) y las métricas finales.
+- [x] Crear **Pruebas y métricas** en Notion (LarpeoIntenso → Documentación técnica): matriz
+  T01–T10, métricas automáticas, comparación de consultas y pruebas fallidas con su corrección.
+- [ ] Actualizar esa página con las métricas finales cuando la planilla esté etiquetada
+  (`python -m eval.metricas` y copiar `eval/resultados/metricas.md`).
 
 ## Mejoras opcionales
 
