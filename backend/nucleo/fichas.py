@@ -55,6 +55,11 @@ Cada afirmación tiene un tipo:
 - "hipotesis": posibilidad a investigar, no confirmada.
 Cada afirmación cita al menos un elemento: id_evidencia (exactamente como aparece)
 y campo (un nombre de campo que ese elemento tiene, ej. "titulo", "valor", "magnitud").
+Cita TODOS los campos de donde sale lo que escribes, no solo el principal:
+- si nombras al medio ("según TVN", "TVN reporta"), cita también su campo "medio";
+- si das la fecha, cita "fecha";
+- si das la unidad de una cifra ("% de la población activa"), cita "unidad".
+Si no vas a citar un campo, no escribas lo que contiene.
 
 BORRADORES
 - En brief, guion y copy, pon la cita entre corchetes después de cada afirmación
@@ -63,6 +68,8 @@ BORRADORES
 - Toda oración que contenga una cifra o una fecha debe citar el campo que contiene
   ESA cifra: una fecha se cita con :fecha o :fecha_utc, un valor del
   Banco Mundial con :valor y su año con :anio, una cifra de un titular con :titulo.
+- Lo mismo para el medio y la unidad: si la oración nombra al medio, cita :medio;
+  si dice la unidad de una cifra, cita :unidad. Ej: "Según TVN [N-abc:medio], ...".
   No escribas cifras sin cita, tampoco en preguntas retóricas.
 - Si hay cifras en conflicto, brief, guion y copy_digital deben mencionarlas TODAS.
 - En afirmaciones, que_se_reporta, brief, guion y copy no nombres instituciones,
@@ -122,7 +129,7 @@ def _esquema(con_borrador):
     lista_textos = {"type": "array", "items": texto}
     propiedades = {
         "que_se_reporta": texto,
-        "afirmaciones": {"type": "array", "items": {
+        "afirmaciones": {"type": "array", "minItems": 1, "items": {
             "type": "object",
             "properties": {
                 "texto": texto,
@@ -218,6 +225,7 @@ def validar_redaccion(evento, paquete, redaccion, borrador):
     evidencia, la ficha queda BLOQUEADA (pasa a "requiere evidencia").
 
     Bloquea:
+    - una ficha sin afirmaciones
     - afirmaciones sin cita válida, o con cifras que no están en lo que citan
     - en brief/guion/copy: citas inválidas, cifras que no están en lo que cita su
       oración, siglas que no están en la evidencia, y (si hay contradicción) no
@@ -241,6 +249,9 @@ def validar_redaccion(evento, paquete, redaccion, borrador):
             descartadas.append({**a, "motivo_descarte": "; ".join(detalle)})
     if descartadas:
         motivos.append(f"{len(descartadas)} afirmación(es) sin respaldo válido")
+    if not redaccion["afirmaciones"]:
+        # Una ficha sin afirmaciones no le dice nada a la editora: al menos lo que reporta cada titular
+        motivos.append("la ficha no tiene afirmaciones: incluye al menos lo que reporta cada titular, con su cita")
 
     if borrador:
         # El título no lleva corchetes de cita: sus cifras solo deben existir en la evidencia

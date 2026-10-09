@@ -24,16 +24,18 @@ def _afirmaciones(paquete):
     for id_ev, e in paquete.items():
         if e["tipo"] == "noticia":
             afirmaciones.append({
-                "texto": f"{e['medio']} publicó el titular: «{e['titulo']}» [{id_ev}:titulo].",
+                "texto": f"{e['medio']} [{id_ev}:medio] publicó el titular: «{e['titulo']}» [{id_ev}:titulo].",
                 "tipo": "declaracion",
-                "citas": [{"id_evidencia": id_ev, "campo": "titulo"}],
+                "citas": [{"id_evidencia": id_ev, "campo": "medio"}, {"id_evidencia": id_ev, "campo": "titulo"}],
             })
         elif e["tipo"] == "indicador_banco_mundial":
             afirmaciones.append({
                 "texto": (f"Según el Banco Mundial, el dato anual de {e['anio']} [{id_ev}:anio] de "
-                          f"{e['nombre'].lower()} en Panamá fue {e['valor']} ({e['unidad']}) [{id_ev}:valor]."),
+                          f"{e['nombre'].lower()} en Panamá fue {e['valor']} [{id_ev}:valor] "
+                          f"({e['unidad']}) [{id_ev}:unidad]."),
                 "tipo": "hecho",
-                "citas": [{"id_evidencia": id_ev, "campo": "valor"}, {"id_evidencia": id_ev, "campo": "anio"}],
+                "citas": [{"id_evidencia": id_ev, "campo": "valor"}, {"id_evidencia": id_ev, "campo": "anio"},
+                          {"id_evidencia": id_ev, "campo": "unidad"}],
             })
         elif e["tipo"] == "sismo_usgs":
             afirmaciones.append({

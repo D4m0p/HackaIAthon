@@ -7,22 +7,22 @@ Calculadas con `python -m eval.metricas` sobre la corrida del paquete real. Nume
 | Métrica | Resultado |
 |---|---|
 | Fichas | 10 (por método: {'llm': 10}) |
-| Fichas bloqueadas por el validador | 0 (rescatadas con corrección: 2) |
-| Cobertura de citas: afirmaciones con cita válida | 14 de 14 (100%) |
-| Oraciones citadas del borrador con cifras respaldadas | 16 de 16 (100%) |
+| Fichas bloqueadas por el validador | 0 (rescatadas con corrección: 0) |
+| Cobertura de citas: afirmaciones con cita válida | 13 de 13 (100%) |
+| Oraciones citadas del borrador con cifras respaldadas | 11 de 11 (100%) |
 
 ## Eficiencia y costo
 
-356 llamadas reales al LLM (141 exitosas) y 97 respondidas desde la caché. Fallos por código: {'503': 13, '429': 191, '429_minuto': 6, '504': 1, 'sin_clave': 4}. Tokens: 407,657. Costo: 0 USD (Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.)
+397 llamadas reales al LLM (172 exitosas) y 163 respondidas desde la caché. Fallos por código: {'503': 13, '429': 197, '429_minuto': 10, '504': 1, 'sin_clave': 4}. Tokens: 502,240. Costo: 0 USD (Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.)
 
 | Tarea | Llamadas | Mediana (s) | p95 (s) | Tokens promedio |
 |---|---|---|---|---|
 | clasificar_temas | 29 | 6.5 | 12.71 | 4803 |
 | consulta | 45 | 0.89 | 1.93 | 1026 |
 | consulta_correccion | 3 | 1.11 | 1.3 | 1159 |
-| ficha | 48 | 7.79 | 22.0 | 3331 |
-| ficha_correccion | 6 | 3.65 | 25.15 | 4068 |
-| ficha_reintento | 10 | 3.59 | 13.19 | 3442 |
+| ficha | 71 | 7.19 | 29.44 | 3157 |
+| ficha_correccion | 10 | 3.8 | 35.34 | 4000 |
+| ficha_reintento | 14 | 3.79 | 23.14 | 3513 |
 
 > **Referencia: etiquetas del juez IA (no humano)**, hechas sin ver las respuestas del sistema y con un modelo distinto al que clasifica. Es una evaluación preliminar: no reemplaza las etiquetas humanas que pide el reto.
 
@@ -53,7 +53,7 @@ Relación con Panamá (LLM): 92 de 100 (92%).
 
 ## Validez de sustento
 
-- validez: 16 de 30 (53%)
+- validez: 15 de 20 (75%)
 
 ## Acuerdo entre personas (kappa de Cohen)
 

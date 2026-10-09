@@ -9,43 +9,43 @@
    "llm": 10
   },
   "por_modelo": {
+   "gemini-3.8-flash": 1,
    "gemini-3.5-flash": 2,
-   "groq:openai/gpt-oss-120b": 6,
-   "groq:qwen/qwen3.8-27b": 2
+   "groq:openai/gpt-oss-120b": 7
   },
   "bloqueadas": 0,
-  "corregidas": 2,
+  "corregidas": 0,
   "cobertura_citas_afirmaciones": {
-   "numerador": 14,
-   "denominador": 14,
+   "numerador": 13,
+   "denominador": 13,
    "valor": 1.0
   },
   "oraciones_citadas_con_cifras_respaldadas": {
-   "numerador": 16,
-   "denominador": 16,
+   "numerador": 11,
+   "denominador": 11,
    "valor": 1.0
   },
   "fallos": []
  },
  "eficiencia": {
-  "llamadas_reales": 356,
-  "exitosas": 141,
-  "desde_cache": 97,
+  "llamadas_reales": 397,
+  "exitosas": 172,
+  "desde_cache": 163,
   "fallos_por_codigo": {
    "503": 13,
-   "429": 191,
-   "429_minuto": 6,
+   "429": 197,
+   "429_minuto": 10,
    "504": 1,
    "sin_clave": 4
   },
   "exitosas_por_modelo": {
    "gemini-3.5-flash-lite": 75,
-   "gemini-3.5-flash": 23,
-   "gemini-3.8-flash": 1,
-   "groq:openai/gpt-oss-120b": 35,
-   "groq:qwen/qwen3.8-27b": 7
+   "gemini-3.5-flash": 25,
+   "gemini-3.8-flash": 2,
+   "groq:openai/gpt-oss-120b": 59,
+   "groq:qwen/qwen3.8-27b": 11
   },
-  "tokens_totales": 407657,
+  "tokens_totales": 502240,
   "costo_usd": 0,
   "nota_costo": "Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.",
   "por_tarea": {
@@ -68,22 +68,22 @@
     "tokens_promedio": 1159
    },
    "ficha": {
-    "llamadas": 48,
-    "segundos_mediana": 7.79,
-    "segundos_p95": 22.0,
-    "tokens_promedio": 3331
+    "llamadas": 71,
+    "segundos_mediana": 7.19,
+    "segundos_p95": 29.44,
+    "tokens_promedio": 3157
    },
    "ficha_correccion": {
-    "llamadas": 6,
-    "segundos_mediana": 3.65,
-    "segundos_p95": 25.15,
-    "tokens_promedio": 4068
+    "llamadas": 10,
+    "segundos_mediana": 3.8,
+    "segundos_p95": 35.34,
+    "tokens_promedio": 4000
    },
    "ficha_reintento": {
-    "llamadas": 10,
-    "segundos_mediana": 3.59,
-    "segundos_p95": 13.19,
-    "tokens_promedio": 3442
+    "llamadas": 14,
+    "segundos_mediana": 3.79,
+    "segundos_p95": 23.14,
+    "tokens_promedio": 3513
    }
   }
  },
@@ -206,28 +206,19 @@
  },
  "sustento": {
   "validez": {
-   "numerador": 16,
-   "denominador": 30,
-   "valor": 0.533
+   "numerador": 15,
+   "denominador": 20,
+   "valor": 0.75
   },
-  "parcial": 14,
+  "parcial": 5,
   "no": 0,
   "meta": "90 % sobre al menos 30 afirmaciones (sección 9.1)",
   "fallos": [
-   "CASO-EV-N-6ffd1c40b65f: Mitradel publico nuevas vacantes de empleo en su portal, segun reporto TVN el 7 de octubre",
-   "CASO-EV-N-6ffd1c40b65f: La tasa de desempleo anual en Panama para el ano 2024 fue de 8.451% de la poblacion activa",
-   "CASO-EV-N-6ffd1c40b65f: El medio TVN publico el 7 de octubre de 2026 [N-6ffd1c40b65f:fecha] que Mitradel habilito ",
-   "CASO-EV-N-6ffd1c40b65f: Por otro lado, los datos historicos del Banco Mundial indican que en el ano 2024 [WB:PAN:S",
-   "CASO-EV-N-6ffd1c40b65f: El medio TVN informo el 7 de octubre de 2026 [N-6ffd1c40b65f:fecha] sobre la publicacion d",
-   "CASO-EV-N-6ffd1c40b65f: Esta iniciativa surge en un contexto donde, segun datos historicos del Banco Mundial, la t",
-   "CASO-EV-N-6ffd1c40b65f: Mitradel publica nuevas vacantes de empleo en su portal web, segun reporto TVN el 7 de oct",
-   "CASO-EV-N-6ffd1c40b65f: Como contexto historico, la tasa de desempleo en Panama para el ano 2024 [WB:PAN:SL.UEM.TO",
-   "CASO-EV-N-3d58bd578f4b: Según un titular publicado por el medio TVN el 8 de octubre de 2026, más de 200 universita",
-   "CASO-EV-N-7f5a31e89279: TVN reporta que en Bocas del Toro se están afinando los detalles para el III Simulacro de ",
-   "CASO-EV-N-34877dd09e6b: TVN publicó un titular indicando que el FMI proyecta un crecimiento cercano al 5% para la ",
-   "CASO-EV-N-34877dd09e6b: En una segunda nota, TVN pregunta si subirán las cuotas de préstamos, mencionando que un e",
-   "CASO-EV-N-34877dd09e6b: TVN reporta que el FMI proyecta un crecimiento cercano al 5% para 2026 [N-34877dd09e6b:tit",
-   "CASO-EV-N-e7673d45b48a: TVN informa que se ordenó la detención domiciliaria e imputaron cargos a Lau Cortés por en"
+   "CASO-EV-N-34877dd09e6b: Un economista explicará el impacto de las tasas de interés en la economía panameña y la po",
+   "CASO-EV-N-34877dd09e6b: Además, otro titular indica que un economista explicará cómo las tasas de interés podrían ",
+   "CASO-EV-N-34877dd09e6b: El primero señala que el Fondo Monetario Internacional proyecta un crecimiento cercano al ",
+   "CASO-EV-N-34877dd09e6b: El segundo anuncia que un economista explicará cómo las tasas de interés podrían elevar la",
+   "CASO-EV-N-34877dd09e6b: TVN reporta que el FMI prevé un crecimiento del 5% para Panamá en 2026 y que un economista"
   ]
  },
  "acuerdo_entre_personas": {

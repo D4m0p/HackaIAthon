@@ -175,7 +175,8 @@ def _cumple_esquema(dato, esquema):
             return False
         return all(_cumple_esquema(dato[c], sub) for c, sub in esquema.get("properties", {}).items() if c in dato)
     if tipo == "array":
-        return isinstance(dato, list) and all(_cumple_esquema(x, esquema.get("items", {})) for x in dato)
+        return (isinstance(dato, list) and len(dato) >= esquema.get("minItems", 0)
+                and all(_cumple_esquema(x, esquema.get("items", {})) for x in dato))
     if tipo == "string":
         return isinstance(dato, str) and ("enum" not in esquema or dato in esquema["enum"])
     return True

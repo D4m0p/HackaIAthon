@@ -156,6 +156,23 @@ def test_si_el_validador_bloquea_se_pide_una_correccion(eventos, monkeypatch):
     assert '45' not in ficha['borrador']['brief']
 
 
+def test_ficha_sin_afirmaciones_se_bloquea(eventos, monkeypatch):
+    import nucleo.fichas as fichas
+    vacia = {**_redaccion_falsa('Medio A reporta restricciones [SIN-001:titulo].'), 'afirmaciones': []}
+    monkeypatch.setattr(fichas, '_redactar', lambda evento, paquete, con_borrador, correccion=None: (vacia, 'modelo-x'))
+    ficha = fichas.generar_ficha(eventos['EV-SIN-001'], usar_llm=True, usar_artefactos=False)
+    assert ficha['validacion']['bloqueada'] is True
+    assert any('no tiene afirmaciones' in m for m in ficha['validacion']['motivos_bloqueo'])
+
+
+def test_esquema_exige_al_menos_una_afirmacion():
+    from nucleo.fichas import _esquema
+    from nucleo.llm import _cumple_esquema
+    base = {k: v for k, v in _redaccion_falsa('x').items() if k != 'borrador'}
+    assert _cumple_esquema(base, _esquema(False))
+    assert not _cumple_esquema({**base, 'afirmaciones': []}, _esquema(False))
+
+
 def test_si_la_correccion_no_mejora_queda_la_primera_bloqueada(eventos, monkeypatch):
     import nucleo.fichas as fichas
     monkeypatch.setattr(fichas, '_redactar', lambda evento, paquete, con_borrador, correccion=None: (
