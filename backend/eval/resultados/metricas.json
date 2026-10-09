@@ -1,7 +1,8 @@
 {
  "planillas": [
-  "/home/anna/hackIAthon/backend/eval/planilla_etiquetas.xlsx"
+  "eval/planilla_juez_ia.xlsx"
  ],
+ "referencia": "del juez IA (no humano)",
  "fichas": {
   "fichas": 10,
   "por_metodo": {
@@ -27,9 +28,9 @@
   "fallos": []
  },
  "eficiencia": {
-  "llamadas_reales": 351,
-  "exitosas": 136,
-  "desde_cache": 36,
+  "llamadas_reales": 356,
+  "exitosas": 141,
+  "desde_cache": 97,
   "fallos_por_codigo": {
    "503": 13,
    "429": 191,
@@ -38,13 +39,13 @@
    "sin_clave": 4
   },
   "exitosas_por_modelo": {
-   "gemini-3.5-flash-lite": 70,
+   "gemini-3.5-flash-lite": 75,
    "gemini-3.5-flash": 23,
    "gemini-3.8-flash": 1,
    "groq:openai/gpt-oss-120b": 35,
    "groq:qwen/qwen3.8-27b": 7
   },
-  "tokens_totales": 402263,
+  "tokens_totales": 407657,
   "costo_usd": 0,
   "nota_costo": "Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.",
   "por_tarea": {
@@ -55,16 +56,16 @@
     "tokens_promedio": 4803
    },
    "consulta": {
-    "llamadas": 41,
-    "segundos_mediana": 0.88,
-    "segundos_p95": 1.79,
-    "tokens_promedio": 1023
+    "llamadas": 45,
+    "segundos_mediana": 0.89,
+    "segundos_p95": 1.93,
+    "tokens_promedio": 1026
    },
    "consulta_correccion": {
-    "llamadas": 2,
-    "segundos_mediana": 1.06,
+    "llamadas": 3,
+    "segundos_mediana": 1.11,
     "segundos_p95": 1.3,
-    "tokens_promedio": 1144
+    "tokens_promedio": 1159
    },
    "ficha": {
     "llamadas": 48,
@@ -87,16 +88,147 @@
   }
  },
  "temas": {
-  "pendiente": "hoja Etiquetas sin la columna tema completa"
+  "etiquetados": 100,
+  "llm": {
+   "n": 100,
+   "macro_f1": 0.767,
+   "exactitud": {
+    "numerador": 85,
+    "denominador": 100,
+    "valor": 0.85
+   },
+   "fallos": [
+    "N-64a1fae98dc4: humano=otro · sistema=logistica_canal",
+    "N-68c57b12f603: humano=otro · sistema=economia",
+    "N-0969f8653207: humano=economia · sistema=eventos_naturales",
+    "N-9ff28e293ca9: humano=economia · sistema=eventos_naturales",
+    "N-dd34c48ca6b0: humano=economia · sistema=eventos_naturales",
+    "N-b422f83c3990: humano=otro · sistema=economia",
+    "N-40cbac2aaf10: humano=otro · sistema=servicios_publicos",
+    "N-fe5ca57b21e3: humano=otro · sistema=logistica_canal",
+    "N-e29de4c68577: humano=otro · sistema=regulacion",
+    "N-97e773785a2f: humano=otro · sistema=regulacion",
+    "N-7a752b31c5cd: humano=economia · sistema=otro",
+    "N-e72c1a3b4ee8: humano=economia · sistema=servicios_publicos",
+    "N-492273ddbdec: humano=economia · sistema=eventos_naturales",
+    "N-c53d81bbfc62: humano=regulacion · sistema=otro",
+    "N-3d58bd578f4b: humano=otro · sistema=economia"
+   ]
+  },
+  "embeddings": {
+   "n": 100,
+   "macro_f1": 0.409,
+   "exactitud": {
+    "numerador": 70,
+    "denominador": 100,
+    "valor": 0.7
+   },
+   "fallos": [
+    "N-09557e5550fa: humano=otro · sistema=eventos_naturales",
+    "N-64a1fae98dc4: humano=otro · sistema=eventos_naturales",
+    "N-26cefa4637f9: humano=otro · sistema=turismo",
+    "N-0969f8653207: humano=economia · sistema=eventos_naturales",
+    "N-5a8984e3c6be: humano=otro · sistema=economia",
+    "N-7dc53f071bcf: humano=otro · sistema=turismo",
+    "N-47f8ee7205c7: humano=otro · sistema=turismo",
+    "N-9ff28e293ca9: humano=economia · sistema=eventos_naturales",
+    "N-60fc93934ea3: humano=economia · sistema=turismo",
+    "N-b16c57d0755c: humano=servicios_publicos · sistema=economia",
+    "N-a28a7bda9ddf: humano=otro · sistema=economia",
+    "N-dd34c48ca6b0: humano=economia · sistema=eventos_naturales",
+    "N-39aa0e29cfba: humano=servicios_publicos · sistema=economia",
+    "N-35c3390a72c8: humano=otro · sistema=economia",
+    "N-52cf60bc5719: humano=servicios_publicos · sistema=otro"
+   ]
+  },
+  "palabras_clave": {
+   "n": 100,
+   "macro_f1": 0.564,
+   "exactitud": {
+    "numerador": 79,
+    "denominador": 100,
+    "valor": 0.79
+   },
+   "fallos": [
+    "N-09557e5550fa: humano=otro · sistema=servicios_publicos",
+    "N-64a1fae98dc4: humano=otro · sistema=servicios_publicos",
+    "N-0969f8653207: humano=economia · sistema=otro",
+    "N-9ff28e293ca9: humano=economia · sistema=otro",
+    "N-60fc93934ea3: humano=economia · sistema=otro",
+    "N-fe1e5505bf42: humano=otro · sistema=logistica_canal",
+    "N-b16c57d0755c: humano=servicios_publicos · sistema=otro",
+    "N-dd34c48ca6b0: humano=economia · sistema=otro",
+    "N-13dd7d47059a: humano=otro · sistema=regulacion",
+    "N-0e5cbfb7c64a: humano=turismo · sistema=otro",
+    "N-52cf60bc5719: humano=servicios_publicos · sistema=otro",
+    "N-331e09783345: humano=economia · sistema=otro",
+    "N-7a752b31c5cd: humano=economia · sistema=otro",
+    "N-e72c1a3b4ee8: humano=economia · sistema=otro",
+    "N-3d80200c9e25: humano=servicios_publicos · sistema=otro"
+   ]
+  },
+  "relacion_panama_llm": {
+   "numerador": 92,
+   "denominador": 100,
+   "valor": 0.92
+  }
  },
  "agenda": {
-  "pendiente": "hoja Agenda sin etiquetar"
+  "precision_5": {
+   "numerador": 4,
+   "denominador": 5,
+   "valor": 0.8
+  },
+  "precision_10": {
+   "numerador": 8,
+   "denominador": 10,
+   "valor": 0.8
+  },
+  "precision_15": {
+   "numerador": 12,
+   "denominador": 15,
+   "valor": 0.8
+  },
+  "nota": "Exploratoria si quien etiqueta no es editor/a de TVN (sección 9.1)."
  },
  "agrupacion": {
-  "pendiente": "hoja Pares sin etiquetar"
+  "precision": {
+   "numerador": 10,
+   "denominador": 20,
+   "valor": 0.5
+  },
+  "recall": {
+   "numerador": 10,
+   "denominador": 12,
+   "valor": 0.833
+  },
+  "nota": "Recall sobre la muestra de pares: incluye solo pares separados parecidos (similitud >= 0,60)."
  },
  "sustento": {
-  "pendiente": "hoja Afirmaciones sin etiquetar"
+  "validez": {
+   "numerador": 16,
+   "denominador": 30,
+   "valor": 0.533
+  },
+  "parcial": 14,
+  "no": 0,
+  "meta": "90 % sobre al menos 30 afirmaciones (sección 9.1)",
+  "fallos": [
+   "CASO-EV-N-6ffd1c40b65f: Mitradel publico nuevas vacantes de empleo en su portal, segun reporto TVN el 7 de octubre",
+   "CASO-EV-N-6ffd1c40b65f: La tasa de desempleo anual en Panama para el ano 2024 fue de 8.451% de la poblacion activa",
+   "CASO-EV-N-6ffd1c40b65f: El medio TVN publico el 7 de octubre de 2026 [N-6ffd1c40b65f:fecha] que Mitradel habilito ",
+   "CASO-EV-N-6ffd1c40b65f: Por otro lado, los datos historicos del Banco Mundial indican que en el ano 2024 [WB:PAN:S",
+   "CASO-EV-N-6ffd1c40b65f: El medio TVN informo el 7 de octubre de 2026 [N-6ffd1c40b65f:fecha] sobre la publicacion d",
+   "CASO-EV-N-6ffd1c40b65f: Esta iniciativa surge en un contexto donde, segun datos historicos del Banco Mundial, la t",
+   "CASO-EV-N-6ffd1c40b65f: Mitradel publica nuevas vacantes de empleo en su portal web, segun reporto TVN el 7 de oct",
+   "CASO-EV-N-6ffd1c40b65f: Como contexto historico, la tasa de desempleo en Panama para el ano 2024 [WB:PAN:SL.UEM.TO",
+   "CASO-EV-N-3d58bd578f4b: Según un titular publicado por el medio TVN el 8 de octubre de 2026, más de 200 universita",
+   "CASO-EV-N-7f5a31e89279: TVN reporta que en Bocas del Toro se están afinando los detalles para el III Simulacro de ",
+   "CASO-EV-N-34877dd09e6b: TVN publicó un titular indicando que el FMI proyecta un crecimiento cercano al 5% para la ",
+   "CASO-EV-N-34877dd09e6b: En una segunda nota, TVN pregunta si subirán las cuotas de préstamos, mencionando que un e",
+   "CASO-EV-N-34877dd09e6b: TVN reporta que el FMI proyecta un crecimiento cercano al 5% para 2026 [N-34877dd09e6b:tit",
+   "CASO-EV-N-e7673d45b48a: TVN informa que se ordenó la detención domiciliaria e imputaron cargos a Lau Cortés por en"
+  ]
  },
  "acuerdo_entre_personas": {
   "pendiente": "se necesita una segunda persona (pasar dos planillas)"

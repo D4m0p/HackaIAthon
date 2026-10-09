@@ -215,6 +215,12 @@ def acuerdo(planillas):
     return resultado
 
 
+def quien_etiqueto(planilla):
+    """La copia etiquetada por un juez IA lo dice en su primera celda; el reporte debe decirlo también."""
+    titulo = str(load_workbook(planilla)["Instrucciones"]["A1"].value or "")
+    return "del juez IA (no humano)" if "JUEZ IA" in titulo else "humanas"
+
+
 # ---------------------------------------------------------------------------
 def calcular(planillas):
     eventos = json.loads((ARTEFACTOS / "eventos.json").read_text(encoding="utf-8"))
@@ -222,6 +228,7 @@ def calcular(planillas):
     principal = planillas[0]
     return {
         "planillas": [str(p) for p in planillas],
+        "referencia": quien_etiqueto(principal),
         "fichas": metricas_fichas(eventos, fichas),
         "eficiencia": metricas_eficiencia(),
         "temas": metricas_temas(leer_hoja(principal, "Etiquetas", "id_noticia",
@@ -254,7 +261,11 @@ def a_markdown(m):
               for k, v in e["por_tarea"].items()]
         l.append("")
 
-    l += ["## Clasificación de temas (contra etiquetas humanas)", ""]
+    if m["referencia"] != "humanas":
+        l += [f"> **Referencia: etiquetas {m['referencia']}**, hechas sin ver las respuestas del sistema y con "
+              "un modelo distinto al que clasifica. Es una evaluación preliminar: no reemplaza las etiquetas humanas "
+              "que pide el reto.", ""]
+    l += [f"## Clasificación de temas (contra etiquetas {m['referencia']})", ""]
     if "pendiente" in t:
         l.append(f"Pendiente: {t['pendiente']}.")
     else:

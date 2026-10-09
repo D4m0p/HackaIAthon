@@ -103,7 +103,7 @@ def _instrucciones(hoja):
         ("Son los casos que el sistema puso arriba, en un orden mezclado a propósito. Para cada uno: "
          "¿un editor de TVN debería considerarlo para la agenda del día? (si / no).", False),
         ("", False),
-        ("Hoja Pares (40 pares de titulares)", True),
+        ("Hoja Pares (30 pares de titulares)", True),
         ("¿Los dos titulares hablan del MISMO hecho concreto (no solo del mismo tema)? Ejemplo: dos notas "
          "sobre el mismo sismo = si; una sobre un sismo y otra sobre otro sismo = no.", False),
         ("", False),

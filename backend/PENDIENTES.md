@@ -11,8 +11,12 @@ Lista viva: se tacha cuando se completa. Lo que dependa de otra persona dice de 
   los titulares, y 5 sin respuesta en el corpus) en el mismo formato, sin mirar el prompt, y
   correr: `python -m interfaz.evaluar <archivo> --ejemplo` desde la raíz con el entorno del núcleo.
 - [ ] **Repetir la comparación de consultas sobre el paquete real** (no solo los datos de ejemplo).
-- [ ] **Etiquetar la planilla** `eval/planilla_etiquetas.xlsx`, idealmente dos personas por
-  separado (cada una en su copia). Sin esto no hay macro-F1, Precision@5 ni validez de sustento.
+- [x] **Evaluación preliminar con juez IA:** `eval/planilla_juez_ia.xlsx`, etiquetada sin ver
+  las respuestas del sistema; el reporte lo declara como referencia no humana.
+- [ ] **Etiquetas humanas** en `eval/planilla_etiquetas.xlsx` (idealmente dos personas por
+  separado). Con una sola copia humana se puede medir también el acuerdo humano–juez IA.
+- [ ] **Sobreagrupación:** el juez IA marca 10 de 20 pares agrupados como hechos distintos
+  (alianzas de TVN Media, resultados de MLB). Revisar el umbral sin ajustarlo a esas mismas etiquetas.
 
 ## Coordinación con otros equipos
 

@@ -13,32 +13,47 @@ Calculadas con `python -m eval.metricas` sobre la corrida del paquete real. Nume
 
 ## Eficiencia y costo
 
-351 llamadas reales al LLM (136 exitosas) y 36 respondidas desde la caché. Fallos por código: {'503': 13, '429': 191, '429_minuto': 6, '504': 1, 'sin_clave': 4}. Tokens: 402,263. Costo: 0 USD (Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.)
+356 llamadas reales al LLM (141 exitosas) y 97 respondidas desde la caché. Fallos por código: {'503': 13, '429': 191, '429_minuto': 6, '504': 1, 'sin_clave': 4}. Tokens: 407,657. Costo: 0 USD (Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.)
 
 | Tarea | Llamadas | Mediana (s) | p95 (s) | Tokens promedio |
 |---|---|---|---|---|
 | clasificar_temas | 29 | 6.5 | 12.71 | 4803 |
-| consulta | 41 | 0.88 | 1.79 | 1023 |
-| consulta_correccion | 2 | 1.06 | 1.3 | 1144 |
+| consulta | 45 | 0.89 | 1.93 | 1026 |
+| consulta_correccion | 3 | 1.11 | 1.3 | 1159 |
 | ficha | 48 | 7.79 | 22.0 | 3331 |
 | ficha_correccion | 6 | 3.65 | 25.15 | 4068 |
 | ficha_reintento | 10 | 3.59 | 13.19 | 3442 |
 
-## Clasificación de temas (contra etiquetas humanas)
+> **Referencia: etiquetas del juez IA (no humano)**, hechas sin ver las respuestas del sistema y con un modelo distinto al que clasifica. Es una evaluación preliminar: no reemplaza las etiquetas humanas que pide el reto.
 
-Pendiente: hoja Etiquetas sin la columna tema completa.
+## Clasificación de temas (contra etiquetas del juez IA (no humano))
+
+100 titulares etiquetados.
+
+| Método | Macro-F1 | Exactitud |
+|---|---|---|
+| LLM | 0.767 | 85 de 100 (85%) |
+| Embeddings (respaldo sin LLM) | 0.409 | 70 de 100 (70%) |
+| Palabras clave (baseline) | 0.564 | 79 de 100 (79%) |
+
+Relación con Panamá (LLM): 92 de 100 (92%).
 
 ## Ranking (Precision@k)
 
-Pendiente: hoja Agenda sin etiquetar.
+- precision_5: 4 de 5 (80%)
+- precision_10: 8 de 10 (80%)
+- precision_15: 12 de 15 (80%)
+- Nota: Exploratoria si quien etiqueta no es editor/a de TVN (sección 9.1).
 
 ## Agrupación de noticias
 
-Pendiente: hoja Pares sin etiquetar.
+- precision: 10 de 20 (50%)
+- recall: 10 de 12 (83%)
+- Nota: Recall sobre la muestra de pares: incluye solo pares separados parecidos (similitud >= 0,60).
 
 ## Validez de sustento
 
-Pendiente: hoja Afirmaciones sin etiquetar.
+- validez: 16 de 30 (53%)
 
 ## Acuerdo entre personas (kappa de Cohen)
 
