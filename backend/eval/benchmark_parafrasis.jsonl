@@ -1,0 +1,15 @@
+{"id": "P01", "tipo": "sustentada", "consulta": "¿Qué está pasando con el tránsito de barcos por la vía interoceánica?", "sintetico": true, "evento_esperado": "EV-SIN-001"}
+{"id": "P02", "tipo": "sustentada", "consulta": "¿Está subiendo el costo de la comida?", "sintetico": true, "evento_esperado": "EV-SIN-004"}
+{"id": "P03", "tipo": "sustentada", "consulta": "¿Tembló la tierra en el occidente del país?", "sintetico": true, "evento_esperado": "EV-SIN-006"}
+{"id": "P04", "tipo": "sustentada", "consulta": "¿Hay barrios que se quedarán sin suministro hídrico?", "sintetico": true, "evento_esperado": "EV-SIN-010"}
+{"id": "P05", "tipo": "sustentada", "consulta": "¿Cómo les va a los alojamientos de la capital?", "sintetico": true, "evento_esperado": "EV-SIN-009"}
+{"id": "P06", "tipo": "sustentada", "consulta": "¿Qué cambios legales se aprobaron para el sector de viajes?", "sintetico": true, "evento_esperado": "EV-SIN-011"}
+{"id": "P07", "tipo": "sustentada", "consulta": "¿Cambió el horario del tren urbano?", "sintetico": true, "evento_esperado": "EV-SIN-012"}
+{"id": "P08", "tipo": "sustentada", "consulta": "¿Qué zonas se anegaron por el mal tiempo?", "sintetico": true, "evento_esperado": "EV-SIN-013"}
+{"id": "P09", "tipo": "sustentada", "consulta": "¿Qué nuevas exigencias tienen los bancos sobre su dinero disponible?", "sintetico": true, "evento_esperado": "EV-SIN-014"}
+{"id": "P10", "tipo": "contradiccion", "consulta": "¿Cuánta gente está sin trabajo en el país?", "sintetico": true, "evento_esperado": "EV-SIN-018"}
+{"id": "S01", "tipo": "sin_respuesta", "consulta": "¿Qué pasó con la huelga de docentes?", "sintetico": true}
+{"id": "S02", "tipo": "sin_respuesta", "consulta": "¿Hubo un derrame de petróleo en el Canal?", "sintetico": true}
+{"id": "S03", "tipo": "sin_respuesta", "consulta": "¿Cuántos turistas chinos llegaron este año?", "sintetico": true}
+{"id": "S04", "tipo": "sin_respuesta", "consulta": "¿Subió el precio de la gasolina?", "sintetico": true}
+{"id": "S05", "tipo": "sin_respuesta", "consulta": "¿Qué dijo el gremio hotelero sobre la reforma turística?", "sintetico": true}

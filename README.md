@@ -125,7 +125,11 @@ python -m nucleo.pipeline --fecha-corte 2025-09-30T00:00:00Z
 
 `artefactos/ejemplo/` es otra cosa: una salida **congelada** que usan las pruebas de la interfaz; el pipeline no la toca (ver su `LEEME.md`).
 
+**Consultas en español.** El motor de consultas de la interfaz (`interfaz/consulta.py`) usa `nucleo/consultar.py` cuando están instaladas las dependencias del núcleo: si la búsqueda por palabras (BM25) no encuentra respuesta, los 3 eventos más parecidos por significado (bge-m3) se le pasan al LLM, que decide si responden la pregunta; su texto pasa por el validador del núcleo y, si no lo pasa, se mantiene la abstención. Cuando BM25 sí encuentra respuesta, el resumen lo redacta el LLM con citas. Sin LLM o sin las dependencias, el motor funciona igual que antes.
+
 ### Evaluación
+
+Comparación de consultas BM25 frente a híbrida: [`backend/eval/resultados/consultas_bm25_vs_hibrida.md`](backend/eval/resultados/consultas_bm25_vs_hibrida.md) (40 de 40 en ambos con el benchmark del equipo C; en 9 paráfrasis, 0 contra 9 respondidas, sin perder abstenciones; con los límites de la medición anotados).
 
 `backend/eval/planilla_etiquetas.xlsx` tiene 100 titulares reales sorteados con semilla fija para etiquetar a mano, a ciegas: tema, relación con Panamá y si merece estar en la agenda de TVN. Esas etiquetas son la referencia para medir macro-F1 de temas (LLM, embeddings y palabras clave) y Precision@5 del ranking. Para regenerarla, desde `backend/`: `python -m eval.crear_planilla`.
 
@@ -156,6 +160,7 @@ Desde la raíz, `python -m pytest` corre las pruebas del paquete de datos y las 
 | `contextualizar.py` | 3 | Vincula eventos con Banco Mundial y USGS sin forzar relaciones |
 | `priorizar.py` | 4 | P = 30R + 25I + 20U + 15N + 10E y estado de evidencia, independiente del puntaje |
 | `fichas.py`, `plantilla.py` | 5 y 6 | Ficha de evidencia y paquete editorial con citas `[ID:campo]`; corrección automática si el validador bloquea |
+| `consultar.py` | — | Búsqueda semántica y respuesta redactada para el motor de consultas de la interfaz |
 | `seguridad.py` | — | Anti-inyección y validador que bloquea contenido sin respaldo |
 | `llm.py`, `artefactos.py` | — | Capa única de LLM (Gemini y Groq en cascada, con verificación del esquema); resultados versionados |
 | `pipeline.py` | — | Corre todo con un comando; `--paquete` usa el cargador del equipo A, `--offline` no usa internet |

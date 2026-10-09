@@ -278,3 +278,13 @@ ALCANCES_SOLO_TITULAR = {"titular", "titular_y_metadatos"}
 # francés...) son casi todo ruido (fletes, bolsa china, política de Brasil).
 # Una noticia sin idioma declarado se conserva.
 IDIOMAS_PANEL = {"es", "en"}
+
+# ---------------------------------------------------------------------------
+# Consultas (nucleo/consultar.py, usado por la interfaz)
+# ---------------------------------------------------------------------------
+# Largo máximo de la respuesta redactada por el LLM.
+LIMITE_PALABRAS_RESPUESTA = 120
+# Parecido mínimo (bge-m3) para que un evento se le pase al LLM cuando la búsqueda por
+# palabras no encontró respuesta. No decide si responder: eso lo decide el LLM leyendo
+# la evidencia. Por debajo de esto ni se consulta (ahorra llamadas).
+UMBRAL_CANDIDATO_SEMANTICO = 0.35

@@ -233,6 +233,9 @@ class Motor:
         self._evidencia = {e["id_evento"]: fuentes.evidencia_de_evento(e) for e in corpus.eventos}
         self._eventos = {e["id_evento"]: e for e in corpus.eventos}
         self._indice = Indice({e["id_evento"]: self._texto_de_evento(e) for e in corpus.eventos})
+        # Núcleo de IA (equipo B): búsqueda semántica y respuesta redactada por el LLM.
+        # Solo si están instaladas las dependencias del núcleo; si no, el motor funciona igual.
+        self._semantico = self._cargar_semantico(corpus)
         self._series: dict[tuple[str, str], dict[int, dict]] = {}
         for fila in corpus.indicadores:
             self._series.setdefault((fila["pais_iso3"], fila["indicador_id"]), {})[fila["anio"]] = fila
@@ -353,6 +356,76 @@ class Motor:
                 self._agregar(respuesta, evento, afirmacion, ETIQUETA_OFICIAL)
         respuesta["versiones"] += self.versiones(evento)
         return len(con_cifra)
+
+    # -- núcleo de IA (equipo B) -----------------------------------------------
+    @staticmethod
+    def _cargar_semantico(corpus: Corpus) -> dict | None:
+        from .puente import nucleo_completo
+        if not corpus.eventos or not nucleo_completo():
+            return None
+        try:
+            from nucleo import consultar
+            return {"buscador": consultar.BuscadorSemantico(corpus.eventos),
+                    "redactar": consultar.redactar_respuesta}
+        except Exception:  # sin modelo de embeddings u otra falta del entorno: motor sin semántica
+            return None
+
+    def _redaccion_llm(self, pregunta: str, eventos: list[dict]) -> dict | None:
+        """Respuesta redactada por el LLM con la evidencia de esos eventos, ya validada
+        por el núcleo. None si no hay LLM, si dice que no alcanza o si no pasa el validador."""
+        if self._semantico is None:
+            return None
+        evidencia, contradicciones = {}, []
+        for evento in eventos:
+            evidencia.update(self._evidencia[evento["id_evento"]][0])
+            contradicciones += evento["posibles_contradicciones"]
+        try:
+            return self._semantico["redactar"](pregunta, evidencia, contradicciones)
+        except Exception:
+            return None
+
+    def _rescate_semantico(self, pregunta: str, respuesta: dict) -> dict | None:
+        """BM25 no encontró respuesta. Los eventos más parecidos por significado se le
+        pasan al LLM, que decide si responden la pregunta. Sin LLM, o si dice que no, o
+        si su texto no pasa el validador, se mantiene la abstención (devuelve None)."""
+        try:
+            candidatos = [(i, s) for i, s in self._semantico["buscador"].buscar(pregunta, 3)
+                          if s >= config.UMBRAL_CANDIDATO_SEMANTICO]
+        except Exception:
+            return None
+        if not candidatos:
+            return None
+        redaccion = self._redaccion_llm(pregunta, [self._eventos[i] for i, _ in candidatos])
+        if redaccion is None:
+            return None
+
+        # Solo los casos que la respuesta realmente cita
+        citados = set(seguridad.citas_en_texto(redaccion["texto"]))
+        def citado(id_evento: str) -> bool:
+            return any(c == i or c.startswith(i + ":") for c in citados for i in self._evidencia[id_evento][0])
+        eventos = [self._eventos[i] for i, _ in candidatos if citado(i)]
+        if not eventos:
+            return None
+
+        respuesta["recuperacion"] = {
+            "metodo": "búsqueda semántica (bge-m3) y juicio del LLM sobre si la evidencia responde",
+            "umbral_similitud": config.UMBRAL_CANDIDATO_SEMANTICO,
+            "candidatos": [{"id_evento": i, "titulo": self._eventos[i]["titulo_representativo"], "similitud": s}
+                           for i, s in candidatos],
+        }
+        respuesta["casos"] = [self.tarjeta(evento) for evento in eventos]
+        for evento in eventos:
+            self._agregar_evento(respuesta, evento, False)
+        respuesta["titulo"] = f"{_cuantos(len(eventos), 'caso', 'casos')} del corpus sobre lo consultado"
+        respuesta["resumen"] = redaccion["texto"]
+        respuesta["resumen_redactado_por"] = redaccion["modelo"]
+        respuesta["avisos"].append("Respuesta encontrada por significado y redactada por un LLM con la evidencia "
+                                   "citada; cada cifra se verificó contra lo que cita.")
+        if any(evento.get("aviso_alcance") for evento in eventos):
+            respuesta["avisos"].append(AVISO_SOLO_TITULAR)
+        if respuesta["versiones"]:
+            respuesta["avisos"].append(AVISO_VERSIONES)
+        return respuesta
 
     # -- entrada ---------------------------------------------------------------
     def responder(self, pregunta: str | None) -> dict:
@@ -779,6 +852,11 @@ class Motor:
                              key=lambda evento: (-cobertura[evento["id_evento"]], evento["prioridad"]["posicion"]))
         parciales = [self._eventos[c.id] for c in candidatos if COBERTURA_MINIMA <= c.cobertura < COBERTURA_SUFICIENTE]
 
+        if not suficientes and self._semantico is not None:
+            # Núcleo de IA (equipo B): antes de abstenerse, buscar por significado
+            rescate = self._rescate_semantico(pregunta, respuesta)
+            if rescate is not None:
+                return rescate
         if not suficientes:
             respuesta["relacionados"] = [self.tarjeta(evento) for evento in parciales[:MAXIMO_EVENTOS]]
             return self._abstenerse(
@@ -834,4 +912,10 @@ class Motor:
         if not respuesta["afirmaciones"]:
             self._abstenerse(respuesta, "No hay evidencia utilizable para responder",
                              "Lo único que coincide es contenido marcado como no confiable.")
+        elif self._semantico is not None:
+            # Núcleo de IA (equipo B): resumen redactado y validado, en lugar del texto genérico
+            redaccion = self._redaccion_llm(pregunta, elegidos)
+            if redaccion is not None:
+                respuesta["resumen"] = redaccion["texto"]
+                respuesta["resumen_redactado_por"] = redaccion["modelo"]
         return respuesta

@@ -50,13 +50,16 @@ def _cargar_cache():
     return {}
 
 
-def embeber(textos):
+def embeber(textos, guardar=True):
     """Devuelve una matriz (n_textos x dimensiones) con vectores normalizados.
     Al estar normalizados, el producto punto entre dos vectores = similitud coseno.
 
-    Cada texto se calcula una sola vez: el resultado se guarda en cache/ y la
-    próxima vez se lee del disco (más rápido y sin necesitar el modelo)."""
+    Cada texto se calcula una sola vez: el resultado se guarda en artefactos/ y la
+    próxima vez se lee del disco (más rápido y sin necesitar el modelo).
+    Con guardar=False (preguntas de usuarios) se calcula sin guardarlo."""
     textos = list(textos)
+    if not guardar:
+        return obtener_modelo().encode(textos, normalize_embeddings=True)
     cache = _cargar_cache()
     faltantes = [t for t in dict.fromkeys(textos) if t not in cache]
 
