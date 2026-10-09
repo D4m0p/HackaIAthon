@@ -1,3 +1,7 @@
-estado/
+# El registro de práctica y los tiempos de consulta son de cada máquina.
+# La bitácora de revisión del paquete real sí se versiona: es la evidencia de la etapa 7.
+estado/ejemplo/
+estado/*/consultas.jsonl
+estado/*/fichas_a_pedido.jsonl
 .env
 __pycache__/

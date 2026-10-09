@@ -194,7 +194,7 @@ python -m interfaz --ejemplo    # datos de ejemplo sintéticos, con un registro 
 
 Sin opciones lee `backend/artefactos/eventos.json` y `fichas.jsonl`, es decir, la corrida del núcleo sobre el paquete real. Si esa corrida todavía no existe, muestra los datos de ejemplo de `backend/artefactos/ejemplo/` y lo avisa en pantalla. Otras opciones: `--puerto`, `--sin-navegador`, `--artefactos` y `--datos`.
 
-Las decisiones de revisión se guardan en `interfaz/estado/real/` o en `interfaz/estado/ejemplo/` (fuera de git). Lo que se practica con los datos de ejemplo nunca se mezcla con el registro del reto.
+Las decisiones de revisión se guardan en `interfaz/estado/real/bitacora.jsonl`, que se versiona porque es la evidencia de la etapa 7, o en `interfaz/estado/ejemplo/`, que queda fuera de git. Lo que se practica con los datos de ejemplo nunca se mezcla con el registro del reto.
 
 | Vista | Etapa | Qué muestra |
 |---|---|---|
