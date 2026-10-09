@@ -25,9 +25,10 @@ Lista viva: se tacha cuando se completa. Lo que dependa de otra persona dice de 
 
 ## Notion
 
-- [ ] Aportar a **Plan y decisiones**: decisiones justificadas (bge-m3, Gemini + Groq,
-  agrupación híbrida, quitar la regla "publicado por TVN", temas v2, datos de ejemplo congelados,
-  consultas híbridas).
+- [x] Aportar a **Plan y decisiones** (LarpeoIntenso → Documentación funcional): backlog,
+  10 decisiones justificadas y cronología con commits.
+- [ ] Completar **Casos y evidencias** con la revisión humana de las 5 fichas propuestas (equipo C).
+- [ ] Completar los bloques "Completar" de **Presentación Pitch Day** (equipo).
 - [x] Crear **Pruebas y métricas** en Notion (LarpeoIntenso → Documentación técnica): matriz
   T01–T10, métricas automáticas, comparación de consultas y pruebas fallidas con su corrección.
 - [ ] Actualizar esa página con las métricas finales cuando la planilla esté etiquetada
