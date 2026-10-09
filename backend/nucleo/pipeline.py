@@ -12,7 +12,7 @@ Con --offline no se usa internet en absoluto: los temas y las redacciones salen
 de artefactos/ (versionados en git) y lo que falte se resuelve con el respaldo
 local. Es el modo para la demo (prueba T10).
 
-Salidas (en --salida; por defecto artefactos/ con --paquete y artefactos/ejemplo/ sin él):
+Salidas (en --salida; por defecto artefactos/ con --paquete y artefactos/ejemplo_corrida/ sin él):
 - eventos.json   eventos organizados, contextualizados y priorizados
 - fichas.jsonl   fichas del top-N (formato del contrato de datos, sección 7)
 - excluidas_idioma.json   noticias fuera del panel por idioma (no se borran del paquete)
@@ -78,10 +78,11 @@ def correr(noticias_csv=None, indicadores_csv=None, sismos_geojson=None, fecha_c
     priorizar(eventos, fecha_corte)
     fichas = generar_fichas(eventos, top_n or config.FICHAS_TOP_N, usar_llm=usar_llm)
 
-    # Datos reales (--paquete) -> artefactos/; datos de ejemplo -> artefactos/ejemplo/,
-    # para que una corrida no pise los resultados de la otra
+    # Datos reales (--paquete) -> artefactos/; datos de ejemplo -> artefactos/ejemplo_corrida/.
+    # artefactos/ejemplo/ NO se toca: es un archivo congelado que usan las pruebas de la
+    # interfaz (equipo C) y no debe cambiar con cada corrida (ver su LEEME.md).
     por_defecto = CARPETA_BACKEND / config.CARPETA_ARTEFACTOS
-    salida = Path(carpeta_salida or (por_defecto if paquete else por_defecto / "ejemplo"))
+    salida = Path(carpeta_salida or (por_defecto if paquete else por_defecto / "ejemplo_corrida"))
     salida.mkdir(parents=True, exist_ok=True)
     (salida / "eventos.json").write_text(json.dumps(eventos, ensure_ascii=False, indent=1, default=str),
                                          encoding="utf-8")
@@ -118,7 +119,7 @@ def main():
     parser.add_argument("--offline", action="store_true", help="No usar internet (demo, prueba T10)")
     parser.add_argument("--top", type=int, default=None, help="Cuántas fichas generar")
     parser.add_argument("--salida", default=None,
-                        help="Carpeta de salida (por defecto artefactos/, o artefactos/ejemplo/ sin --paquete)")
+                        help="Carpeta de salida (por defecto artefactos/, o artefactos/ejemplo_corrida/ sin --paquete)")
     args = parser.parse_args()
 
     eventos, fichas = correr(args.noticias, args.indicadores, args.sismos, args.fecha_corte,

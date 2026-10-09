@@ -13,8 +13,9 @@ import pytest
 
 from nucleo.pipeline import DATOS_EJEMPLO, correr
 
-# Resultados de referencia de los datos de ejemplo (los del paquete real van en artefactos/)
-ARTEFACTOS = Path(__file__).parent.parent / "artefactos" / "ejemplo"
+# Resultados de la última corrida con conexión sobre los datos de ejemplo. (artefactos/ejemplo/
+# es otra cosa: un archivo congelado para las pruebas de la interfaz.)
+ARTEFACTOS = Path(__file__).parent.parent / "artefactos" / "ejemplo_corrida"
 FECHA_CORTE = "2025-09-30T00:00:00Z"
 
 

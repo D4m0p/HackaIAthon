@@ -21,8 +21,9 @@
     "alcance_texto": "titular",
     "tema": "eventos_naturales",
     "metodo_tema": "llm",
-    "motivo_tema": "Informa sobre lluvias intensas e inundaciones.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre inundaciones causadas por lluvias en Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -50,7 +51,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'eventos_naturales' es del reto; menciona 'arraijan'"
+     "explicacion": "tema 'eventos_naturales' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.6,
@@ -110,8 +111,9 @@
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
-    "motivo_tema": "Informa sobre la tasa de desempleo en el país.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre el desempleo en Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    },
    {
     "id_noticia": "SIN-019",
@@ -127,8 +129,9 @@
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
-    "motivo_tema": "Trata sobre la disminución del desempleo.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre cifras de empleo en Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -208,7 +211,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'economia' es del reto; menciona 'panama'"
+     "explicacion": "tema 'economia' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.9,
@@ -280,8 +283,9 @@
     "alcance_texto": "titular",
     "tema": "servicios_publicos",
     "metodo_tema": "llm",
-    "motivo_tema": "Trata sobre el horario del Metro de Panamá, transporte público.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre el funcionamiento del transporte público (Metro de Panamá).",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -309,7 +313,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'servicios_publicos' es del reto; menciona 'panama'"
+     "explicacion": "tema 'servicios_publicos' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.7,
@@ -368,8 +372,9 @@
     "alcance_texto": "titular",
     "tema": "servicios_publicos",
     "metodo_tema": "llm",
-    "motivo_tema": "Informa sobre un corte de agua potable.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre cortes de agua potable en San Miguelito.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -397,7 +402,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'servicios_publicos' es del reto; menciona 'san miguelito'"
+     "explicacion": "tema 'servicios_publicos' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.7,
@@ -457,8 +462,9 @@
     "alcance_texto": "titular",
     "tema": "eventos_naturales",
     "metodo_tema": "llm",
-    "motivo_tema": "Informa sobre un sismo en Chiriquí.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre un sismo ocurrido en Chiriquí.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    },
    {
     "id_noticia": "SIN-007",
@@ -474,8 +480,9 @@
     "alcance_texto": "titular",
     "tema": "eventos_naturales",
     "metodo_tema": "llm",
-    "motivo_tema": "Reporta un temblor en Chiriquí y Bocas del Toro.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre un temblor percibido en provincias panameñas.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -519,7 +526,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'eventos_naturales' es del reto; menciona 'chiriqui'"
+     "explicacion": "tema 'eventos_naturales' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.8,
@@ -579,8 +586,9 @@
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
-    "motivo_tema": "Trata sobre la inflación y el precio de la canasta básica.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre inflación y precios en Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    },
    {
     "id_noticia": "SIN-005",
@@ -596,8 +604,9 @@
     "alcance_texto": "titular",
     "tema": "economia",
     "metodo_tema": "llm",
-    "motivo_tema": "Se refiere al aumento de precios de alimentos.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre precios de alimentos en comercios panameños.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -677,7 +686,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'economia' es del reto; menciona 'panama'"
+     "explicacion": "tema 'economia' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.9,
@@ -738,8 +747,9 @@
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
-    "motivo_tema": "Se refiere a restricciones de calado en el Canal de Panamá.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre operaciones del Canal de Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    },
    {
     "id_noticia": "SIN-002",
@@ -755,8 +765,9 @@
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
-    "motivo_tema": "Trata sobre restricciones de calado en el Canal de Panamá.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre operaciones del Canal de Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    },
    {
     "id_noticia": "SIN-003",
@@ -772,8 +783,9 @@
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
-    "motivo_tema": "Aborda límites de carga para buques en el Canal.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre el tránsito de buques en el Canal.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -807,7 +819,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'logistica_canal' es del reto; menciona 'panama'"
+     "explicacion": "tema 'logistica_canal' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.8,
@@ -845,182 +857,6 @@
   "aviso_alcance": "Basado únicamente en titular/metadatos."
  },
  {
-  "id_evento": "EV-SIN-009",
-  "tema": "turismo",
-  "titulo_representativo": "Ocupación hotelera en Ciudad de Panamá alcanza su nivel más alto del año",
-  "ids_noticias": [
-   "SIN-009"
-  ],
-  "noticias": [
-   {
-    "id_noticia": "SIN-009",
-    "titulo": "Ocupación hotelera en Ciudad de Panamá alcanza su nivel más alto del año",
-    "medio": "Medio D",
-    "url": "https://ejemplo.invalid/sin-009",
-    "fecha_publicacion": "2025-09-25T10:00:00Z",
-    "fecha_deteccion": "2025-09-25T11:00:00Z",
-    "fecha": "2025-09-25T10:00:00Z",
-    "tipo_fecha": "publicacion",
-    "antiguedad": null,
-    "origen": "sintetico",
-    "alcance_texto": "titular",
-    "tema": "turismo",
-    "metodo_tema": "llm",
-    "motivo_tema": "Se refiere a la ocupación hotelera en la Ciudad de Panamá.",
-    "modelo_tema": "gemini-3.5-flash"
-   }
-  ],
-  "medios": [
-   "Medio D"
-  ],
-  "n_noticias": 1,
-  "procedencias": [
-   [
-    "SIN-009"
-   ]
-  ],
-  "n_fuentes_independientes": 1,
-  "fecha_primera": "2025-09-25T10:00:00+00:00",
-  "fecha_ultima": "2025-09-25T10:00:00+00:00",
-  "tema_por_respaldo": false,
-  "contexto": [],
-  "sin_contexto_motivo": "No se encontró un dato oficial pertinente en el corpus; no se fuerza una relación.",
-  "prioridad": {
-   "puntaje": 59.7,
-   "puntaje_formula": 59.7,
-   "ajuste": null,
-   "nivel": "medio",
-   "componentes": {
-    "R": {
-     "valor": 1.0,
-     "peso": 30,
-     "aporte": 30.0,
-     "explicacion": "tema 'turismo' es del reto; menciona 'panama'"
-    },
-    "I": {
-     "valor": 0.5,
-     "peso": 25,
-     "aporte": 12.5,
-     "explicacion": "peso base del tema 0.5"
-    },
-    "U": {
-     "valor": 0.345,
-     "peso": 20,
-     "aporte": 6.9,
-     "explicacion": "fecha más reciente (publicacion) hace 4.6 días (ventana de 7)"
-    },
-    "N": {
-     "valor": 0.687,
-     "peso": 15,
-     "aporte": 10.3,
-     "explicacion": "parecido 0.63 con el evento anterior más cercano (EV-SIN-008)"
-    },
-    "E": {
-     "valor": 0.0,
-     "peso": 10,
-     "aporte": 0.0,
-     "explicacion": "1 fuente(s) independiente(s); sin dato oficial"
-    }
-   },
-   "formula": "P = 30R + 25I + 20U + 15N + 10E",
-   "version_reglas": "reglas-v1",
-   "aviso": "La prioridad ordena la revisión; no confirma la noticia ni habilita su publicación.",
-   "posicion": 8
-  },
-  "posibles_contradicciones": [],
-  "estado_evidencia": "insuficiente",
-  "motivo_estado_evidencia": "una sola procedencia y sin dato oficial",
-  "aviso_alcance": "Basado únicamente en titular/metadatos."
- },
- {
-  "id_evento": "EV-SIN-008",
-  "tema": "turismo",
-  "titulo_representativo": "Llegada de turistas a Panamá crece durante el primer semestre",
-  "ids_noticias": [
-   "SIN-008"
-  ],
-  "noticias": [
-   {
-    "id_noticia": "SIN-008",
-    "titulo": "Llegada de turistas a Panamá crece durante el primer semestre",
-    "medio": "Medio A",
-    "url": "https://ejemplo.invalid/sin-008",
-    "fecha_publicacion": "2025-09-15T10:00:00Z",
-    "fecha_deteccion": "2025-09-15T11:00:00Z",
-    "fecha": "2025-09-15T10:00:00Z",
-    "tipo_fecha": "publicacion",
-    "antiguedad": null,
-    "origen": "sintetico",
-    "alcance_texto": "titular",
-    "tema": "turismo",
-    "metodo_tema": "llm",
-    "motivo_tema": "Trata sobre el crecimiento en la llegada de turistas.",
-    "modelo_tema": "gemini-3.5-flash"
-   }
-  ],
-  "medios": [
-   "Medio A"
-  ],
-  "n_noticias": 1,
-  "procedencias": [
-   [
-    "SIN-008"
-   ]
-  ],
-  "n_fuentes_independientes": 1,
-  "fecha_primera": "2025-09-15T10:00:00+00:00",
-  "fecha_ultima": "2025-09-15T10:00:00+00:00",
-  "tema_por_respaldo": false,
-  "contexto": [],
-  "sin_contexto_motivo": "No se encontró un dato oficial pertinente en el corpus; no se fuerza una relación.",
-  "prioridad": {
-   "puntaje": 57.5,
-   "puntaje_formula": 57.5,
-   "ajuste": null,
-   "nivel": "medio",
-   "componentes": {
-    "R": {
-     "valor": 1.0,
-     "peso": 30,
-     "aporte": 30.0,
-     "explicacion": "tema 'turismo' es del reto; menciona 'panama'"
-    },
-    "I": {
-     "valor": 0.5,
-     "peso": 25,
-     "aporte": 12.5,
-     "explicacion": "peso base del tema 0.5"
-    },
-    "U": {
-     "valor": 0.0,
-     "peso": 20,
-     "aporte": 0.0,
-     "explicacion": "fecha más reciente (publicacion) hace 14.6 días (ventana de 7)"
-    },
-    "N": {
-     "valor": 1.0,
-     "peso": 15,
-     "aporte": 15.0,
-     "explicacion": "no hay eventos anteriores parecidos"
-    },
-    "E": {
-     "valor": 0.0,
-     "peso": 10,
-     "aporte": 0.0,
-     "explicacion": "1 fuente(s) independiente(s); sin dato oficial"
-    }
-   },
-   "formula": "P = 30R + 25I + 20U + 15N + 10E",
-   "version_reglas": "reglas-v1",
-   "aviso": "La prioridad ordena la revisión; no confirma la noticia ni habilita su publicación.",
-   "posicion": 9
-  },
-  "posibles_contradicciones": [],
-  "estado_evidencia": "insuficiente",
-  "motivo_estado_evidencia": "una sola procedencia y sin dato oficial",
-  "aviso_alcance": "Basado únicamente en titular/metadatos."
- },
- {
   "id_evento": "EV-SIN-011",
   "tema": "regulacion",
   "titulo_representativo": "Asamblea Nacional aprueba en tercer debate reforma a la ley de turismo",
@@ -1042,8 +878,9 @@
     "alcance_texto": "titular",
     "tema": "regulacion",
     "metodo_tema": "llm",
-    "motivo_tema": "Se refiere a la aprobación de una reforma de ley.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre la aprobación de leyes en la Asamblea de Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -1062,16 +899,16 @@
   "contexto": [],
   "sin_contexto_motivo": "No se encontró un dato oficial pertinente en el corpus; no se fuerza una relación.",
   "prioridad": {
-   "puntaje": 50.2,
-   "puntaje_formula": 50.2,
+   "puntaje": 65.2,
+   "puntaje_formula": 65.2,
    "ajuste": null,
    "nivel": "medio",
    "componentes": {
     "R": {
-     "valor": 0.5,
+     "valor": 1.0,
      "peso": 30,
-     "aporte": 15.0,
-     "explicacion": "tema 'regulacion' es del reto; sin vínculo explícito con Panamá"
+     "aporte": 30.0,
+     "explicacion": "tema 'regulacion' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.6,
@@ -1101,7 +938,7 @@
    "formula": "P = 30R + 25I + 20U + 15N + 10E",
    "version_reglas": "reglas-v1",
    "aviso": "La prioridad ordena la revisión; no confirma la noticia ni habilita su publicación.",
-   "posicion": 10
+   "posicion": 8
   },
   "posibles_contradicciones": [],
   "estado_evidencia": "insuficiente",
@@ -1130,8 +967,9 @@
     "alcance_texto": "titular",
     "tema": "regulacion",
     "metodo_tema": "llm",
-    "motivo_tema": "Trata sobre un nuevo acuerdo de la Superintendencia de Bancos.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre acuerdos de superintendencias bancarias en Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -1150,16 +988,16 @@
   "contexto": [],
   "sin_contexto_motivo": "No se encontró un dato oficial pertinente en el corpus; no se fuerza una relación.",
   "prioridad": {
-   "puntaje": 46.7,
-   "puntaje_formula": 46.7,
+   "puntaje": 61.7,
+   "puntaje_formula": 61.7,
    "ajuste": null,
    "nivel": "medio",
    "componentes": {
     "R": {
-     "valor": 0.5,
+     "valor": 1.0,
      "peso": 30,
-     "aporte": 15.0,
-     "explicacion": "tema 'regulacion' es del reto; sin vínculo explícito con Panamá"
+     "aporte": 30.0,
+     "explicacion": "tema 'regulacion' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.6,
@@ -1178,6 +1016,184 @@
      "peso": 15,
      "aporte": 15.0,
      "explicacion": "parecido 0.44 con el evento anterior más cercano (EV-SIN-001)"
+    },
+    "E": {
+     "valor": 0.0,
+     "peso": 10,
+     "aporte": 0.0,
+     "explicacion": "1 fuente(s) independiente(s); sin dato oficial"
+    }
+   },
+   "formula": "P = 30R + 25I + 20U + 15N + 10E",
+   "version_reglas": "reglas-v1",
+   "aviso": "La prioridad ordena la revisión; no confirma la noticia ni habilita su publicación.",
+   "posicion": 9
+  },
+  "posibles_contradicciones": [],
+  "estado_evidencia": "insuficiente",
+  "motivo_estado_evidencia": "una sola procedencia y sin dato oficial",
+  "aviso_alcance": "Basado únicamente en titular/metadatos."
+ },
+ {
+  "id_evento": "EV-SIN-009",
+  "tema": "turismo",
+  "titulo_representativo": "Ocupación hotelera en Ciudad de Panamá alcanza su nivel más alto del año",
+  "ids_noticias": [
+   "SIN-009"
+  ],
+  "noticias": [
+   {
+    "id_noticia": "SIN-009",
+    "titulo": "Ocupación hotelera en Ciudad de Panamá alcanza su nivel más alto del año",
+    "medio": "Medio D",
+    "url": "https://ejemplo.invalid/sin-009",
+    "fecha_publicacion": "2025-09-25T10:00:00Z",
+    "fecha_deteccion": "2025-09-25T11:00:00Z",
+    "fecha": "2025-09-25T10:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
+    "alcance_texto": "titular",
+    "tema": "turismo",
+    "metodo_tema": "llm",
+    "motivo_tema": "Trata sobre ocupación hotelera en Ciudad de Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
+   }
+  ],
+  "medios": [
+   "Medio D"
+  ],
+  "n_noticias": 1,
+  "procedencias": [
+   [
+    "SIN-009"
+   ]
+  ],
+  "n_fuentes_independientes": 1,
+  "fecha_primera": "2025-09-25T10:00:00+00:00",
+  "fecha_ultima": "2025-09-25T10:00:00+00:00",
+  "tema_por_respaldo": false,
+  "contexto": [],
+  "sin_contexto_motivo": "No se encontró un dato oficial pertinente en el corpus; no se fuerza una relación.",
+  "prioridad": {
+   "puntaje": 59.7,
+   "puntaje_formula": 59.7,
+   "ajuste": null,
+   "nivel": "medio",
+   "componentes": {
+    "R": {
+     "valor": 1.0,
+     "peso": 30,
+     "aporte": 30.0,
+     "explicacion": "tema 'turismo' es del reto; relación con Panamá: directa (según el LLM)"
+    },
+    "I": {
+     "valor": 0.5,
+     "peso": 25,
+     "aporte": 12.5,
+     "explicacion": "peso base del tema 0.5"
+    },
+    "U": {
+     "valor": 0.345,
+     "peso": 20,
+     "aporte": 6.9,
+     "explicacion": "fecha más reciente (publicacion) hace 4.6 días (ventana de 7)"
+    },
+    "N": {
+     "valor": 0.687,
+     "peso": 15,
+     "aporte": 10.3,
+     "explicacion": "parecido 0.63 con el evento anterior más cercano (EV-SIN-008)"
+    },
+    "E": {
+     "valor": 0.0,
+     "peso": 10,
+     "aporte": 0.0,
+     "explicacion": "1 fuente(s) independiente(s); sin dato oficial"
+    }
+   },
+   "formula": "P = 30R + 25I + 20U + 15N + 10E",
+   "version_reglas": "reglas-v1",
+   "aviso": "La prioridad ordena la revisión; no confirma la noticia ni habilita su publicación.",
+   "posicion": 10
+  },
+  "posibles_contradicciones": [],
+  "estado_evidencia": "insuficiente",
+  "motivo_estado_evidencia": "una sola procedencia y sin dato oficial",
+  "aviso_alcance": "Basado únicamente en titular/metadatos."
+ },
+ {
+  "id_evento": "EV-SIN-008",
+  "tema": "turismo",
+  "titulo_representativo": "Llegada de turistas a Panamá crece durante el primer semestre",
+  "ids_noticias": [
+   "SIN-008"
+  ],
+  "noticias": [
+   {
+    "id_noticia": "SIN-008",
+    "titulo": "Llegada de turistas a Panamá crece durante el primer semestre",
+    "medio": "Medio A",
+    "url": "https://ejemplo.invalid/sin-008",
+    "fecha_publicacion": "2025-09-15T10:00:00Z",
+    "fecha_deteccion": "2025-09-15T11:00:00Z",
+    "fecha": "2025-09-15T10:00:00Z",
+    "tipo_fecha": "publicacion",
+    "antiguedad": null,
+    "origen": "sintetico",
+    "alcance_texto": "titular",
+    "tema": "turismo",
+    "metodo_tema": "llm",
+    "motivo_tema": "Trata sobre la llegada de turistas a Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
+   }
+  ],
+  "medios": [
+   "Medio A"
+  ],
+  "n_noticias": 1,
+  "procedencias": [
+   [
+    "SIN-008"
+   ]
+  ],
+  "n_fuentes_independientes": 1,
+  "fecha_primera": "2025-09-15T10:00:00+00:00",
+  "fecha_ultima": "2025-09-15T10:00:00+00:00",
+  "tema_por_respaldo": false,
+  "contexto": [],
+  "sin_contexto_motivo": "No se encontró un dato oficial pertinente en el corpus; no se fuerza una relación.",
+  "prioridad": {
+   "puntaje": 57.5,
+   "puntaje_formula": 57.5,
+   "ajuste": null,
+   "nivel": "medio",
+   "componentes": {
+    "R": {
+     "valor": 1.0,
+     "peso": 30,
+     "aporte": 30.0,
+     "explicacion": "tema 'turismo' es del reto; relación con Panamá: directa (según el LLM)"
+    },
+    "I": {
+     "valor": 0.5,
+     "peso": 25,
+     "aporte": 12.5,
+     "explicacion": "peso base del tema 0.5"
+    },
+    "U": {
+     "valor": 0.0,
+     "peso": 20,
+     "aporte": 0.0,
+     "explicacion": "fecha más reciente (publicacion) hace 14.6 días (ventana de 7)"
+    },
+    "N": {
+     "valor": 1.0,
+     "peso": 15,
+     "aporte": 15.0,
+     "explicacion": "no hay eventos anteriores parecidos"
     },
     "E": {
      "valor": 0.0,
@@ -1218,8 +1234,9 @@
     "alcance_texto": "titular",
     "tema": "logistica_canal",
     "metodo_tema": "llm",
-    "motivo_tema": "Trata sobre restricciones de calado en el Canal de Panamá.",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre restricciones operativas en el Canal de Panamá.",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
@@ -1247,7 +1264,7 @@
      "valor": 1.0,
      "peso": 30,
      "aporte": 30.0,
-     "explicacion": "tema 'logistica_canal' es del reto; menciona 'panama'"
+     "explicacion": "tema 'logistica_canal' es del reto; relación con Panamá: directa (según el LLM)"
     },
     "I": {
      "valor": 0.8,
@@ -1307,7 +1324,8 @@
     "tema": "otro",
     "metodo_tema": "bloqueado_inyeccion",
     "motivo_tema": "el titular intenta dar instrucciones al sistema; no se envió al LLM",
-    "modelo_tema": null
+    "modelo_tema": null,
+    "relacion_panama": null
    }
   ],
   "medios": [
@@ -1394,8 +1412,9 @@
     "alcance_texto": "titular",
     "tema": "otro",
     "metodo_tema": "llm",
-    "motivo_tema": "Se refiere a deportes (fútbol).",
-    "modelo_tema": "gemini-3.5-flash"
+    "motivo_tema": "Trata sobre deportes (fútbol).",
+    "modelo_tema": "gemini-3.5-flash-lite",
+    "relacion_panama": "directa"
    }
   ],
   "medios": [
