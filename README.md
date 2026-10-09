@@ -87,13 +87,15 @@ cd backend
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env    # completar GEMINI_API_KEY (nunca se sube a git)
+cp .env.example .env    # completar GEMINI_API_KEY y GROQ_API_KEY (nunca se suben a git)
 
 # Descarga única del modelo de embeddings BAAI/bge-m3 (~2,2 GB)
 python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-m3')"
 ```
 
 La instalación y la descarga del modelo necesitan internet **una sola vez** (~1 GB de librerías y ~2,2 GB del modelo). Después todo funciona sin conexión. En la máquina de la demo hay que hacerlo antes del evento.
+
+**Proveedores de LLM (planes gratuitos).** Se usan en cascada: Gemini (`gemini-3.8-flash` y `gemini-3.5-flash` para fichas, `gemini-3.5-flash-lite` para temas) y, si Gemini no tiene cuota, Groq (`openai/gpt-oss-120b` y `qwen/qwen3.8-27b`). Claves gratuitas en [aistudio.google.com/apikey](https://aistudio.google.com/apikey) y [console.groq.com/keys](https://console.groq.com/keys). Si falta una clave, ese proveedor se salta sin error. Un modelo con el cupo diario agotado no se reintenta en esa ejecución; ante el límite por minuto de Groq se espera y se reintenta. Cada tema y cada ficha registran qué modelo los generó.
 
 ### Ejecutar
 
@@ -111,7 +113,21 @@ Con `--paquete` se usa `ingesta.cargar_paquete()` y la fecha de corte del manife
 | `fichas.jsonl` | Fichas del top 10 con afirmaciones citadas, borrador y resultado del validador |
 | `excluidas_idioma.json` | Noticias fuera del panel por idioma (solo se muestran español e inglés) |
 
+**Cómo decide.** El LLM asigna a cada titular un tema y su relación con Panamá (directa, indirecta o ninguna), con definiciones que dicen qué queda fuera de cada tema (versión `temas-v2` en `config.py`); esa relación alimenta la relevancia R del puntaje. Agrupación, contexto oficial, puntaje y estado de evidencia son reglas sin LLM. Si el validador bloquea una ficha redactada por el LLM, se le pide una corrección con los motivos exactos y se usa solo si mejora; si no, la ficha queda en "requiere evidencia" con sus motivos visibles.
+
 **Sin internet.** Los temas que asigna el LLM y sus redacciones se guardan en `artefactos/` (`temas.json`, `redacciones.json`) junto con los embeddings ya calculados, y se versionan en git. Con `--offline` el resultado es idéntico al de la corrida con conexión. Lo que no esté guardado se resuelve sin LLM: el tema con el clasificador por embeddings y la ficha con una plantilla que solo repite lo que dicen las fuentes, ambos marcados para revisión.
+
+**Datos de ejemplo.** Sin `--paquete`, el pipeline usa los datos sintéticos de `backend/datos_ejemplo/` (hay que indicar la fecha de corte) y escribe en `artefactos/ejemplo_corrida/`:
+
+```bash
+python -m nucleo.pipeline --fecha-corte 2025-09-30T00:00:00Z
+```
+
+`artefactos/ejemplo/` es otra cosa: una salida **congelada** que usan las pruebas de la interfaz; el pipeline no la toca (ver su `LEEME.md`).
+
+### Evaluación
+
+`backend/eval/planilla_etiquetas.xlsx` tiene 100 titulares reales sorteados con semilla fija para etiquetar a mano, a ciegas: tema, relación con Panamá y si merece estar en la agenda de TVN. Esas etiquetas son la referencia para medir macro-F1 de temas (LLM, embeddings y palabras clave) y Precision@5 del ranking. Para regenerarla, desde `backend/`: `python -m eval.crear_planilla`.
 
 ### Pruebas
 
@@ -136,12 +152,14 @@ Desde la raíz, `python -m pytest` corre las pruebas del paquete de datos y las 
 
 | Módulo | Etapa | Qué hace |
 |---|---|---|
-| `organizar.py` | 2 | Embeddings locales, temas (Gemini con respaldo) y agrupación híbrida de eventos |
+| `organizar.py` | 2 | Filtro de idioma, embeddings locales, tema y relación con Panamá (LLM con respaldo) y agrupación híbrida de eventos |
 | `contextualizar.py` | 3 | Vincula eventos con Banco Mundial y USGS sin forzar relaciones |
 | `priorizar.py` | 4 | P = 30R + 25I + 20U + 15N + 10E y estado de evidencia, independiente del puntaje |
-| `fichas.py`, `plantilla.py` | 5 y 6 | Ficha de evidencia y paquete editorial con citas `[ID:campo]` |
+| `fichas.py`, `plantilla.py` | 5 y 6 | Ficha de evidencia y paquete editorial con citas `[ID:campo]`; corrección automática si el validador bloquea |
 | `seguridad.py` | — | Anti-inyección y validador que bloquea contenido sin respaldo |
-| `llm.py`, `artefactos.py` | — | Capa única de Gemini con modelos de respaldo; resultados versionados |
+| `llm.py`, `artefactos.py` | — | Capa única de LLM (Gemini y Groq en cascada, con verificación del esquema); resultados versionados |
+| `pipeline.py` | — | Corre todo con un comando; `--paquete` usa el cargador del equipo A, `--offline` no usa internet |
+| `eval/crear_planilla.py` | — | Genera la planilla de etiquetado humano |
 | `baseline.py` | — | Versión sin IA (palabras clave) para comparar |
 | `config.py` | — | Umbrales, pesos y reglas, con la versión de reglas vigente |
 

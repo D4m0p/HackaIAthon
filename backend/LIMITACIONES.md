@@ -25,3 +25,37 @@ ningún evento, porque cada versión queda en un evento distinto.
 semántico es alto (bge-m3 es multilingüe; umbral sugerido 0,75) y contar la traducción
 como la **misma procedencia**, no como una confirmación independiente ("una agencia
 replicada cuenta como una sola procedencia", sección 4 del reglamento).
+
+## Clasificación sin LLM
+
+**Qué pasa.** Si un titular no tiene tema guardado y no hay LLM disponible, el tema lo
+asigna un clasificador por embeddings, menos preciso (con datos reales llegó a poner
+noticias de fútbol en turismo). La ficha queda marcada: "tema asignado por respaldo,
+confirmar en la revisión".
+
+**Cómo se resolvería.** Medirlo con la planilla etiquetada (`eval/`) y, si conviene,
+entrenar un clasificador sobre esas etiquetas.
+
+## Calidad de la clasificación sin medir
+
+La versión `temas-v2` se ajustó al ver errores con los datos reales (consejos de salud
+y farándula como "servicios públicos", procesos judiciales de otros países como
+"regulación"), pero todavía no hay una medición formal. La planilla de 100 titulares
+etiquetados a ciegas es el paso pendiente para reportar macro-F1 y Precision@5.
+
+## Sismos sin casos reales
+
+USGS aporta sismos de 2024 y las noticias del paquete son de 2026: el vínculo noticia ↔
+sismo funciona (probado con datos sintéticos), pero en este paquete no hay casos reales.
+
+## Contradicciones
+
+El detector de cifras en conflicto solo compara porcentajes que aparecen en los
+titulares de un mismo evento. Otras contradicciones las tiene que notar la revisión humana.
+
+## Dependencia de planes gratuitos de LLM
+
+Gemini y Groq se usan en sus planes gratuitos, con cuotas bajas (en una jornada de
+desarrollo Gemini rechazó 177 llamadas por cupo agotado). La demo no depende de ellos
+porque todo sale de los artefactos versionados, pero regenerar resultados puede tener
+que esperar a que se renueve la cuota.
