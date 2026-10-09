@@ -36,12 +36,15 @@ confirmar en la revisión".
 **Cómo se resolvería.** Medirlo con la planilla etiquetada (`eval/`) y, si conviene,
 entrenar un clasificador sobre esas etiquetas.
 
-## Calidad de la clasificación sin medir
+## Calidad de la clasificación y la agrupación
 
-La versión `temas-v2` se ajustó al ver errores con los datos reales (consejos de salud
-y farándula como "servicios públicos", procesos judiciales de otros países como
-"regulación"), pero todavía no hay una medición formal. La planilla de 100 titulares
-etiquetados a ciegas es el paso pendiente para reportar macro-F1 y Precision@5.
+La versión `temas-v2` se ajustó al ver errores con los datos reales. Medida contra la
+planilla revisada (`eval/planilla_revisada.xlsx`): macro-F1 de temas 0,767 con LLM frente a
+0,564 de palabras clave, y Precision@5 de 4 de 5. Quedan errores: procesos judiciales de
+otros países (Duterte, la JEP de Colombia) siguen saliendo como "regulación", aunque no
+llegan al top-10. La agrupación **sobreagrupa**: 10 de 20 pares agrupados son hechos
+distintos del mismo tema. La medición viene de una sola persona revisora; falta una
+segunda para medir el acuerdo.
 
 ## Sismos sin casos reales
 

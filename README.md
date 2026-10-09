@@ -134,13 +134,13 @@ Comparación de consultas BM25 frente a híbrida: [`backend/eval/resultados/cons
 Métricas del núcleo (sección 9.1), desde `backend/`:
 
 ```bash
-python -m eval.metricas                              # con la planilla del repo
+python -m eval.metricas                              # con la planilla revisada
 python -m eval.metricas copia_1.xlsx copia_2.xlsx    # dos personas: agrega el acuerdo (kappa)
 ```
 
 Escribe `backend/eval/resultados/metricas.md` (para Notion) y `metricas.json`, siempre con numerador, denominador y fallos. Sin etiquetas calcula lo automático (cobertura de citas, eficiencia, tokens y costo) y deja el resto como pendiente.
 
-La planilla `backend/eval/planilla_etiquetas.xlsx` se etiqueta a mano y tiene cuatro hojas: **Etiquetas** (100 titulares sorteados: tema y relación con Panamá → macro-F1 de LLM, embeddings y palabras clave), **Agenda** (los 15 primeros eventos mezclados → Precision@5 y @10), **Pares** (pares que el sistema juntó y pares parecidos que separó → precisión y recall de la agrupación) y **Afirmaciones** (afirmaciones y oraciones citadas con lo que citan → validez de sustento). Para regenerarla: `python -m eval.crear_planilla`. Los pendientes del equipo están en [`backend/PENDIENTES.md`](backend/PENDIENTES.md).
+La referencia es `backend/eval/planilla_revisada.xlsx`, revisada por el equipo; `backend/eval/planilla_etiquetas.xlsx` es la misma planilla vacía, para que otra persona etiquete por separado. Tiene cuatro hojas: **Etiquetas** (100 titulares sorteados: tema y relación con Panamá → macro-F1 de LLM, embeddings y palabras clave), **Agenda** (los 15 primeros eventos mezclados → Precision@5 y @10), **Pares** (pares que el sistema juntó y pares parecidos que separó → precisión y recall de la agrupación) y **Afirmaciones** (afirmaciones y oraciones citadas con lo que citan → validez de sustento). Para regenerarla: `python -m eval.crear_planilla`. Los pendientes del equipo están en [`backend/PENDIENTES.md`](backend/PENDIENTES.md).
 
 ### Pruebas
 

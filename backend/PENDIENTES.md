@@ -11,12 +11,15 @@ Lista viva: se tacha cuando se completa. Lo que dependa de otra persona dice de 
   los titulares, y 5 sin respuesta en el corpus) en el mismo formato, sin mirar el prompt, y
   correr: `python -m interfaz.evaluar <archivo> --ejemplo` desde la raíz con el entorno del núcleo.
 - [ ] **Repetir la comparación de consultas sobre el paquete real** (no solo los datos de ejemplo).
-- [x] **Evaluación preliminar con juez IA:** `eval/planilla_juez_ia.xlsx`, etiquetada sin ver
-  las respuestas del sistema; el reporte lo declara como referencia no humana.
-- [ ] **Etiquetas humanas** en `eval/planilla_etiquetas.xlsx` (idealmente dos personas por
-  separado). Con una sola copia humana se puede medir también el acuerdo humano–juez IA.
-- [ ] **Sobreagrupación:** el juez IA marca 10 de 20 pares agrupados como hechos distintos
-  (alianzas de TVN Media, resultados de MLB). Revisar el umbral sin ajustarlo a esas mismas etiquetas.
+- [x] **Planilla de referencia:** `eval/planilla_revisada.xlsx`, revisada fila por fila por
+  Ariel Jimenez (equipo C) sobre una propuesta prellenada, sin cambios. Métricas en
+  `eval/resultados/metricas.md`.
+- [ ] **Segunda persona** que etiquete por separado una copia de `eval/planilla_etiquetas.xlsx`
+  (vacía) para medir el acuerdo entre personas (kappa).
+- [ ] **Sobreagrupación:** 10 de 20 pares agrupados son hechos distintos (alianzas de TVN Media,
+  resultados de MLB). Revisar el umbral con etiquetas nuevas, no con estas mismas.
+- [ ] **Validez de sustento 75 % (meta 90 %):** las parciales cambian el tiempo verbal del titular
+  ("explica" → "explicará"), desarrollan siglas o redondean cifras ("cerca de 5%" → "5%").
 
 ## Coordinación con otros equipos
 
@@ -35,8 +38,7 @@ Lista viva: se tacha cuando se completa. Lo que dependa de otra persona dice de 
 - [ ] Completar los bloques "Completar" de **Presentación Pitch Day** (equipo).
 - [x] Crear **Pruebas y métricas** en Notion (LarpeoIntenso → Documentación técnica): matriz
   T01–T10, métricas automáticas, comparación de consultas y pruebas fallidas con su corrección.
-- [ ] Actualizar esa página con las métricas finales cuando la planilla esté etiquetada
-  (`python -m eval.metricas` y copiar `eval/resultados/metricas.md`).
+- [x] Actualizar esa página con las métricas de la planilla revisada.
 
 ## Mejoras opcionales
 

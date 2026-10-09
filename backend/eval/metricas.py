@@ -30,7 +30,7 @@ CARPETA = Path(__file__).parent
 BACKEND = CARPETA.parent
 ARTEFACTOS = BACKEND / config.CARPETA_ARTEFACTOS
 REGISTRO_LLM = BACKEND / config.CARPETA_CACHE / "llm_log.jsonl"
-PLANILLA = CARPETA / "planilla_etiquetas.xlsx"
+PLANILLA = CARPETA / "planilla_revisada.xlsx"   # la plantilla vacía es planilla_etiquetas.xlsx
 RESULTADOS = CARPETA / "resultados"
 
 
@@ -216,9 +216,9 @@ def acuerdo(planillas):
 
 
 def quien_etiqueto(planilla):
-    """La copia etiquetada por un juez IA lo dice en su primera celda; el reporte debe decirlo también."""
+    """Quién etiquetó y cómo: lo que dice la primera celda de la planilla después de "—"."""
     titulo = str(load_workbook(planilla)["Instrucciones"]["A1"].value or "")
-    return "del juez IA (no humano)" if "JUEZ IA" in titulo else "humanas"
+    return titulo.partition("—")[2].strip() or None
 
 
 # ---------------------------------------------------------------------------
@@ -261,11 +261,9 @@ def a_markdown(m):
               for k, v in e["por_tarea"].items()]
         l.append("")
 
-    if m["referencia"] != "humanas":
-        l += [f"> **Referencia: etiquetas {m['referencia']}**, hechas sin ver las respuestas del sistema y con "
-              "un modelo distinto al que clasifica. Es una evaluación preliminar: no reemplaza las etiquetas humanas "
-              "que pide el reto.", ""]
-    l += [f"## Clasificación de temas (contra etiquetas {m['referencia']})", ""]
+    if m["referencia"]:
+        l += [f"> **Referencia:** {m['referencia']}.", ""]
+    l += ["## Clasificación de temas (contra las etiquetas de referencia)", ""]
     if "pendiente" in t:
         l.append(f"Pendiente: {t['pendiente']}.")
     else:

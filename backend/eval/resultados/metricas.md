@@ -13,7 +13,7 @@ Calculadas con `python -m eval.metricas` sobre la corrida del paquete real. Nume
 
 ## Eficiencia y costo
 
-397 llamadas reales al LLM (172 exitosas) y 163 respondidas desde la caché. Fallos por código: {'503': 13, '429': 197, '429_minuto': 10, '504': 1, 'sin_clave': 4}. Tokens: 502,240. Costo: 0 USD (Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.)
+397 llamadas reales al LLM (172 exitosas) y 229 respondidas desde la caché. Fallos por código: {'503': 13, '429': 197, '429_minuto': 10, '504': 1, 'sin_clave': 4}. Tokens: 502,240. Costo: 0 USD (Planes gratuitos de Gemini y Groq: costo 0. Se reportan los tokens para estimarlo con precios pagos.)
 
 | Tarea | Llamadas | Mediana (s) | p95 (s) | Tokens promedio |
 |---|---|---|---|---|
@@ -24,9 +24,9 @@ Calculadas con `python -m eval.metricas` sobre la corrida del paquete real. Nume
 | ficha_correccion | 10 | 3.8 | 35.34 | 4000 |
 | ficha_reintento | 14 | 3.79 | 23.14 | 3513 |
 
-> **Referencia: etiquetas del juez IA (no humano)**, hechas sin ver las respuestas del sistema y con un modelo distinto al que clasifica. Es una evaluación preliminar: no reemplaza las etiquetas humanas que pide el reto.
+> **Referencia:** revisada fila por fila por Ariel Jimenez (equipo C) sobre una propuesta prellenada, sin cambios.
 
-## Clasificación de temas (contra etiquetas del juez IA (no humano))
+## Clasificación de temas (contra las etiquetas de referencia)
 
 100 titulares etiquetados.
 

@@ -1,8 +1,8 @@
 {
  "planillas": [
-  "eval/planilla_juez_ia.xlsx"
+  "/home/anna/hackIAthon/backend/eval/planilla_revisada.xlsx"
  ],
- "referencia": "del juez IA (no humano)",
+ "referencia": "revisada fila por fila por Ariel Jimenez (equipo C) sobre una propuesta prellenada, sin cambios",
  "fichas": {
   "fichas": 10,
   "por_metodo": {
@@ -30,7 +30,7 @@
  "eficiencia": {
   "llamadas_reales": 397,
   "exitosas": 172,
-  "desde_cache": 163,
+  "desde_cache": 229,
   "fallos_por_codigo": {
    "503": 13,
    "429": 197,
